@@ -1,0 +1,10 @@
+23:04:43 **** Incremental Build of configuration Debug for project HEISENBERG_03 ****
+make -j8 all 
+arm-none-eabi-size  HEISENBERG_03.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10412	     12	   1644	  12068	   2f24	HEISENBERG_03.elf
+Finished building: default.size.stdout
+ 
+
+23:04:43 Build Finished. 0 errors, 0 warnings. (took 134ms)
+

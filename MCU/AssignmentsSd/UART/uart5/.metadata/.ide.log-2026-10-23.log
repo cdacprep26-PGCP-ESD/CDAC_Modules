@@ -1,0 +1,79 @@
+2026-10-23 00:04:13,813 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 591963384 Bytes (1001390080)
+2026-10-23 00:04:14,268 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8
+2026-10-23 00:04:14,269 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2026-10-23 00:04:14,269 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2026-10-23 00:04:14,269 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2026-10-23 00:04:14,270 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2026-10-23 00:04:14,283 [INFO] CodeGenerator:892 - code generatio: config db path: /opt/st/stm32cubeide_1.19.0/plugins/com.st.stm32cube.common.mx_6.15.0.202507011659//db/
+2026-10-23 00:04:14,463 [INFO] CodeEngine:265 - oldGeneratedFile, /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/MXTmpFiles/license.tmp_save
+2026-10-23 00:04:14,671 [INFO] CodeEngine:289 - Generated code: /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/MXTmpFiles/license.tmp
+2026-10-23 00:04:14,766 [INFO] CodeEngine:265 - oldGeneratedFile, /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/MXTmpFiles/gpio.tmp_save
+2026-10-23 00:04:14,880 [INFO] CodeEngine:289 - Generated code: /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/MXTmpFiles/gpio.tmp
+2026-10-23 00:04:15,078 [INFO] CodeEngine:265 - oldGeneratedFile, /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/Core/Src/stm32f4xx_it.c_save
+2026-10-23 00:04:15,321 [INFO] CodeEngine:289 - Generated code: /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/Core/Src/stm32f4xx_it.c
+2026-10-23 00:04:15,323 [INFO] CodeEngine:265 - oldGeneratedFile, /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/Core/Inc/stm32f4xx_it.h_save
+2026-10-23 00:04:15,402 [INFO] CodeEngine:289 - Generated code: /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/Core/Inc/stm32f4xx_it.h
+2026-10-23 00:04:15,427 [INFO] CodeEngine:265 - oldGeneratedFile, /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/Core/Src/stm32f4xx_hal_msp.c_save
+2026-10-23 00:04:15,561 [INFO] CodeEngine:289 - Generated code: /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/Core/Src/stm32f4xx_hal_msp.c
+2026-10-23 00:04:15,562 [INFO] CodeEngine:265 - oldGeneratedFile, /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/MXTmpFiles/system.tmp_save
+2026-10-23 00:04:15,625 [INFO] CodeEngine:289 - Generated code: /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/MXTmpFiles/system.tmp
+2026-10-23 00:04:15,628 [INFO] CodeEngine:321 - oldGeneratedFile, /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/Core/Inc/stm32f4xx_hal_conf.h_save
+2026-10-23 00:04:15,701 [INFO] CodeEngine:345 - Generated code: /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/Core/Inc/stm32f4xx_hal_conf.h
+2026-10-23 00:04:15,736 [INFO] ApiDbMcu:532 - Load IP Config File for TIM2
+2026-10-23 00:04:15,741 [INFO] ApiDbMcu:532 - Load IP Config File for RCC
+2026-10-23 00:04:15,742 [WARN] IPConfigManager:3811 - IP not found : TIM
+2026-10-23 00:04:15,743 [WARN] CodeGenerator:4259 - IP not found : null
+2026-10-23 00:04:15,746 [INFO] CodeEngine:265 - oldGeneratedFile, /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/Core/Inc/main.h_save
+2026-10-23 00:04:15,866 [INFO] CodeEngine:289 - Generated code: /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/Core/Inc/main.h
+2026-10-23 00:04:15,868 [INFO] CodeEngine:265 - oldGeneratedFile, /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/Core/Src/main.c_save
+2026-10-23 00:04:15,981 [INFO] CodeEngine:289 - Generated code: /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/Core/Src/main.c
+2026-10-23 00:04:16,623 [INFO] ProjectBuilder:3606 - Time for Copy HAL[1] : 452mS.
+2026-10-23 00:04:16,624 [INFO] ProjectBuilder:5216 - Project Generator version: 4.7.0-B52
+2026-10-23 00:04:16,718 [INFO] ConfigFileManager:1595 - The Die is : DIE413
+2026-10-23 00:04:16,732 [INFO] ApiDbMcu:532 - Load IP Config File for FATFS
+2026-10-23 00:04:16,743 [INFO] ApiDbMcu:532 - Load IP Config File for FREERTOS
+2026-10-23 00:04:16,746 [INFO] ApiDbMcu:532 - Load IP Config File for LIBJPEG
+2026-10-23 00:04:16,761 [INFO] ApiDbMcu:532 - Load IP Config File for LWIP
+2026-10-23 00:04:16,774 [INFO] ApiDbMcu:532 - Load IP Config File for MBEDTLS
+2026-10-23 00:04:16,795 [INFO] ApiDbMcu:532 - Load IP Config File for USB_DEVICE
+2026-10-23 00:04:16,812 [INFO] ApiDbMcu:532 - Load IP Config File for USB_HOST
+2026-10-23 00:04:17,443 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 819mS.
+2026-10-23 00:04:17,443 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
+2026-10-23 00:04:17,444 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
+2026-10-23 22:11:36,744 [INFO] Gpio:278 - dependency for GPIO [TIM2]
+2026-10-23 22:11:42,313 [INFO] Gpio:278 - dependency for GPIO [TIM2]
+2026-10-23 22:15:43,943 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 413022928 Bytes (1001390080)
+2026-10-23 22:15:44,085 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 440285904 Bytes (1001390080)
+2026-10-23 22:15:44,168 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 463880912 Bytes (1001390080)
+2026-10-23 22:15:44,355 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8
+2026-10-23 22:15:44,355 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2026-10-23 22:15:44,355 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2026-10-23 22:15:44,355 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2026-10-23 22:15:44,356 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2026-10-23 22:15:44,372 [INFO] CodeGenerator:892 - code generatio: config db path: /opt/st/stm32cubeide_1.19.0/plugins/com.st.stm32cube.common.mx_6.15.0.202507011659//db/
+2026-10-23 22:15:44,488 [INFO] CodeEngine:265 - oldGeneratedFile, /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/MXTmpFiles/license.tmp_save
+2026-10-23 22:15:44,739 [INFO] CodeEngine:289 - Generated code: /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/MXTmpFiles/license.tmp
+2026-10-23 22:15:44,758 [INFO] CodeEngine:265 - oldGeneratedFile, /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/MXTmpFiles/gpio.tmp_save
+2026-10-23 22:15:44,914 [INFO] CodeEngine:289 - Generated code: /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/MXTmpFiles/gpio.tmp
+2026-10-23 22:15:45,080 [INFO] CodeEngine:265 - oldGeneratedFile, /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/Core/Src/stm32f4xx_it.c_save
+2026-10-23 22:15:45,439 [INFO] CodeEngine:289 - Generated code: /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/Core/Src/stm32f4xx_it.c
+2026-10-23 22:15:45,440 [INFO] CodeEngine:265 - oldGeneratedFile, /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/Core/Inc/stm32f4xx_it.h_save
+2026-10-23 22:15:45,544 [INFO] CodeEngine:289 - Generated code: /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/Core/Inc/stm32f4xx_it.h
+2026-10-23 22:15:45,552 [INFO] CodeEngine:265 - oldGeneratedFile, /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/Core/Src/stm32f4xx_hal_msp.c_save
+2026-10-23 22:15:45,725 [INFO] CodeEngine:289 - Generated code: /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/Core/Src/stm32f4xx_hal_msp.c
+2026-10-23 22:15:45,727 [INFO] CodeEngine:265 - oldGeneratedFile, /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/MXTmpFiles/system.tmp_save
+2026-10-23 22:15:45,809 [INFO] CodeEngine:289 - Generated code: /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/MXTmpFiles/system.tmp
+2026-10-23 22:15:45,813 [INFO] CodeEngine:321 - oldGeneratedFile, /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/Core/Inc/stm32f4xx_hal_conf.h_save
+2026-10-23 22:15:45,902 [INFO] CodeEngine:345 - Generated code: /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/Core/Inc/stm32f4xx_hal_conf.h
+2026-10-23 22:15:45,926 [WARN] IPConfigManager:3811 - IP not found : TIM
+2026-10-23 22:15:45,926 [WARN] CodeGenerator:4259 - IP not found : null
+2026-10-23 22:15:45,928 [INFO] CodeEngine:265 - oldGeneratedFile, /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/Core/Inc/main.h_save
+2026-10-23 22:15:46,048 [INFO] CodeEngine:289 - Generated code: /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/Core/Inc/main.h
+2026-10-23 22:15:46,049 [INFO] CodeEngine:265 - oldGeneratedFile, /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/Core/Src/main.c_save
+2026-10-23 22:15:46,192 [INFO] CodeEngine:289 - Generated code: /home/desd/Microcontroller_Interfacing/UART/uart5/HEISENBERG_04/Core/Src/main.c
+2026-10-23 22:15:46,506 [INFO] ProjectBuilder:3606 - Time for Copy HAL[1] : 36mS.
+2026-10-23 22:15:46,508 [INFO] ProjectBuilder:5216 - Project Generator version: 4.7.0-B52
+2026-10-23 22:15:46,650 [INFO] ConfigFileManager:1595 - The Die is : DIE413
+2026-10-23 22:15:47,457 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 949mS.
+2026-10-23 22:15:47,457 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
+2026-10-23 22:15:47,458 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.

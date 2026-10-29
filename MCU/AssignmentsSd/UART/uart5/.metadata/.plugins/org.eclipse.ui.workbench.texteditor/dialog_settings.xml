@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="hasShownOverlayPopupBefore" value="true"/>
+	<item key="replaceBarOpen" value="false"/>
+	<list key="searchhistory">
+		<item value="HAL_TIM_IC_Capt"/>
+		<item value="HAL_TIM_IC_S"/>
+		<item value="HAL_TIM_GET_Comp"/>
+		<item value="HAL_TIM_OC_DelayElapsedCallback"/>
+		<item value="HAL_TIM_OC_Start_IT"/>
+		<item value="HAL_TIM_OC_Start_IT()"/>
+		<item value="PWM_Start"/>
+		<item value="PWM_Init"/>
+	</list>
+</section>
