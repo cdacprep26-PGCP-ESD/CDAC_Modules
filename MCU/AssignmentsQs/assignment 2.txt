@@ -1,0 +1,10 @@
+STM32F407 DISCOVERY BOARD PROGRAMMING ASSIGNMENT
+Assignment 2: External Interrupts/NVIC & ADC
+
+1. Configure PA0 as an EXTI0 rising-edge interrupt and toggle PD12 inside the interrupt callback.
+2. Count PA0 external interrupts and observe the counter using the debugger.
+3. Configure two external GPIO interrupt sources and use each source to control a different LED.
+4. Read one analog input using ADC1 single-conversion polling mode, whenever the PA0 User button is pressed.
+5. Configure ADC1 in continuous-conversion mode and monitor the converted value using variable resistance.
+6. Collect 100 ADC samples and calculate their average, minimum, and maximum values.
+

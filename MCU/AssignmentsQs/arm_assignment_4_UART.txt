@@ -1,0 +1,92 @@
+STM32F407 DISCOVERY BOARD PROGRAMMING ASSIGNMENT
+Assignment 4: UART Communication - Simple Version
+
+Assumption: Use USART2 with PA2 as TX and PA3 as RX. Configure the UART for 115200 baud, 8 data bits, no parity, 1 stop bit, and no hardware flow control. Use the green onboard LED connected to PD12. Use STM32 HAL functions.
+
+Q1. UART Initialization and Message Transmission
+Configure USART2 and transmit the message "Hello STM32F407" to a serial terminal.
+
+Tasks:
+
+1. Configure the clocks for GPIOA and USART2.
+2. Configure PA2 as USART2_TX with Alternate Function 7.
+3. Configure PA3 as USART2_RX with Alternate Function 7.
+4. Configure USART2 for 115200 baud, 8 data bits, no parity, 1 stop bit, and no flow control.
+5. Initialize USART2 using HAL_UART_Init().
+6. Transmit "Hello STM32F407\r\n" using HAL_UART_Transmit().
+7. View the message in a serial terminal.
+8. Keep SWD enabled for debugging.
+
+Q2. Receive and Echo One Character
+Receive one character through USART2 and transmit the same character back to the terminal.
+
+Tasks:
+
+1. Declare a one-byte receive variable.
+2. Receive one character using HAL_UART_Receive().
+3. Transmit the character using HAL_UART_Transmit().
+4. Repeat the operation continuously.
+5. Keep the program in polling mode.
+6. Keep SWD enabled for debugging.
+
+Q3. Receive a Complete String
+Receive a string terminated by the Enter key and display it back on the terminal.
+
+Tasks:
+
+1. Declare a 64-byte character buffer.
+2. Receive characters one at a time using HAL_UART_Receive().
+3. Stop receiving when the user presses Enter.
+4. Reserve the last byte for the null terminator.
+5. Add the null terminator after the received text.
+6. Transmit the received string using HAL_UART_Transmit().
+7. Clear the buffer before receiving the next string.
+8. Keep SWD enabled for debugging.
+
+Q4. UART Commands for LED Control
+Receive simple commands through USART2 and control the green onboard LED connected to PD12.
+
+Commands:
+
+LED ON  - Turn on PD12.
+LED OFF - Turn off PD12.
+
+Tasks:
+
+1. Configure PD12 as a push-pull output.
+2. Receive a command until the Enter key is pressed.
+3. Compare the command with "LED ON".
+4. Turn on PD12 when the command is "LED ON".
+5. Compare the command with "LED OFF".
+6. Turn off PD12 when the command is "LED OFF".
+7. Transmit a short response after each command.
+8. Repeat the command operation continuously.
+9. Keep SWD enabled for debugging.
+
+Q5. UART Reception Using DMA
+Receive a fixed-size message using DMA and transmit the message back after the DMA transfer is complete.
+
+Use a 33-byte receive buffer and receive exactly 32 data bytes. Reserve the 33rd byte for the null terminator.
+
+Tasks:
+
+1. Configure USART2 reception using DMA.
+2. Configure the USART2_RX DMA request in Normal mode.
+3. Enable memory increment and byte data alignment.
+4. Declare a 33-byte DMA receive buffer.
+5. Start reception using HAL_UART_Receive_DMA() for 32 bytes.
+6. Implement HAL_UART_RxCpltCallback().
+7. Add a null terminator at buffer index 32 after reception is complete.
+8. Transmit the received message using HAL_UART_Transmit().
+9. Start another DMA reception for the next 32-byte message.
+10. Explain how DMA moves received UART data into memory.
+11. Keep SWD enabled for debugging.
+
+Serial Terminal Settings:
+
+Baud rate: 115200
+Data bits: 8
+Parity: None
+Stop bits: 1
+Flow control: None
+

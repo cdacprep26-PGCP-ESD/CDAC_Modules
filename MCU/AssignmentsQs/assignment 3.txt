@@ -1,0 +1,74 @@
+STM32F407 DISCOVERY BOARD PROGRAMMING ASSIGNMENT
+Assignment 3: General-Purpose Timers
+Assumption: Timer clock frequency = 16 MHz unless otherwise specified.
+
+Q1. Traffic Signal Timing Using Timer Interrupt
+A pedestrian traffic light must keep the GREEN LED ON for 2 seconds, then switch to RED for 1 second, and repeat continuously.
+Use TIM2 in base-timer interrupt mode. Configure the timer so that the interrupt occurs every 100 ms, and implement software counters to generate the required 2-second and 1-second intervals.
+Use PD12 as GREEN LED and PD14 as RED LED.
+
+Tasks:
+1. Configure TIM2 using Internal Clock.
+2. Select suitable Prescaler and Counter Period values for a 100 ms interrupt.
+3. Enable TIM2 global interrupt in NVIC.
+4. Start TIM2 in interrupt mode using HAL.
+5. Implement the traffic-light sequence using HAL_TIM_PeriodElapsedCallback().
+6. Keep SWD enabled for debugging.
+
+
+Q2. LED Brightness Control Using PWM
+An LED connected to TIM4 Channel 1 must smoothly fade from minimum brightness to maximum brightness and back.
+Use PWM mode with a timer clock of 16 MHz. Configure the PWM frequency to 1 kHz and vary the duty cycle in software.
+
+Tasks:
+1. Configure TIM4 Channel 1 in PWM Generation mode.
+2. Select Prescaler and Counter Period values to obtain 1 kHz PWM.
+3. Start PWM using HAL_TIM_PWM_Start().
+4. Change CCR1 periodically to vary LED brightness.
+5. Keep SWD enabled.
+6. Explain how duty cycle controls LED brightness.
+
+
+Q3. Multi-Stage Sequence Using Output Compare
+A test system must trigger four visible events at 250 ms, 500 ms, 750 ms, and 1000 ms after a timer starts.
+Use TIM4 Output Compare mode with four channels, one for each event.
+
+Tasks:
+1. Configure TIM4 with a 1 ms timer tick.
+2. Configure CH1, CH2, CH3, and CH4 in Output Compare Toggle mode.
+3. Set compare pulse values for 250 ms, 500 ms, 750 ms, and 1000 ms.
+4. Start all four Output Compare channels using HAL.
+5. Explain how CCR values determine the event timing.
+
+
+Q4. Independent LED Toggle Rates Using Output Compare Interrupts
+Four LEDs must toggle independently at different intervals:
+- LED1 every 200 ms
+- LED2 every 400 ms
+- LED3 every 600 ms
+- LED4 every 1000 ms
+
+Use TIM4 Output Compare interrupt mode. Each channel must schedule its next compare event dynamically by adding its interval to the previous compare value.
+
+Tasks:
+1. Configure TIM4 with a 1 ms timer tick.
+2. Configure four Output Compare channels in Toggle mode.
+3. Enable TIM4 global interrupt.
+4. Start all channels using HAL_TIM_OC_Start_IT().
+5. In HAL_TIM_OC_DelayElapsedCallback(), update each channel's compare value dynamically.
+6. Keep SWD enabled for observation in the debugger.
+
+
+Q5. Measure Button Press Interval Using Input Capture
+A user presses a push button twice. The system must measure the time interval between the two presses in milliseconds.
+Use TIM2 Input Capture Channel 1 in interrupt mode.
+
+Tasks:
+1. Configure TIM2 with a 1 ms timer tick.
+2. Configure Channel 1 as Input Capture Direct Mode.
+3. Use Rising Edge polarity.
+4. Use a suitable input filter to reduce switch bounce.
+5. Enable TIM2 global interrupt.
+6. Capture the first and second timestamps in HAL_TIM_IC_CaptureCallback().
+7. Calculate the elapsed time between the two button presses.
+8. Keep SWD enabled for debugging.

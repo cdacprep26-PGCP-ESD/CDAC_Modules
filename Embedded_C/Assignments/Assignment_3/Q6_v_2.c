@@ -1,0 +1,35 @@
+//Q6.Fibonacci series using Recursion
+
+#include<stdio.h>
+
+int fibonacci(int n) //Function defination
+{
+	if(n==0)
+	{
+		return 0;
+	}
+
+	if(n==1)
+	{
+		return 1;
+	}
+	else
+	{
+		return fibonacci(n-1) + fibonacci(n-2); //Recursive Function
+	}
+}
+
+int main()
+{
+	int n, i;
+
+	printf("Enter the number of element :");
+	scanf("%d", &n);
+
+	for(i=0; i<n; i++)
+	{
+		printf(" %d ", fibonacci(i)); //Function Calling
+	}
+
+	return 0;
+} //main

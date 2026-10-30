@@ -1,0 +1,12 @@
+﻿STM32F407 DISCOVERY BOARD PROGRAMMING ASSIGNMENT
+Assignment 1: GPIO Fundamentals
+
+
+1. Configure PD12 as a GPIO output and continuously toggle the green onboard LED with a 500 ms delay.
+2. Configure PD12-PD15 as outputs and switch all four onboard LEDs ON and OFF simultaneously.
+3. Create a forward LED sequence from PD12 to PD15, with each LED remaining ON for 500 ms.
+4. Create a forward-and-reverse LED running pattern using PD12-PD15.
+5. Configure PA0 as a GPIO input and make PD12 remain ON only while the User button is pressed.
+
+
+NOTE:- Do the assignments using HAL as well as register based programs using STMCUBE IDE.
