@@ -1,0 +1,4 @@
+nproc: Command for fetching Numbers of Cores Available for process
+
+taskset: Assigning Core to Process 
+	syntax: taskset -c 0 ./file1.out &
