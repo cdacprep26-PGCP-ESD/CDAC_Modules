@@ -1,7 +1,7 @@
 nproc: Command for fetching Numbers of Cores Available for process
 
-taskset: Assigning Core to the currently running Process 
-	syntax: taskset -pc 0(core) <PID>
+//Assigning Core to the currently running Process 
+syntax: taskset -pc 0(core) <PID>
 
 //Creates New Process in the specified core
 taskset -c 0(core) ./file1.out &
@@ -14,3 +14,9 @@ ps -eo pid,psr,class,stat,cmd,psr | grep while1.out
 
 //Nice Value Change
 renice -n 5(New_Nice_Value) -p 64484(PID)
+
+//Command to change Scheduling Algo. of a Process
+sudo chrt -f/-r/-o PR <PID>
+
+
+ASLR : Address Space Layout Randomisation
