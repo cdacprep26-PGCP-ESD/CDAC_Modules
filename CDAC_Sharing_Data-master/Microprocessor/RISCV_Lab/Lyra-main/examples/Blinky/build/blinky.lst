@@ -1,0 +1,104 @@
+GAS LISTING /tmp/ccTHZgsn.s 			page 1
+
+
+   1              		.file	"blinky.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_zicsr2p0_zifencei2p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              		.section	.text.main,"ax",@progbits
+   8              		.align	2
+   9              		.globl	main
+  11              	main:
+  12 0000 130101FF 		addi	sp,sp,-16
+  13 0004 23261100 		sw	ra,12(sp)
+  14 0008 13061000 		li	a2,1
+  15 000c 93058000 		li	a1,8
+  16 0010 13051000 		li	a0,1
+  17 0014 97000000 		call	GPIO_Init
+  17      E7800000 
+  18 001c 13061000 		li	a2,1
+  19 0020 93056000 		li	a1,6
+  20 0024 13051000 		li	a0,1
+  21 0028 97000000 		call	GPIO_Init
+  21      E7800000 
+  22 0030 13061000 		li	a2,1
+  23 0034 93057000 		li	a1,7
+  24 0038 13051000 		li	a0,1
+  25 003c 97000000 		call	GPIO_Init
+  25      E7800000 
+  26 0044 93058000 		li	a1,8
+  27 0048 13051000 		li	a0,1
+  28 004c 97000000 		call	GPIO_SetPin
+  28      E7800000 
+  29 0054 93056000 		li	a1,6
+  30 0058 13051000 		li	a0,1
+  31 005c 97000000 		call	GPIO_SetPin
+  31      E7800000 
+  32 0064 93057000 		li	a1,7
+  33 0068 13051000 		li	a0,1
+  34 006c 97000000 		call	GPIO_SetPin
+  34      E7800000 
+  35              	.L2:
+  36 0074 93058000 		li	a1,8
+  37 0078 13051000 		li	a0,1
+  38 007c 97000000 		call	GPIO_ResetPin
+  38      E7800000 
+  39 0084 1305401F 		li	a0,500
+  40 0088 97000000 		call	delayms
+  40      E7800000 
+  41 0090 93058000 		li	a1,8
+  42 0094 13051000 		li	a0,1
+  43 0098 97000000 		call	GPIO_SetPin
+  43      E7800000 
+  44 00a0 1305401F 		li	a0,500
+  45 00a4 97000000 		call	delayms
+  45      E7800000 
+  46 00ac 93056000 		li	a1,6
+  47 00b0 13051000 		li	a0,1
+  48 00b4 97000000 		call	GPIO_ResetPin
+GAS LISTING /tmp/ccTHZgsn.s 			page 2
+
+
+  48      E7800000 
+  49 00bc 1305401F 		li	a0,500
+  50 00c0 97000000 		call	delayms
+  50      E7800000 
+  51 00c8 93056000 		li	a1,6
+  52 00cc 13051000 		li	a0,1
+  53 00d0 97000000 		call	GPIO_SetPin
+  53      E7800000 
+  54 00d8 1305401F 		li	a0,500
+  55 00dc 97000000 		call	delayms
+  55      E7800000 
+  56 00e4 93057000 		li	a1,7
+  57 00e8 13051000 		li	a0,1
+  58 00ec 97000000 		call	GPIO_ResetPin
+  58      E7800000 
+  59 00f4 1305401F 		li	a0,500
+  60 00f8 97000000 		call	delayms
+  60      E7800000 
+  61 0100 93057000 		li	a1,7
+  62 0104 13051000 		li	a0,1
+  63 0108 97000000 		call	GPIO_SetPin
+  63      E7800000 
+  64 0110 1305401F 		li	a0,500
+  65 0114 97000000 		call	delayms
+  65      E7800000 
+  66 011c 6FF09FF5 		j	.L2
+  68              		.ident	"GCC: (xPack GNU RISC-V Embedded GCC x86_64) 13.2.0"
+GAS LISTING /tmp/ccTHZgsn.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 blinky.c
+     /tmp/ccTHZgsn.s:11     .text.main:00000000 main
+     /tmp/ccTHZgsn.s:12     .text.main:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/ccTHZgsn.s:35     .text.main:00000074 .L2
+
+UNDEFINED SYMBOLS
+GPIO_Init
+GPIO_SetPin
+GPIO_ResetPin
+delayms
