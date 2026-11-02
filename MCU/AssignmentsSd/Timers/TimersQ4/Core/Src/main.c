@@ -251,50 +251,31 @@ void HAL_TIM_OC_DelayElapsedCallback(TIM_HandleTypeDef *htim)
   {
 	  if(htim-> Channel == HAL_TIM_ACTIVE_CHANNEL_1)
 	  {
-		  if(__HAL_TIM_GET_COMPARE(&htim4, TIM_CHANNEL_1) > 6000)
-		  {
-			  __HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_1,200);
-		  }
-		  else
-		  {
-			  __HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_1, __HAL_TIM_GET_COMPARE(&htim4, TIM_CHANNEL_1)+200);
-		  }
+		  
+		  
+			  __HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_1,( __HAL_TIM_GET_COMPARE(&htim4, TIM_CHANNEL_1)+200)%1000);
+		  
 	  }
 
 	  else if(htim-> Channel == HAL_TIM_ACTIVE_CHANNEL_2)
 	  {
-		  if(__HAL_TIM_GET_COMPARE(&htim4, TIM_CHANNEL_2) > 6000)
-		  {
-		  		__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_2,400);
-		  }
-		  else
-		  {
-		  		__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_2, __HAL_TIM_GET_COMPARE(&htim4, TIM_CHANNEL_1)+400);
-		  }
+		  
+		  		__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_2, (__HAL_TIM_GET_COMPARE(&htim4, TIM_CHANNEL_1)+400)%1000);
+		  
 	   }
 
 	  else if(htim-> Channel == HAL_TIM_ACTIVE_CHANNEL_3)
 	  {
-		  if(__HAL_TIM_GET_COMPARE(&htim4, TIM_CHANNEL_3) > 6000)
-		  {
-		  		__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_3,600);
-		  }
-		  else
-		  {
-		  		__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_3, __HAL_TIM_GET_COMPARE(&htim4, TIM_CHANNEL_3)+600);
-		  }
+		 
+		  		__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_3, (__HAL_TIM_GET_COMPARE(&htim4, TIM_CHANNEL_3)+600)%1000);
+		  
 	  }
 
 	  else if(htim-> Channel == HAL_TIM_ACTIVE_CHANNEL_4)
 	  {
-		  if(__HAL_TIM_GET_COMPARE(&htim4, TIM_CHANNEL_4) > 6000)
-		  {
-		  		__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_4,1000);
-		  }
-		  else
-		  {
-		  		__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_4, __HAL_TIM_GET_COMPARE(&htim4, TIM_CHANNEL_4)+1000);
-		  	}
+		 
+		  		__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_4, (__HAL_TIM_GET_COMPARE(&htim4, TIM_CHANNEL_4)+1000)%1000);
+		  	
 	  }
   }
 

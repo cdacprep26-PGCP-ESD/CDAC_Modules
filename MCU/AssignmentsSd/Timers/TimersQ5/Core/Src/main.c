@@ -227,40 +227,50 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
 {
-  /* Prevent unused argument(s) compilation warning */
-	te = 0;
-	if(htim -> Instance == TIM2)
-	{
-		if(htim -> Channel == HAL_TIM_ACTIVE_CHANNEL_1)
-		{
+    static uint32_t lastCapture = 0;
+    uint32_t currentCapture;
 
-			if(state == 0)
-			{
-				fp  = __HAL_TIM_GET_COMPARE(&htim2, TIM_CHANNEL_1);
-				state = 1;
-			}
-			else
-			{
-				int secondPress = __HAL_TIM_GET_COMPARE(&htim2, TIM_CHANNEL_1);
+    te = 0;
 
-				if(secondPress >  htim2.Init.Period )
-				{
-					te =  (htim2.Init.Period - fp) + secondPress;
-				}
-				else
-				{
-					te = secondPress - fp;
+    if(htim->Instance == TIM2)
+    {
+        if(htim->Channel == HAL_TIM_ACTIVE_CHANNEL_1)
+        {
+            currentCapture =
+                HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1);
 
-				}
-				state = 0;
-			}
+            /* Debounce */
+            if((currentCapture - lastCapture) < 500)   // adjust threshold
+            {
+                return;
+            }
 
-		}
-	}
+            lastCapture = currentCapture;
 
-  /* NOTE : This function should not be modified, when the callback is needed,
-            the HAL_TIM_IC_CaptureCallback could be implemented in the user file
-   */
+            if(state == 0)
+            {
+                fp = currentCapture;
+                state = 1;
+            }
+            else
+            {
+                int secondPress = currentCapture;
+
+                if(secondPress >= fp)
+                {
+                    te = secondPress - fp;
+                }
+                else
+                {
+                    /* Timer overflow */
+                    te = (htim2.Init.Period - fp + 1)
+                         + secondPress;
+                }
+
+                state = 0;
+            }
+        }
+    }
 }
 /* USER CODE END 4 */
 
