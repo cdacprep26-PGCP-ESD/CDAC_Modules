@@ -1,0 +1,118 @@
+RISC-V VEGA / THEJAS32 MICROPROCESSOR LAB
+7 ADDITIONAL ASSIGNMENTS — EASY TO MEDIUM (QUESTIONS 11–17)
+Target board: ARIESv2 / Thejas32
+Platform: Lyra SDK / HAL
+
+GENERAL INSTRUCTIONS
+--------------------
+1. Use Lyra HAL functions where available.
+2. Submit main.c and Makefile for each question.
+3. Compile using make before testing on the board.
+4. Use UART0 (huart0), 115200 baud, 8N1 unless stated otherwise.
+5. The onboard RGB LED is active-low; consult hal/include/aries.h.
+6. Use only available onboard LEDs and supported GPIO/button connections.
+7. No PWM, SPI, or I2C is required.
+
+QUESTION 11: UART-BASED UP/DOWN COUNTER (EASY)
+---------------------------------------------
+Write a program that maintains a counter between 0 and 20.
+Tasks:
+1. Initialize UART0 and set the counter to 0.
+2. Receive one character at a time using UART polling.
+3. On '+', increment; on '-', decrement; on 'r', reset to zero.
+4. After every valid command, print the updated counter value.
+5. Do not increment above 20 or decrement below 0; print "Limit reached".
+6. Ignore Enter (CR/LF) characters.
+Concepts: UART polling, if/else, integers, limits.
+Reference: examples/UART/UART_Polling/uart.c
+
+QUESTION 12: BUTTON-CONTROLLED LED BLINK SPEED (EASY)
+----------------------------------------------------
+Configure one supported push-button GPIO input and the onboard red LED output.
+Tasks:
+1. In normal mode, blink the red LED every 1000 ms.
+2. While the button is held, blink the red LED every 250 ms.
+3. When the button is released, return to 1000 ms blinking.
+4. Use GPIO polling and delayms(); do not use interrupts.
+5. Add a simple debounce check for input stability.
+Concepts: GPIO input/output, polling, delays, active-low LED.
+Reference: examples/GPIO/GPIO_Polling/main.c
+
+QUESTION 13: UART-BASED SIMPLE CALCULATOR (EASY–MEDIUM)
+------------------------------------------------------
+Build a calculator controlled through UART0.
+Tasks:
+1. Receive two single-digit numbers (0–9) and an operator (+ or -).
+2. Accept a simple input sequence such as 7+2 followed by Enter.
+3. Compute the answer and print it through UART.
+4. Handle negative subtraction results correctly.
+5. For invalid inputs or operators, print "Invalid expression".
+6. Repeat to accept the next expression.
+Concepts: UART, character-to-digit conversion, arithmetic, input validation.
+Reference: examples/UART/UART_Polling/uart.c
+
+QUESTION 14: TIMER-BASED SECONDS COUNTER (EASY–MEDIUM)
+-----------------------------------------------------
+Use Timer 0 to count elapsed seconds and print the total using UART0.
+Tasks:
+1. Configure Timer 0 for a periodic 1-second interrupt.
+2. Increment a volatile seconds counter in the timer callback.
+3. Print the current count from main() after every second.
+4. When the count reaches 10, reset it to 0 and continue.
+5. Do not transmit UART data or call delayms() inside the callback.
+Concepts: timer interrupt, volatile variables, ISR-to-main flag.
+Reference: examples/Timer/TimerInterrupt/timer_int.c
+
+QUESTION 15: COUNT VOWELS IN A UART MESSAGE (MEDIUM)
+----------------------------------------------------
+Receive a text message and count its vowels.
+Tasks:
+1. Initialize UART0 and prompt "Enter text:".
+2. Receive characters until Enter is pressed, maximum 30 characters.
+3. Count a, e, i, o, u in either uppercase or lowercase.
+4. Print the original message, its length, and its vowel count.
+5. Safely reject or truncate messages that exceed the buffer capacity;
+   clearly report which behavior you implemented.
+6. Start receiving the next message.
+Concepts: UART, arrays, loops, character handling, buffer bounds.
+Reference: examples/UART/UART_Polling/uart.c
+
+QUESTION 16: BUTTON PRESS EVENT COUNTER (MEDIUM)
+-----------------------------------------------
+Count valid presses of a supported GPIO push button.
+Tasks:
+1. Configure the button as a GPIO input using polling.
+2. Increase a counter by 1 on each new press, not while held.
+3. Add basic software debounce (approximately 50 ms).
+4. Print "Button count: N" to UART after every valid press.
+5. On every fifth press, flash the green LED twice.
+6. After count 20, wrap back to zero.
+Concepts: GPIO edge detection by polling, debounce, counters, UART, LED.
+Reference: examples/GPIO/GPIO_Polling/main.c
+
+QUESTION 17: UART-CONTROLLED LED AUTO-OFF TIMER (MEDIUM)
+-------------------------------------------------------
+Switch an LED on with a UART command and turn it off automatically.
+Tasks:
+1. Initialize UART0, Timer 0, and the onboard blue LED.
+2. On command 'o', turn the blue LED ON.
+3. Start a 5-second countdown using a 1-second periodic timer interrupt.
+4. Turn the LED OFF when 5 seconds have elapsed.
+5. On 'o' again, restart the 5-second countdown.
+6. On command 's', print whether the LED is ON or OFF.
+7. Keep the timer callback short; carry out LED and UART work in main().
+Concepts: UART commands, timer interrupts, state flags, GPIO.
+Reference: examples/Timer/TimerInterrupt/timer_int.c
+
+SUBMISSION FOR EACH QUESTION
+----------------------------
+- main.c
+- Makefile
+- Successful compilation output
+- UART output screenshot or brief test observation
+- Short explanation of the logic
+
+NOTES
+-----
+Confirm board-specific pin mappings and timer settings in your Lyra SDK.
+All exercises intentionally exclude PWM, SPI and I2C.
