@@ -1,0 +1,160 @@
+GAS LISTING /tmp/ccvZuwvt.s 			page 1
+
+
+   1              		.file	"q1.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_zicsr2p0_zifencei2p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              		.section	.rodata.UART_Transmit_User.str1.4,"aMS",@progbits,1
+   8              		.align	2
+   9              	.LC0:
+  10 0000 636F756E 		.string	"counter : %d\r\n"
+  10      74657220 
+  10      3A202564 
+  10      0D0A00
+  11              		.section	.text.UART_Transmit_User,"ax",@progbits
+  12              		.align	2
+  13              		.globl	UART_Transmit_User
+  15              	UART_Transmit_User:
+  16 0000 130101FF 		addi	sp,sp,-16
+  17 0004 23261100 		sw	ra,12(sp)
+  18 0008 23248100 		sw	s0,8(sp)
+  19 000c 13040500 		mv	s0,a0
+  20 0010 93860500 		mv	a3,a1
+  21 0014 17060000 		lla	a2,.LC0
+  21      13060600 
+  22 001c 9305F000 		li	a1,15
+  23 0020 97000000 		call	snprintf
+  23      E7800000 
+  24 0028 634AA000 		bgt	a0,zero,.L4
+  25              	.L1:
+  26 002c 8320C100 		lw	ra,12(sp)
+  27 0030 03248100 		lw	s0,8(sp)
+  28 0034 13010101 		addi	sp,sp,16
+  29 0038 67800000 		jr	ra
+  30              	.L4:
+  31 003c 1306F000 		li	a2,15
+  32 0040 93050400 		mv	a1,s0
+  33 0044 17050000 		lla	a0,huart0
+  33      13050500 
+  34 004c 97000000 		call	UART_Transmit
+  34      E7800000 
+  35 0054 13052003 		li	a0,50
+  36 0058 97000000 		call	delayms
+  36      E7800000 
+  37 0060 6FF0DFFC 		j	.L1
+  39              		.section	.rodata.main.str1.4,"aMS",@progbits,1
+  40              		.align	2
+  41              	.LC1:
+  42 0000 4C696D69 		.string	"Limit Reached!\r\n"
+  42      74205265 
+  42      61636865 
+  42      64210D0A 
+  42      00
+  43              		.section	.text.main,"ax",@progbits
+  44              		.align	2
+  45              		.globl	main
+  47              	main:
+  48 0000 130101FE 		addi	sp,sp,-32
+GAS LISTING /tmp/ccvZuwvt.s 			page 2
+
+
+  49 0004 232E1100 		sw	ra,28(sp)
+  50 0008 232C8100 		sw	s0,24(sp)
+  51 000c 17050000 		lla	a0,huart0
+  51      13050500 
+  52 0014 97000000 		call	UART_Init
+  52      E7800000 
+  53 001c 13040000 		li	s0,0
+  54 0020 6F00C005 		j	.L6
+  55              	.L12:
+  56 0024 13073001 		li	a4,19
+  57 0028 636C8706 		bgtu	s0,a4,.L7
+  58 002c 13041400 		addi	s0,s0,1
+  59 0030 1374F40F 		andi	s0,s0,0xff
+  60 0034 93050400 		mv	a1,s0
+  61 0038 13050100 		mv	a0,sp
+  62 003c 97000000 		call	UART_Transmit_User
+  62      E7800000 
+  63 0044 6F008003 		j	.L6
+  64              	.L13:
+  65 0048 63000406 		beq	s0,zero,.L9
+  66 004c 1304F4FF 		addi	s0,s0,-1
+  67 0050 1374F40F 		andi	s0,s0,0xff
+  68 0054 93050400 		mv	a1,s0
+  69 0058 13050100 		mv	a0,sp
+  70 005c 97000000 		call	UART_Transmit_User
+  70      E7800000 
+  71 0064 6F008001 		j	.L6
+  72              	.L14:
+  73 0068 93050000 		li	a1,0
+  74 006c 13050100 		mv	a0,sp
+  75 0070 97000000 		call	UART_Transmit_User
+  75      E7800000 
+  76 0078 13040000 		li	s0,0
+  77              	.L6:
+  78 007c 13061000 		li	a2,1
+  79 0080 9305F100 		addi	a1,sp,15
+  80 0084 17050000 		lla	a0,huart0
+  80      13050500 
+  81 008c 97000000 		call	UART_Receive
+  81      E7800000 
+  82 0094 8347F100 		lbu	a5,15(sp)
+  83 0098 1307B002 		li	a4,43
+  84 009c E384E7F8 		beq	a5,a4,.L12
+  85              	.L7:
+  86 00a0 1307D002 		li	a4,45
+  87 00a4 E382E7FA 		beq	a5,a4,.L13
+  88              	.L9:
+  89 00a8 13072007 		li	a4,114
+  90 00ac E38EE7FA 		beq	a5,a4,.L14
+  91 00b0 1306F000 		li	a2,15
+  92 00b4 97050000 		lla	a1,.LC1
+  92      93850500 
+  93 00bc 17050000 		lla	a0,huart0
+  93      13050500 
+  94 00c4 97000000 		call	UART_Transmit
+  94      E7800000 
+  95 00cc 13052003 		li	a0,50
+GAS LISTING /tmp/ccvZuwvt.s 			page 3
+
+
+  96 00d0 97000000 		call	delayms
+  96      E7800000 
+  97 00d8 6FF05FFA 		j	.L6
+  99              		.ident	"GCC: (xPack GNU RISC-V Embedded GCC x86_64) 13.2.0"
+GAS LISTING /tmp/ccvZuwvt.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 q1.c
+     /tmp/ccvZuwvt.s:15     .text.UART_Transmit_User:00000000 UART_Transmit_User
+     /tmp/ccvZuwvt.s:16     .text.UART_Transmit_User:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/ccvZuwvt.s:47     .text.main:00000000 main
+     /tmp/ccvZuwvt.s:48     .text.main:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/ccvZuwvt.s:9      .rodata.UART_Transmit_User.str1.4:00000000 .LC0
+     /tmp/ccvZuwvt.s:21     .text.UART_Transmit_User:00000014 .L0 
+     /tmp/ccvZuwvt.s:33     .text.UART_Transmit_User:00000044 .L0 
+     /tmp/ccvZuwvt.s:30     .text.UART_Transmit_User:0000003c .L4
+     /tmp/ccvZuwvt.s:25     .text.UART_Transmit_User:0000002c .L1
+     /tmp/ccvZuwvt.s:51     .text.main:0000000c .L0 
+     /tmp/ccvZuwvt.s:80     .text.main:00000084 .L0 
+     /tmp/ccvZuwvt.s:41     .rodata.main.str1.4:00000000 .LC1
+     /tmp/ccvZuwvt.s:92     .text.main:000000b4 .L0 
+     /tmp/ccvZuwvt.s:93     .text.main:000000bc .L0 
+     /tmp/ccvZuwvt.s:77     .text.main:0000007c .L6
+     /tmp/ccvZuwvt.s:85     .text.main:000000a0 .L7
+     /tmp/ccvZuwvt.s:88     .text.main:000000a8 .L9
+     /tmp/ccvZuwvt.s:55     .text.main:00000024 .L12
+     /tmp/ccvZuwvt.s:64     .text.main:00000048 .L13
+     /tmp/ccvZuwvt.s:72     .text.main:00000068 .L14
+
+UNDEFINED SYMBOLS
+snprintf
+huart0
+UART_Transmit
+delayms
+UART_Init
+UART_Receive

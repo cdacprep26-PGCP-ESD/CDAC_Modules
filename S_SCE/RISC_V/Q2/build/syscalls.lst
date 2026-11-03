@@ -1,0 +1,248 @@
+GAS LISTING /tmp/ccIxgJpB.s 			page 1
+
+
+   1              		.file	"syscalls.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_zicsr2p0_zifencei2p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              		.section	.text._kill,"ax",@progbits
+   8              		.align	2
+   9              		.globl	_kill
+  11              	_kill:
+  12 0000 130101FF 		addi	sp,sp,-16
+  13 0004 23261100 		sw	ra,12(sp)
+  14 0008 97000000 		call	__errno
+  14      E7800000 
+  15 0010 93076001 		li	a5,22
+  16 0014 2320F500 		sw	a5,0(a0)
+  17 0018 1305F0FF 		li	a0,-1
+  18 001c 8320C100 		lw	ra,12(sp)
+  19 0020 13010101 		addi	sp,sp,16
+  20 0024 67800000 		jr	ra
+  22              		.section	.text._exit,"ax",@progbits
+  23              		.align	2
+  24              		.globl	_exit
+  26              	_exit:
+  27 0000 130101FF 		addi	sp,sp,-16
+  28 0004 23261100 		sw	ra,12(sp)
+  29 0008 9305F0FF 		li	a1,-1
+  30 000c 97000000 		call	_kill
+  30      E7800000 
+  31              	.L4:
+  32 0014 6F000000 		j	.L4
+  34              		.section	.text._read,"ax",@progbits
+  35              		.align	2
+  36              		.weak	_read
+  38              	_read:
+  39 0000 130101FF 		addi	sp,sp,-16
+  40 0004 23261100 		sw	ra,12(sp)
+  41 0008 23248100 		sw	s0,8(sp)
+  42 000c 13040600 		mv	s0,a2
+  43 0010 17050000 		lla	a0,huart0
+  43      13050500 
+  44 0018 97000000 		call	UART_Receive
+  44      E7800000 
+  45 0020 13050400 		mv	a0,s0
+  46 0024 8320C100 		lw	ra,12(sp)
+  47 0028 03248100 		lw	s0,8(sp)
+  48 002c 13010101 		addi	sp,sp,16
+  49 0030 67800000 		jr	ra
+  51              		.section	.text._write,"ax",@progbits
+  52              		.align	2
+  53              		.weak	_write
+  55              	_write:
+  56 0000 130101FF 		addi	sp,sp,-16
+  57 0004 23261100 		sw	ra,12(sp)
+  58 0008 23248100 		sw	s0,8(sp)
+  59 000c 13040600 		mv	s0,a2
+  60 0010 17050000 		lla	a0,huart0
+GAS LISTING /tmp/ccIxgJpB.s 			page 2
+
+
+  60      13050500 
+  61 0018 97000000 		call	UART_Transmit
+  61      E7800000 
+  62 0020 13050400 		mv	a0,s0
+  63 0024 8320C100 		lw	ra,12(sp)
+  64 0028 03248100 		lw	s0,8(sp)
+  65 002c 13010101 		addi	sp,sp,16
+  66 0030 67800000 		jr	ra
+  68              		.section	.text._close,"ax",@progbits
+  69              		.align	2
+  70              		.globl	_close
+  72              	_close:
+  73 0000 1305F0FF 		li	a0,-1
+  74 0004 67800000 		ret
+  76              		.section	.text._fstat,"ax",@progbits
+  77              		.align	2
+  78              		.globl	_fstat
+  80              	_fstat:
+  81 0000 B7270000 		li	a5,8192
+  82 0004 23A2F500 		sw	a5,4(a1)
+  83 0008 13050000 		li	a0,0
+  84 000c 67800000 		ret
+  86              		.section	.text._isatty,"ax",@progbits
+  87              		.align	2
+  88              		.globl	_isatty
+  90              	_isatty:
+  91 0000 13051000 		li	a0,1
+  92 0004 67800000 		ret
+  94              		.section	.text._lseek,"ax",@progbits
+  95              		.align	2
+  96              		.globl	_lseek
+  98              	_lseek:
+  99 0000 13050000 		li	a0,0
+ 100 0004 67800000 		ret
+ 102              		.section	.text._open,"ax",@progbits
+ 103              		.align	2
+ 104              		.globl	_open
+ 106              	_open:
+ 107 0000 130101FE 		addi	sp,sp,-32
+ 108 0004 2324C100 		sw	a2,8(sp)
+ 109 0008 2326D100 		sw	a3,12(sp)
+ 110 000c 2328E100 		sw	a4,16(sp)
+ 111 0010 232AF100 		sw	a5,20(sp)
+ 112 0014 232C0101 		sw	a6,24(sp)
+ 113 0018 232E1101 		sw	a7,28(sp)
+ 114 001c 1305F0FF 		li	a0,-1
+ 115 0020 13010102 		addi	sp,sp,32
+ 116 0024 67800000 		jr	ra
+ 118              		.section	.text._wait,"ax",@progbits
+ 119              		.align	2
+ 120              		.globl	_wait
+ 122              	_wait:
+ 123 0000 130101FF 		addi	sp,sp,-16
+ 124 0004 23261100 		sw	ra,12(sp)
+ 125 0008 97000000 		call	__errno
+ 125      E7800000 
+ 126 0010 9307A000 		li	a5,10
+GAS LISTING /tmp/ccIxgJpB.s 			page 3
+
+
+ 127 0014 2320F500 		sw	a5,0(a0)
+ 128 0018 1305F0FF 		li	a0,-1
+ 129 001c 8320C100 		lw	ra,12(sp)
+ 130 0020 13010101 		addi	sp,sp,16
+ 131 0024 67800000 		jr	ra
+ 133              		.section	.text._unlink,"ax",@progbits
+ 134              		.align	2
+ 135              		.globl	_unlink
+ 137              	_unlink:
+ 138 0000 130101FF 		addi	sp,sp,-16
+ 139 0004 23261100 		sw	ra,12(sp)
+ 140 0008 97000000 		call	__errno
+ 140      E7800000 
+ 141 0010 93072000 		li	a5,2
+ 142 0014 2320F500 		sw	a5,0(a0)
+ 143 0018 1305F0FF 		li	a0,-1
+ 144 001c 8320C100 		lw	ra,12(sp)
+ 145 0020 13010101 		addi	sp,sp,16
+ 146 0024 67800000 		jr	ra
+ 148              		.section	.text._times,"ax",@progbits
+ 149              		.align	2
+ 150              		.globl	_times
+ 152              	_times:
+ 153 0000 1305F0FF 		li	a0,-1
+ 154 0004 67800000 		ret
+ 156              		.section	.text._stat,"ax",@progbits
+ 157              		.align	2
+ 158              		.globl	_stat
+ 160              	_stat:
+ 161 0000 B7270000 		li	a5,8192
+ 162 0004 23A2F500 		sw	a5,4(a1)
+ 163 0008 13050000 		li	a0,0
+ 164 000c 67800000 		ret
+ 166              		.section	.text._link,"ax",@progbits
+ 167              		.align	2
+ 168              		.globl	_link
+ 170              	_link:
+ 171 0000 130101FF 		addi	sp,sp,-16
+ 172 0004 23261100 		sw	ra,12(sp)
+ 173 0008 97000000 		call	__errno
+ 173      E7800000 
+ 174 0010 9307F001 		li	a5,31
+ 175 0014 2320F500 		sw	a5,0(a0)
+ 176 0018 1305F0FF 		li	a0,-1
+ 177 001c 8320C100 		lw	ra,12(sp)
+ 178 0020 13010101 		addi	sp,sp,16
+ 179 0024 67800000 		jr	ra
+ 181              		.section	.text._fork,"ax",@progbits
+ 182              		.align	2
+ 183              		.globl	_fork
+ 185              	_fork:
+ 186 0000 130101FF 		addi	sp,sp,-16
+ 187 0004 23261100 		sw	ra,12(sp)
+ 188 0008 97000000 		call	__errno
+ 188      E7800000 
+ 189 0010 9307B000 		li	a5,11
+ 190 0014 2320F500 		sw	a5,0(a0)
+GAS LISTING /tmp/ccIxgJpB.s 			page 4
+
+
+ 191 0018 1305F0FF 		li	a0,-1
+ 192 001c 8320C100 		lw	ra,12(sp)
+ 193 0020 13010101 		addi	sp,sp,16
+ 194 0024 67800000 		jr	ra
+ 196              		.section	.text._execve,"ax",@progbits
+ 197              		.align	2
+ 198              		.globl	_execve
+ 200              	_execve:
+ 201 0000 130101FF 		addi	sp,sp,-16
+ 202 0004 23261100 		sw	ra,12(sp)
+ 203 0008 97000000 		call	__errno
+ 203      E7800000 
+ 204 0010 9307C000 		li	a5,12
+ 205 0014 2320F500 		sw	a5,0(a0)
+ 206 0018 1305F0FF 		li	a0,-1
+ 207 001c 8320C100 		lw	ra,12(sp)
+ 208 0020 13010101 		addi	sp,sp,16
+ 209 0024 67800000 		jr	ra
+ 211              		.ident	"GCC: (xPack GNU RISC-V Embedded GCC x86_64) 13.2.0"
+GAS LISTING /tmp/ccIxgJpB.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 syscalls.c
+     /tmp/ccIxgJpB.s:11     .text._kill:00000000 _kill
+     /tmp/ccIxgJpB.s:12     .text._kill:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/ccIxgJpB.s:26     .text._exit:00000000 _exit
+     /tmp/ccIxgJpB.s:27     .text._exit:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/ccIxgJpB.s:38     .text._read:00000000 _read
+     /tmp/ccIxgJpB.s:39     .text._read:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/ccIxgJpB.s:55     .text._write:00000000 _write
+     /tmp/ccIxgJpB.s:56     .text._write:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/ccIxgJpB.s:72     .text._close:00000000 _close
+     /tmp/ccIxgJpB.s:73     .text._close:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/ccIxgJpB.s:80     .text._fstat:00000000 _fstat
+     /tmp/ccIxgJpB.s:81     .text._fstat:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/ccIxgJpB.s:90     .text._isatty:00000000 _isatty
+     /tmp/ccIxgJpB.s:91     .text._isatty:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/ccIxgJpB.s:98     .text._lseek:00000000 _lseek
+     /tmp/ccIxgJpB.s:99     .text._lseek:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/ccIxgJpB.s:106    .text._open:00000000 _open
+     /tmp/ccIxgJpB.s:107    .text._open:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/ccIxgJpB.s:122    .text._wait:00000000 _wait
+     /tmp/ccIxgJpB.s:123    .text._wait:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/ccIxgJpB.s:137    .text._unlink:00000000 _unlink
+     /tmp/ccIxgJpB.s:138    .text._unlink:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/ccIxgJpB.s:152    .text._times:00000000 _times
+     /tmp/ccIxgJpB.s:153    .text._times:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/ccIxgJpB.s:160    .text._stat:00000000 _stat
+     /tmp/ccIxgJpB.s:161    .text._stat:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/ccIxgJpB.s:170    .text._link:00000000 _link
+     /tmp/ccIxgJpB.s:171    .text._link:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/ccIxgJpB.s:185    .text._fork:00000000 _fork
+     /tmp/ccIxgJpB.s:186    .text._fork:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/ccIxgJpB.s:200    .text._execve:00000000 _execve
+     /tmp/ccIxgJpB.s:201    .text._execve:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/ccIxgJpB.s:31     .text._exit:00000014 .L4
+     /tmp/ccIxgJpB.s:43     .text._read:00000010 .L0 
+     /tmp/ccIxgJpB.s:60     .text._write:00000010 .L0 
+
+UNDEFINED SYMBOLS
+__errno
+huart0
+UART_Receive
+UART_Transmit

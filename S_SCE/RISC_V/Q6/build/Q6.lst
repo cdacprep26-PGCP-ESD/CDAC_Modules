@@ -1,0 +1,147 @@
+GAS LISTING /tmp/cc1IKwPs.s 			page 1
+
+
+   1              		.file	"Q6.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_zicsr2p0_zifencei2p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              		.section	.rodata.main.str1.4,"aMS",@progbits,1
+   8              		.align	2
+   9              	.LC0:
+  10 0000 42757474 		.string	"Button Count : %d\r\n"
+  10      6F6E2043 
+  10      6F756E74 
+  10      203A2025 
+  10      640D0A00 
+  11              		.section	.text.main,"ax",@progbits
+  12              		.align	2
+  13              		.globl	main
+  15              	main:
+  16 0000 130101FD 		addi	sp,sp,-48
+  17 0004 23261102 		sw	ra,44(sp)
+  18 0008 23248102 		sw	s0,40(sp)
+  19 000c 23229102 		sw	s1,36(sp)
+  20 0010 13060000 		li	a2,0
+  21 0014 93053000 		li	a1,3
+  22 0018 13051000 		li	a0,1
+  23 001c 97000000 		call	GPIO_Init
+  23      E7800000 
+  24 0024 13061000 		li	a2,1
+  25 0028 93056000 		li	a1,6
+  26 002c 13051000 		li	a0,1
+  27 0030 97000000 		call	GPIO_Init
+  27      E7800000 
+  28 0038 17050000 		lla	a0,huart0
+  28      13050500 
+  29 0040 97000000 		call	UART_Init
+  29      E7800000 
+  30 0048 93056000 		li	a1,6
+  31 004c 13051000 		li	a0,1
+  32 0050 97000000 		call	GPIO_SetPin
+  32      E7800000 
+  33 0058 13040000 		li	s0,0
+  34 005c 6F008000 		j	.L2
+  35              	.L11:
+  36 0060 13840400 		mv	s0,s1
+  37              	.L2:
+  38 0064 93040400 		mv	s1,s0
+  39              	.L3:
+  40 0068 93053000 		li	a1,3
+  41 006c 13051000 		li	a0,1
+  42 0070 97000000 		call	GPIO_ReadPin
+  42      E7800000 
+  43 0078 13040500 		mv	s0,a0
+  44 007c E31605FE 		bne	a0,zero,.L3
+  45 0080 13052003 		li	a0,50
+  46 0084 97000000 		call	delayms
+  46      E7800000 
+  47              	.L4:
+GAS LISTING /tmp/cc1IKwPs.s 			page 2
+
+
+  48 008c 93053000 		li	a1,3
+  49 0090 13051000 		li	a0,1
+  50 0094 97000000 		call	GPIO_ReadPin
+  50      E7800000 
+  51 009c E30805FE 		beq	a0,zero,.L4
+  52 00a0 13052003 		li	a0,50
+  53 00a4 97000000 		call	delayms
+  53      E7800000 
+  54 00ac 93841400 		addi	s1,s1,1
+  55 00b0 13860400 		mv	a2,s1
+  56 00b4 97050000 		lla	a1,.LC0
+  56      93850500 
+  57 00bc 1305C100 		addi	a0,sp,12
+  58 00c0 97000000 		call	sprintf
+  58      E7800000 
+  59 00c8 1306A001 		li	a2,26
+  60 00cc 9305C100 		addi	a1,sp,12
+  61 00d0 17050000 		lla	a0,huart0
+  61      13050500 
+  62 00d8 97000000 		call	UART_Transmit
+  62      E7800000 
+  63 00e0 93075000 		li	a5,5
+  64 00e4 B3E7F402 		rem	a5,s1,a5
+  65 00e8 63880700 		beq	a5,zero,.L10
+  66              	.L5:
+  67 00ec 93073001 		li	a5,19
+  68 00f0 E3CA97F6 		bgt	s1,a5,.L2
+  69 00f4 6FF0DFF6 		j	.L11
+  70              	.L10:
+  71 00f8 93056000 		li	a1,6
+  72 00fc 13051000 		li	a0,1
+  73 0100 97000000 		call	GPIO_ResetPin
+  73      E7800000 
+  74 0108 13052003 		li	a0,50
+  75 010c 97000000 		call	delayms
+  75      E7800000 
+  76 0114 93056000 		li	a1,6
+  77 0118 13051000 		li	a0,1
+  78 011c 97000000 		call	GPIO_SetPin
+  78      E7800000 
+  79 0124 13054006 		li	a0,100
+  80 0128 97000000 		call	delayms
+  80      E7800000 
+  81 0130 93056000 		li	a1,6
+  82 0134 13051000 		li	a0,1
+  83 0138 97000000 		call	GPIO_ResetPin
+  83      E7800000 
+  84 0140 13052003 		li	a0,50
+  85 0144 97000000 		call	delayms
+  85      E7800000 
+  86 014c 93056000 		li	a1,6
+  87 0150 13051000 		li	a0,1
+  88 0154 97000000 		call	GPIO_SetPin
+  88      E7800000 
+  89 015c 6FF01FF9 		j	.L5
+  91              		.ident	"GCC: (xPack GNU RISC-V Embedded GCC x86_64) 13.2.0"
+GAS LISTING /tmp/cc1IKwPs.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 Q6.c
+     /tmp/cc1IKwPs.s:15     .text.main:00000000 main
+     /tmp/cc1IKwPs.s:16     .text.main:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/cc1IKwPs.s:28     .text.main:00000038 .L0 
+     /tmp/cc1IKwPs.s:9      .rodata.main.str1.4:00000000 .LC0
+     /tmp/cc1IKwPs.s:56     .text.main:000000b4 .L0 
+     /tmp/cc1IKwPs.s:61     .text.main:000000d0 .L0 
+     /tmp/cc1IKwPs.s:37     .text.main:00000064 .L2
+     /tmp/cc1IKwPs.s:39     .text.main:00000068 .L3
+     /tmp/cc1IKwPs.s:47     .text.main:0000008c .L4
+     /tmp/cc1IKwPs.s:70     .text.main:000000f8 .L10
+     /tmp/cc1IKwPs.s:35     .text.main:00000060 .L11
+     /tmp/cc1IKwPs.s:66     .text.main:000000ec .L5
+
+UNDEFINED SYMBOLS
+GPIO_Init
+huart0
+UART_Init
+GPIO_SetPin
+GPIO_ReadPin
+delayms
+sprintf
+UART_Transmit
+GPIO_ResetPin

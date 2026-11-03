@@ -1,0 +1,374 @@
+GAS LISTING /tmp/ccDzpgXM.s 			page 1
+
+
+   1              		.file	"hal_interrupt.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_zicsr2p0_zifencei2p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              		.section	.text.InfiniteLoop,"ax",@progbits
+   8              		.align	2
+   9              		.globl	InfiniteLoop
+  11              	InfiniteLoop:
+  12              	.L2:
+  13 0000 6F000000 		j	.L2
+  15              		.weak	PWMChannel8_IRQHandler
+  16              		.set	PWMChannel8_IRQHandler,InfiniteLoop
+  17              		.weak	PWMChannel7_IRQHandler
+  18              		.set	PWMChannel7_IRQHandler,InfiniteLoop
+  19              		.weak	PWMChannel6_IRQHandler
+  20              		.set	PWMChannel6_IRQHandler,InfiniteLoop
+  21              		.weak	PWMChannel5_IRQHandler
+  22              		.set	PWMChannel5_IRQHandler,InfiniteLoop
+  23              		.weak	PWMChannel4_IRQHandler
+  24              		.set	PWMChannel4_IRQHandler,InfiniteLoop
+  25              		.weak	PWMChannel3_IRQHandler
+  26              		.set	PWMChannel3_IRQHandler,InfiniteLoop
+  27              		.weak	PWMChannel2_IRQHandler
+  28              		.set	PWMChannel2_IRQHandler,InfiniteLoop
+  29              		.weak	PWMChannel1_IRQHandler
+  30              		.set	PWMChannel1_IRQHandler,InfiniteLoop
+  31              		.weak	GPIO12_IRQHandler
+  32              		.set	GPIO12_IRQHandler,InfiniteLoop
+  33              		.weak	GPIO11_IRQHandler
+  34              		.set	GPIO11_IRQHandler,InfiniteLoop
+  35              		.weak	GPIO10_IRQHandler
+  36              		.set	GPIO10_IRQHandler,InfiniteLoop
+  37              		.weak	GPIO9_IRQHandler
+  38              		.set	GPIO9_IRQHandler,InfiniteLoop
+  39              		.weak	GPIO8_IRQHandler
+  40              		.set	GPIO8_IRQHandler,InfiniteLoop
+  41              		.weak	GPIO7_IRQHandler
+  42              		.set	GPIO7_IRQHandler,InfiniteLoop
+  43              		.weak	GPIO6_IRQHandler
+  44              		.set	GPIO6_IRQHandler,InfiniteLoop
+  45              		.weak	GPIO5_IRQHandler
+  46              		.set	GPIO5_IRQHandler,InfiniteLoop
+  47              		.weak	GPIO4_IRQHandler
+  48              		.set	GPIO4_IRQHandler,InfiniteLoop
+  49              		.weak	GPIO3_IRQHandler
+  50              		.set	GPIO3_IRQHandler,InfiniteLoop
+  51              		.weak	GPIO2_IRQHandler
+  52              		.set	GPIO2_IRQHandler,InfiniteLoop
+  53              		.weak	GPIO1_IRQHandler
+  54              		.set	GPIO1_IRQHandler,InfiniteLoop
+  55              		.weak	GPIO0_IRQHandler
+  56              		.set	GPIO0_IRQHandler,InfiniteLoop
+  57              		.weak	TIMER2_IRQHandler
+  58              		.set	TIMER2_IRQHandler,InfiniteLoop
+  59              		.weak	TIMER1_IRQHandler
+GAS LISTING /tmp/ccDzpgXM.s 			page 2
+
+
+  60              		.set	TIMER1_IRQHandler,InfiniteLoop
+  61              		.weak	TIMER0_IRQHandler
+  62              		.set	TIMER0_IRQHandler,InfiniteLoop
+  63              		.weak	I2C2_IRQHandler
+  64              		.set	I2C2_IRQHandler,InfiniteLoop
+  65              		.weak	I2C1_IRQHandler
+  66              		.set	I2C1_IRQHandler,InfiniteLoop
+  67              		.weak	I2C0_IRQHandler
+  68              		.set	I2C0_IRQHandler,InfiniteLoop
+  69              		.weak	SPI2_IRQHandler
+  70              		.set	SPI2_IRQHandler,InfiniteLoop
+  71              		.weak	SPI1_IRQHandler
+  72              		.set	SPI1_IRQHandler,InfiniteLoop
+  73              		.weak	SPI0_IRQHandler
+  74              		.set	SPI0_IRQHandler,InfiniteLoop
+  75              		.weak	UART2_IRQHandler
+  76              		.set	UART2_IRQHandler,InfiniteLoop
+  77              		.weak	UART1_IRQHandler
+  78              		.set	UART1_IRQHandler,InfiniteLoop
+  79              		.weak	UART0_IRQHandler
+  80              		.set	UART0_IRQHandler,InfiniteLoop
+  81              		.section	.text.__enable_irq,"ax",@progbits
+  82              		.align	2
+  83              		.globl	__enable_irq
+  85              	__enable_irq:
+  86 0000 B7170000 		li	a5,4096
+  87 0004 93870780 		addi	a5,a5,-2048
+  88              	 #APP
+  89              	# 53 "/opt/Lyra/drivers/hal_interrupt.c" 1
+   1              	/** @file hal_interrupt.c
+   2              	 *  @brief Interrupt handler routines for THEJAS32
+   3              	 *  @author Arif B <arif.dev@pm.me>
+   4              	 */
+   5              	
+   6              	#include <stdint.h>
+   7              	#include <vega/csr.h>
+   8              	#include <vega/interrupt.h>
+   9              	#include <vega/thejas32.h>
+  10              	
+  11              	
+  12              	/* Platform-Level Interrupt Controller - vector table */
+  13              	
+  14              	static void (* plic_vtable[32])(void) = {
+  15              	    UART0_IRQHandler,
+  16              	    UART1_IRQHandler,
+  17              	    UART2_IRQHandler,
+  18              	    SPI0_IRQHandler,
+  19              	    SPI1_IRQHandler,
+  20              	    I2C0_IRQHandler,
+  21              	    I2C1_IRQHandler,
+  22              	    TIMER0_IRQHandler,
+  23              	    TIMER1_IRQHandler,
+  24              	    TIMER2_IRQHandler,
+  25              	    GPIO0_IRQHandler,
+  26              	    GPIO1_IRQHandler,
+  27              	    GPIO2_IRQHandler,
+  28              	    GPIO3_IRQHandler,
+GAS LISTING /tmp/ccDzpgXM.s 			page 3
+
+
+  29              	    GPIO4_IRQHandler,
+  30              	    GPIO5_IRQHandler,
+  31              	    GPIO6_IRQHandler,
+  32              	    GPIO7_IRQHandler,
+  33              	    GPIO8_IRQHandler,
+  34              	    GPIO9_IRQHandler,
+  35              	    GPIO10_IRQHandler,
+  36              	    GPIO11_IRQHandler,
+  37              	    I2C2_IRQHandler,
+  38              	    SPI2_IRQHandler,
+  39              	    PWMChannel1_IRQHandler,
+  40              	    PWMChannel2_IRQHandler,
+  41              	    PWMChannel3_IRQHandler,
+  42              	    PWMChannel4_IRQHandler,
+  43              	    PWMChannel5_IRQHandler,
+  44              	    PWMChannel6_IRQHandler,
+  45              	    PWMChannel7_IRQHandler,
+  46              	    PWMChannel8_IRQHandler,
+  47              	};
+  48              	
+  49              	/*-------------------------------------------------------------------------------------------------
+  50              	
+  51              	void __enable_irq(void)
+  52              	{
+  53 0008 F3A74730 	    csr_setbit(mie, MIE_EIE);
+  54              	    csr_setbit(mstatus, MSTATUS_MIE);
+  90              		csrrs a5, mie, a5
+  91              	# 0 "" 2
+  92              	# 54 "/opt/Lyra/drivers/hal_interrupt.c" 1
+  55              	}
+  93              		csrrs a5, mstatus, 8
+  94              	# 0 "" 2
+  95              	 #NO_APP
+  96 0010 67800000 		ret
+  98              		.section	.text.__disable_irq,"ax",@progbits
+  99              		.align	2
+ 100              		.globl	__disable_irq
+ 102              	__disable_irq:
+ 103 0000 B7170000 		li	a5,4096
+ 104 0004 93870780 		addi	a5,a5,-2048
+ 105              	 #APP
+ 106              	# 61 "/opt/Lyra/drivers/hal_interrupt.c" 1
+  56              	
+  57              	/*-------------------------------------------------------------------------------------------------
+  58              	
+  59              	void __disable_irq(void)
+  60              	{
+  61 0008 F3B74730 	    csr_clrbit(mie, MIE_EIE);
+  62              	    csr_clrbit(mstatus, MSTATUS_MIE);
+ 107              		csrrc a5, mie, a5
+ 108              	# 0 "" 2
+ 109              	# 62 "/opt/Lyra/drivers/hal_interrupt.c" 1
+  63              	}
+ 110              		csrrc a5, mstatus, 8
+ 111              	# 0 "" 2
+ 112              	 #NO_APP
+ 113 0010 67800000 		ret
+GAS LISTING /tmp/ccDzpgXM.s 			page 4
+
+
+ 115              		.section	.text._exception_handler,"ax",@progbits
+ 116              		.align	2
+ 117              		.weak	_exception_handler
+ 119              	_exception_handler:
+ 120 0000 67800000 		ret
+ 122              		.section	.text._interrupt_handler,"ax",@progbits
+ 123              		.align	2
+ 124              		.globl	_interrupt_handler
+ 126              	_interrupt_handler:
+ 127 0000 130101FF 		addi	sp,sp,-16
+ 128 0004 23261100 		sw	ra,12(sp)
+ 129 0008 23248100 		sw	s0,8(sp)
+ 130 000c 23229100 		sw	s1,4(sp)
+ 131 0010 B7070120 		li	a5,536936448
+ 132 0014 83A40701 		lw	s1,16(a5)
+ 133 0018 13040000 		li	s0,0
+ 134 001c 6F008000 		j	.L7
+ 135              	.L8:
+ 136 0020 13041400 		addi	s0,s0,1
+ 137              	.L7:
+ 138 0024 9307F001 		li	a5,31
+ 139 0028 63E68702 		bgtu	s0,a5,.L11
+ 140 002c B3D78400 		srl	a5,s1,s0
+ 141 0030 93F71700 		andi	a5,a5,1
+ 142 0034 E38607FE 		beq	a5,zero,.L8
+ 143 0038 13172400 		slli	a4,s0,2
+ 144 003c 97070000 		lla	a5,plic_vtable
+ 144      93870700 
+ 145 0044 B387E700 		add	a5,a5,a4
+ 146 0048 83A70700 		lw	a5,0(a5)
+ 147 004c E7800700 		jalr	a5
+ 148 0050 6FF01FFD 		j	.L8
+ 149              	.L11:
+ 150 0054 8320C100 		lw	ra,12(sp)
+ 151 0058 03248100 		lw	s0,8(sp)
+ 152 005c 83244100 		lw	s1,4(sp)
+ 153 0060 13010101 		addi	sp,sp,16
+ 154 0064 67800000 		jr	ra
+ 156              		.section	.text._trap_handler,"ax",@progbits
+ 157              		.align	2
+ 158              		.globl	_trap_handler
+ 160              	_trap_handler:
+ 161 0000 130101FF 		addi	sp,sp,-16
+ 162 0004 23261100 		sw	ra,12(sp)
+ 163              	 #APP
+ 164              	# 88 "/opt/Lyra/drivers/hal_interrupt.c" 1
+  64              	
+  65              	/*-------------------------------------------------------------------------------------------------
+  66              	
+  67              	__attribute__((weak))void _exception_handler(void)
+  68              	{
+  69              	    return;
+  70              	}
+  71              	
+  72              	void _interrupt_handler(void)
+  73              	{
+  74              	    uint32_t intstat = PLIC->ISR;
+GAS LISTING /tmp/ccDzpgXM.s 			page 5
+
+
+  75              	
+  76              	    for (uint32_t i = 0; i < 32; i++) {
+  77              	        if ((intstat >> i) & 0x1UL) {
+  78              	            // Call ISR for each triggered interrupt, according to priority
+  79              	            plic_vtable[i]();
+  80              	        }
+  81              	    }
+  82              	}
+  83              	
+  84              	void _trap_handler(void)
+  85              	{
+  86              	    int cause;
+  87              	
+  88 0008 F3272034 	    cause = (csr_read(mcause) >> 31);
+  89              	
+ 165              		csrr a5, mcause
+ 166              	# 0 "" 2
+ 167              	 #NO_APP
+ 168 000c 63DC0700 		bge	a5,zero,.L13
+ 169 0010 97000000 		call	_interrupt_handler
+ 169      E7800000 
+ 170              	.L12:
+ 171 0018 8320C100 		lw	ra,12(sp)
+ 172 001c 13010101 		addi	sp,sp,16
+ 173 0020 67800000 		jr	ra
+ 174              	.L13:
+ 175 0024 97000000 		call	_exception_handler
+ 175      E7800000 
+ 176 002c 6FF0DFFE 		j	.L12
+ 178              		.section	.rodata.plic_vtable,"a"
+ 179              		.align	2
+ 182              	plic_vtable:
+ 183 0000 00000000 		.word	UART0_IRQHandler
+ 184 0004 00000000 		.word	UART1_IRQHandler
+ 185 0008 00000000 		.word	UART2_IRQHandler
+ 186 000c 00000000 		.word	SPI0_IRQHandler
+ 187 0010 00000000 		.word	SPI1_IRQHandler
+ 188 0014 00000000 		.word	I2C0_IRQHandler
+ 189 0018 00000000 		.word	I2C1_IRQHandler
+ 190 001c 00000000 		.word	TIMER0_IRQHandler
+ 191 0020 00000000 		.word	TIMER1_IRQHandler
+ 192 0024 00000000 		.word	TIMER2_IRQHandler
+ 193 0028 00000000 		.word	GPIO0_IRQHandler
+ 194 002c 00000000 		.word	GPIO1_IRQHandler
+ 195 0030 00000000 		.word	GPIO2_IRQHandler
+ 196 0034 00000000 		.word	GPIO3_IRQHandler
+ 197 0038 00000000 		.word	GPIO4_IRQHandler
+ 198 003c 00000000 		.word	GPIO5_IRQHandler
+ 199 0040 00000000 		.word	GPIO6_IRQHandler
+ 200 0044 00000000 		.word	GPIO7_IRQHandler
+ 201 0048 00000000 		.word	GPIO8_IRQHandler
+ 202 004c 00000000 		.word	GPIO9_IRQHandler
+ 203 0050 00000000 		.word	GPIO10_IRQHandler
+ 204 0054 00000000 		.word	GPIO11_IRQHandler
+ 205 0058 00000000 		.word	I2C2_IRQHandler
+ 206 005c 00000000 		.word	SPI2_IRQHandler
+ 207 0060 00000000 		.word	PWMChannel1_IRQHandler
+GAS LISTING /tmp/ccDzpgXM.s 			page 6
+
+
+ 208 0064 00000000 		.word	PWMChannel2_IRQHandler
+ 209 0068 00000000 		.word	PWMChannel3_IRQHandler
+ 210 006c 00000000 		.word	PWMChannel4_IRQHandler
+ 211 0070 00000000 		.word	PWMChannel5_IRQHandler
+ 212 0074 00000000 		.word	PWMChannel6_IRQHandler
+ 213 0078 00000000 		.word	PWMChannel7_IRQHandler
+ 214 007c 00000000 		.word	PWMChannel8_IRQHandler
+ 215              		.ident	"GCC: (xPack GNU RISC-V Embedded GCC x86_64) 13.2.0"
+GAS LISTING /tmp/ccDzpgXM.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 hal_interrupt.c
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 InfiniteLoop
+     /tmp/ccDzpgXM.s:13     .text.InfiniteLoop:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 PWMChannel8_IRQHandler
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 PWMChannel7_IRQHandler
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 PWMChannel6_IRQHandler
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 PWMChannel5_IRQHandler
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 PWMChannel4_IRQHandler
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 PWMChannel3_IRQHandler
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 PWMChannel2_IRQHandler
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 PWMChannel1_IRQHandler
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 GPIO12_IRQHandler
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 GPIO11_IRQHandler
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 GPIO10_IRQHandler
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 GPIO9_IRQHandler
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 GPIO8_IRQHandler
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 GPIO7_IRQHandler
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 GPIO6_IRQHandler
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 GPIO5_IRQHandler
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 GPIO4_IRQHandler
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 GPIO3_IRQHandler
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 GPIO2_IRQHandler
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 GPIO1_IRQHandler
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 GPIO0_IRQHandler
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 TIMER2_IRQHandler
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 TIMER1_IRQHandler
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 TIMER0_IRQHandler
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 I2C2_IRQHandler
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 I2C1_IRQHandler
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 I2C0_IRQHandler
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 SPI2_IRQHandler
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 SPI1_IRQHandler
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 SPI0_IRQHandler
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 UART2_IRQHandler
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 UART1_IRQHandler
+     /tmp/ccDzpgXM.s:11     .text.InfiniteLoop:00000000 UART0_IRQHandler
+     /tmp/ccDzpgXM.s:85     .text.__enable_irq:00000000 __enable_irq
+     /tmp/ccDzpgXM.s:86     .text.__enable_irq:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/ccDzpgXM.s:102    .text.__disable_irq:00000000 __disable_irq
+     /tmp/ccDzpgXM.s:103    .text.__disable_irq:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/ccDzpgXM.s:119    .text._exception_handler:00000000 _exception_handler
+     /tmp/ccDzpgXM.s:120    .text._exception_handler:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/ccDzpgXM.s:126    .text._interrupt_handler:00000000 _interrupt_handler
+     /tmp/ccDzpgXM.s:127    .text._interrupt_handler:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/ccDzpgXM.s:182    .rodata.plic_vtable:00000000 plic_vtable
+     /tmp/ccDzpgXM.s:160    .text._trap_handler:00000000 _trap_handler
+     /tmp/ccDzpgXM.s:161    .text._trap_handler:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/ccDzpgXM.s:12     .text.InfiniteLoop:00000000 .L2
+     /tmp/ccDzpgXM.s:144    .text._interrupt_handler:0000003c .L0 
+     /tmp/ccDzpgXM.s:137    .text._interrupt_handler:00000024 .L7
+     /tmp/ccDzpgXM.s:149    .text._interrupt_handler:00000054 .L11
+     /tmp/ccDzpgXM.s:135    .text._interrupt_handler:00000020 .L8
+     /tmp/ccDzpgXM.s:174    .text._trap_handler:00000024 .L13
+     /tmp/ccDzpgXM.s:170    .text._trap_handler:00000018 .L12
+
+NO UNDEFINED SYMBOLS
+GAS LISTING /tmp/ccDzpgXM.s 			page 8
+
+

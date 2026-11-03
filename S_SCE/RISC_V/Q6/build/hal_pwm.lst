@@ -1,0 +1,185 @@
+GAS LISTING /tmp/ccSgIR6s.s 			page 1
+
+
+   1              		.file	"hal_pwm.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_zicsr2p0_zifencei2p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              		.section	.text.PWM_Init,"ax",@progbits
+   8              		.align	2
+   9              		.globl	PWM_Init
+  11              	PWM_Init:
+  12 0000 130101FF 		addi	sp,sp,-16
+  13 0004 23261100 		sw	ra,12(sp)
+  14 0008 63080508 		beq	a0,zero,.L15
+  15 000c 03270500 		lw	a4,0(a0)
+  16 0010 6300070A 		beq	a4,zero,.L16
+  17 0014 83264501 		lw	a3,20(a0)
+  18 0018 B717CA00 		li	a5,13242368
+  19 001c 9387D71E 		addi	a5,a5,493
+  20 0020 638AF610 		beq	a3,a5,.L12
+  21 0024 B717CA00 		li	a5,13242368
+  22 0028 9387D71E 		addi	a5,a5,493
+  23 002c 232AF500 		sw	a5,20(a0)
+  24 0030 23200700 		sw	zero,0(a4)
+  25 0034 83270500 		lw	a5,0(a0)
+  26 0038 03278500 		lw	a4,8(a0)
+  27 003c 23A4E700 		sw	a4,8(a5)
+  28 0040 83270500 		lw	a5,0(a0)
+  29 0044 0327C500 		lw	a4,12(a0)
+  30 0048 23A6E700 		sw	a4,12(a5)
+  31 004c 83274500 		lw	a5,4(a0)
+  32 0050 13071000 		li	a4,1
+  33 0054 638AE706 		beq	a5,a4,.L5
+  34 0058 13072000 		li	a4,2
+  35 005c 6380E708 		beq	a5,a4,.L6
+  36 0060 63980708 		bne	a5,zero,.L7
+  37 0064 83270500 		lw	a5,0(a0)
+  38 0068 03A70700 		lw	a4,0(a5)
+  39 006c 23A0E700 		sw	a4,0(a5)
+  40              	.L8:
+  41 0070 83270501 		lw	a5,16(a0)
+  42 0074 638A0708 		beq	a5,zero,.L9
+  43 0078 13071000 		li	a4,1
+  44 007c 6380E70A 		beq	a5,a4,.L10
+  45 0080 97000000 		call	__errno
+  45      E7800000 
+  46 0088 93076001 		li	a5,22
+  47 008c 2320F500 		sw	a5,0(a0)
+  48 0090 13056001 		li	a0,22
+  49 0094 6F00800A 		j	.L1
+  50              	.L15:
+  51 0098 97000000 		call	__errno
+  51      E7800000 
+  52 00a0 9307E000 		li	a5,14
+  53 00a4 2320F500 		sw	a5,0(a0)
+  54 00a8 1305E000 		li	a0,14
+  55 00ac 6F000009 		j	.L1
+  56              	.L16:
+GAS LISTING /tmp/ccSgIR6s.s 			page 2
+
+
+  57 00b0 97000000 		call	__errno
+  57      E7800000 
+  58 00b8 9307E000 		li	a5,14
+  59 00bc 2320F500 		sw	a5,0(a0)
+  60 00c0 1305E000 		li	a0,14
+  61 00c4 6F008007 		j	.L1
+  62              	.L5:
+  63 00c8 03270500 		lw	a4,0(a0)
+  64 00cc 83270700 		lw	a5,0(a4)
+  65 00d0 93E71700 		ori	a5,a5,1
+  66 00d4 2320F700 		sw	a5,0(a4)
+  67 00d8 6FF09FF9 		j	.L8
+  68              	.L6:
+  69 00dc 03270500 		lw	a4,0(a0)
+  70 00e0 83270700 		lw	a5,0(a4)
+  71 00e4 93E71700 		ori	a5,a5,1
+  72 00e8 2320F700 		sw	a5,0(a4)
+  73 00ec 6FF05FF8 		j	.L8
+  74              	.L7:
+  75 00f0 97000000 		call	__errno
+  75      E7800000 
+  76 00f8 93076001 		li	a5,22
+  77 00fc 2320F500 		sw	a5,0(a0)
+  78 0100 13056001 		li	a0,22
+  79 0104 6F008003 		j	.L1
+  80              	.L9:
+  81 0108 83270500 		lw	a5,0(a0)
+  82 010c 03A70700 		lw	a4,0(a5)
+  83 0110 23A0E700 		sw	a4,0(a5)
+  84 0114 13050001 		li	a0,16
+  85 0118 6F004002 		j	.L1
+  86              	.L10:
+  87 011c 03270500 		lw	a4,0(a0)
+  88 0120 83270700 		lw	a5,0(a4)
+  89 0124 93E74700 		ori	a5,a5,4
+  90 0128 2320F700 		sw	a5,0(a4)
+  91 012c 13050001 		li	a0,16
+  92 0130 6F00C000 		j	.L1
+  93              	.L12:
+  94 0134 3715CA00 		li	a0,13242368
+  95 0138 1305D51E 		addi	a0,a0,493
+  96              	.L1:
+  97 013c 8320C100 		lw	ra,12(sp)
+  98 0140 13010101 		addi	sp,sp,16
+  99 0144 67800000 		jr	ra
+ 101              		.section	.text.PWM_Start,"ax",@progbits
+ 102              		.align	2
+ 103              		.globl	PWM_Start
+ 105              	PWM_Start:
+ 106 0000 130101FF 		addi	sp,sp,-16
+ 107 0004 23261100 		sw	ra,12(sp)
+ 108 0008 63060502 		beq	a0,zero,.L23
+ 109 000c 83270500 		lw	a5,0(a0)
+ 110 0010 638E0702 		beq	a5,zero,.L24
+ 111 0014 03274501 		lw	a4,20(a0)
+ 112 0018 B717CA00 		li	a5,13242368
+ 113 001c 9387D71E 		addi	a5,a5,493
+GAS LISTING /tmp/ccSgIR6s.s 			page 3
+
+
+ 114 0020 6302F704 		beq	a4,a5,.L21
+ 115 0024 13050001 		li	a0,16
+ 116              	.L17:
+ 117 0028 8320C100 		lw	ra,12(sp)
+ 118 002c 13010101 		addi	sp,sp,16
+ 119 0030 67800000 		jr	ra
+ 120              	.L23:
+ 121 0034 97000000 		call	__errno
+ 121      E7800000 
+ 122 003c 9307E000 		li	a5,14
+ 123 0040 2320F500 		sw	a5,0(a0)
+ 124 0044 1305E000 		li	a0,14
+ 125 0048 6FF01FFE 		j	.L17
+ 126              	.L24:
+ 127 004c 97000000 		call	__errno
+ 127      E7800000 
+ 128 0054 9307E000 		li	a5,14
+ 129 0058 2320F500 		sw	a5,0(a0)
+ 130 005c 1305E000 		li	a0,14
+ 131 0060 6FF09FFC 		j	.L17
+ 132              	.L21:
+ 133 0064 3715CA00 		li	a0,13242368
+ 134 0068 1305D51E 		addi	a0,a0,493
+ 135 006c 6FF0DFFB 		j	.L17
+ 137              		.globl	hpwm1
+ 138              		.section	.data.hpwm1,"aw"
+ 139              		.align	2
+ 142              	hpwm1:
+ 143 0000 00004010 		.word	272629760
+ 144 0004 02000000 		.word	2
+ 145 0008 00000000 		.word	0
+ 146 000c 32000000 		.word	50
+ 147 0010 00000000 		.word	0
+ 148 0014 1EAB11CA 		.word	-904811746
+ 149              		.ident	"GCC: (xPack GNU RISC-V Embedded GCC x86_64) 13.2.0"
+GAS LISTING /tmp/ccSgIR6s.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 hal_pwm.c
+     /tmp/ccSgIR6s.s:11     .text.PWM_Init:00000000 PWM_Init
+     /tmp/ccSgIR6s.s:12     .text.PWM_Init:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/ccSgIR6s.s:105    .text.PWM_Start:00000000 PWM_Start
+     /tmp/ccSgIR6s.s:106    .text.PWM_Start:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/ccSgIR6s.s:142    .data.hpwm1:00000000 hpwm1
+     /tmp/ccSgIR6s.s:50     .text.PWM_Init:00000098 .L15
+     /tmp/ccSgIR6s.s:56     .text.PWM_Init:000000b0 .L16
+     /tmp/ccSgIR6s.s:93     .text.PWM_Init:00000134 .L12
+     /tmp/ccSgIR6s.s:62     .text.PWM_Init:000000c8 .L5
+     /tmp/ccSgIR6s.s:68     .text.PWM_Init:000000dc .L6
+     /tmp/ccSgIR6s.s:74     .text.PWM_Init:000000f0 .L7
+     /tmp/ccSgIR6s.s:80     .text.PWM_Init:00000108 .L9
+     /tmp/ccSgIR6s.s:86     .text.PWM_Init:0000011c .L10
+     /tmp/ccSgIR6s.s:96     .text.PWM_Init:0000013c .L1
+     /tmp/ccSgIR6s.s:40     .text.PWM_Init:00000070 .L8
+     /tmp/ccSgIR6s.s:120    .text.PWM_Start:00000034 .L23
+     /tmp/ccSgIR6s.s:126    .text.PWM_Start:0000004c .L24
+     /tmp/ccSgIR6s.s:132    .text.PWM_Start:00000064 .L21
+     /tmp/ccSgIR6s.s:116    .text.PWM_Start:00000028 .L17
+
+UNDEFINED SYMBOLS
+__errno

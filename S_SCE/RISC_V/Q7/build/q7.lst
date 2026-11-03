@@ -1,0 +1,280 @@
+GAS LISTING /tmp/cccQwnD8.s 			page 1
+
+
+   1              		.file	"q7.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_zicsr2p0_zifencei2p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              		.section	.rodata.main.str1.4,"aMS",@progbits,1
+   8              		.align	2
+   9              	.LC0:
+  10 0000 436F756E 		.string	"Counter : %d\r\n"
+  10      74657220 
+  10      3A202564 
+  10      0D0A00
+  11 000f 00       		.align	2
+  12              	.LC1:
+  13 0010 4C454420 		.string	"LED ON | Counter : %d\r\n"
+  13      4F4E207C 
+  13      20436F75 
+  13      6E746572 
+  13      203A2025 
+  14              		.align	2
+  15              	.LC2:
+  16 0028 4C454420 		.string	"LED OFF | Counter : %d\r\n"
+  16      4F464620 
+  16      7C20436F 
+  16      756E7465 
+  16      72203A20 
+  17              		.section	.text.main,"ax",@progbits
+  18              		.align	2
+  19              		.globl	main
+  21              	main:
+  22 0000 130101FD 		addi	sp,sp,-48
+  23 0004 23261102 		sw	ra,44(sp)
+  24 0008 23248102 		sw	s0,40(sp)
+  25 000c 17040000 		lla	s0,htimer0
+  25      13040400 
+  26 0014 B7E7F505 		li	a5,99999744
+  27 0018 93870710 		addi	a5,a5,256
+  28 001c 2322F400 		sw	a5,4(s0)
+  29 0020 13061000 		li	a2,1
+  30 0024 93057000 		li	a1,7
+  31 0028 13051000 		li	a0,1
+  32 002c 97000000 		call	GPIO_Init
+  32      E7800000 
+  33 0034 13050400 		mv	a0,s0
+  34 0038 97000000 		call	TIMER_Init
+  34      E7800000 
+  35 0040 13050400 		mv	a0,s0
+  36 0044 97000000 		call	TIMER_Start_IT
+  36      E7800000 
+  37 004c 17050000 		lla	a0,huart0
+  37      13050500 
+  38 0054 97000000 		call	UART_Init
+  38      E7800000 
+  39 005c 93057000 		li	a1,7
+  40 0060 13051000 		li	a0,1
+  41 0064 97000000 		call	GPIO_SetPin
+GAS LISTING /tmp/cccQwnD8.s 			page 2
+
+
+  41      E7800000 
+  42 006c 6F00000E 		j	.L6
+  43              	.L8:
+  44 0070 93057000 		li	a1,7
+  45 0074 13051000 		li	a0,1
+  46 0078 97000000 		call	GPIO_ResetPin
+  46      E7800000 
+  47 0080 93071000 		li	a5,1
+  48 0084 17070000 		sb	a5,flag,a4
+  48      2300F700 
+  49 008c 97070000 		lla	a5,counter
+  49      93870700 
+  50 0094 23800700 		sb	zero,0(a5)
+  51 0098 03C60700 		lbu	a2,0(a5)
+  52 009c 97050000 		lla	a1,.LC0
+  52      93850500 
+  53 00a4 13054100 		addi	a0,sp,4
+  54 00a8 97000000 		call	sprintf
+  54      E7800000 
+  55 00b0 1306A001 		li	a2,26
+  56 00b4 93054100 		addi	a1,sp,4
+  57 00b8 17050000 		lla	a0,huart0
+  57      13050500 
+  58 00c0 97000000 		call	UART_Transmit
+  58      E7800000 
+  59 00c8 9307F006 		li	a5,111
+  60 00cc A30FF100 		sb	a5,31(sp)
+  61 00d0 6F00800A 		j	.L3
+  62              	.L9:
+  63 00d4 17070000 		lbu	a4,counter
+  63      03470700 
+  64 00dc 93074000 		li	a5,4
+  65 00e0 63EAE70A 		bgtu	a4,a5,.L4
+  66 00e4 17060000 		lbu	a2,counter
+  66      03460600 
+  67 00ec 97050000 		lla	a1,.LC1
+  67      93850500 
+  68 00f4 13054100 		addi	a0,sp,4
+  69 00f8 97000000 		call	sprintf
+  69      E7800000 
+  70              	.L5:
+  71 0100 1306A001 		li	a2,26
+  72 0104 93054100 		addi	a1,sp,4
+  73 0108 17050000 		lla	a0,huart0
+  73      13050500 
+  74 0110 97000000 		call	UART_Transmit
+  74      E7800000 
+  75              	.L2:
+  76 0118 17060000 		lbu	a2,counter
+  76      03460600 
+  77 0120 97050000 		lla	a1,.LC0
+  77      93850500 
+  78 0128 13054100 		addi	a0,sp,4
+  79 012c 97000000 		call	sprintf
+  79      E7800000 
+  80 0134 1306A001 		li	a2,26
+  81 0138 93054100 		addi	a1,sp,4
+GAS LISTING /tmp/cccQwnD8.s 			page 3
+
+
+  82 013c 17050000 		lla	a0,huart0
+  82      13050500 
+  83 0144 97000000 		call	UART_Transmit
+  83      E7800000 
+  84              	.L6:
+  85 014c 13061000 		li	a2,1
+  86 0150 9305F101 		addi	a1,sp,31
+  87 0154 17050000 		lla	a0,huart0
+  87      13050500 
+  88 015c 97000000 		call	UART_Receive
+  88      E7800000 
+  89 0164 93070001 		li	a5,16
+  90 0168 E318F5FA 		bne	a0,a5,.L2
+  91 016c 0347F101 		lbu	a4,31(sp)
+  92 0170 9307F006 		li	a5,111
+  93 0174 E30EF7EE 		beq	a4,a5,.L8
+  94              	.L3:
+  95 0178 0347F101 		lbu	a4,31(sp)
+  96 017c 93073007 		li	a5,115
+  97 0180 E31CF7F8 		bne	a4,a5,.L2
+  98 0184 17070000 		lbu	a4,flag
+  98      03470700 
+  99 018c 93071000 		li	a5,1
+ 100 0190 E302F7F4 		beq	a4,a5,.L9
+ 101              	.L4:
+ 102 0194 97070000 		lbu	a5,flag
+ 102      83C70700 
+ 103 019c E39207F6 		bne	a5,zero,.L5
+ 104 01a0 17060000 		lbu	a2,counter
+ 104      03460600 
+ 105 01a8 97050000 		lla	a1,.LC2
+ 105      93850500 
+ 106 01b0 13054100 		addi	a0,sp,4
+ 107 01b4 97000000 		call	sprintf
+ 107      E7800000 
+ 108 01bc 6FF05FF4 		j	.L5
+ 110              		.section	.text.TIMER_ElapsedCallback,"ax",@progbits
+ 111              		.align	2
+ 112              		.globl	TIMER_ElapsedCallback
+ 114              	TIMER_ElapsedCallback:
+ 115 0000 17070000 		lbu	a4,flag
+ 115      03470700 
+ 116 0008 93071000 		li	a5,1
+ 117 000c 6304F700 		beq	a4,a5,.L16
+ 118              	.L13:
+ 119 0010 67800000 		ret
+ 120              	.L16:
+ 121 0014 17070000 		lla	a4,counter
+ 121      13070700 
+ 122 001c 83470700 		lbu	a5,0(a4)
+ 123 0020 93871700 		addi	a5,a5,1
+ 124 0024 93F7F70F 		andi	a5,a5,0xff
+ 125 0028 2300F700 		sb	a5,0(a4)
+ 126 002c 83470700 		lbu	a5,0(a4)
+ 127 0030 93F7F70F 		andi	a5,a5,0xff
+ 128 0034 13074000 		li	a4,4
+ 129 0038 E37CF7FC 		bleu	a5,a4,.L13
+GAS LISTING /tmp/cccQwnD8.s 			page 4
+
+
+ 130 003c 130101FF 		addi	sp,sp,-16
+ 131 0040 23261100 		sw	ra,12(sp)
+ 132 0044 97070000 		sb	zero,flag,a5
+ 132      23800700 
+ 133 004c 97070000 		sb	zero,counter,a5
+ 133      23800700 
+ 134 0054 93057000 		li	a1,7
+ 135 0058 13051000 		li	a0,1
+ 136 005c 97000000 		call	GPIO_SetPin
+ 136      E7800000 
+ 137 0064 8320C100 		lw	ra,12(sp)
+ 138 0068 13010101 		addi	sp,sp,16
+ 139 006c 67800000 		jr	ra
+ 141              		.globl	out_buf
+ 142              		.section	.bss.out_buf,"aw",@nobits
+ 143              		.align	2
+ 146              	out_buf:
+ 147 0000 00000000 		.zero	14
+ 147      00000000 
+ 147      00000000 
+ 147      0000
+ 148              		.globl	len
+ 149              		.section	.sbss.len,"aw",@nobits
+ 152              	len:
+ 153 0000 00       		.zero	1
+ 154              		.globl	flag
+ 155              		.section	.sbss.flag,"aw",@nobits
+ 158              	flag:
+ 159 0000 00       		.zero	1
+ 160              		.globl	counter
+ 161              		.section	.sbss.counter,"aw",@nobits
+ 164              	counter:
+ 165 0000 00       		.zero	1
+ 166              		.ident	"GCC: (xPack GNU RISC-V Embedded GCC x86_64) 13.2.0"
+GAS LISTING /tmp/cccQwnD8.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 q7.c
+     /tmp/cccQwnD8.s:21     .text.main:00000000 main
+     /tmp/cccQwnD8.s:22     .text.main:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/cccQwnD8.s:158    .sbss.flag:00000000 flag
+     /tmp/cccQwnD8.s:164    .sbss.counter:00000000 counter
+     /tmp/cccQwnD8.s:114    .text.TIMER_ElapsedCallback:00000000 TIMER_ElapsedCallback
+     /tmp/cccQwnD8.s:115    .text.TIMER_ElapsedCallback:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/cccQwnD8.s:146    .bss.out_buf:00000000 out_buf
+     /tmp/cccQwnD8.s:152    .sbss.len:00000000 len
+     /tmp/cccQwnD8.s:25     .text.main:0000000c .L0 
+     /tmp/cccQwnD8.s:37     .text.main:0000004c .L0 
+     /tmp/cccQwnD8.s:48     .text.main:00000084 .L0 
+     /tmp/cccQwnD8.s:49     .text.main:0000008c .L0 
+     /tmp/cccQwnD8.s:9      .rodata.main.str1.4:00000000 .LC0
+     /tmp/cccQwnD8.s:52     .text.main:0000009c .L0 
+     /tmp/cccQwnD8.s:57     .text.main:000000b8 .L0 
+     /tmp/cccQwnD8.s:63     .text.main:000000d4 .L0 
+     /tmp/cccQwnD8.s:66     .text.main:000000e4 .L0 
+     /tmp/cccQwnD8.s:12     .rodata.main.str1.4:00000010 .LC1
+     /tmp/cccQwnD8.s:67     .text.main:000000ec .L0 
+     /tmp/cccQwnD8.s:73     .text.main:00000108 .L0 
+     /tmp/cccQwnD8.s:76     .text.main:00000118 .L0 
+     /tmp/cccQwnD8.s:77     .text.main:00000120 .L0 
+     /tmp/cccQwnD8.s:82     .text.main:0000013c .L0 
+     /tmp/cccQwnD8.s:87     .text.main:00000154 .L0 
+     /tmp/cccQwnD8.s:98     .text.main:00000184 .L0 
+     /tmp/cccQwnD8.s:102    .text.main:00000194 .L0 
+     /tmp/cccQwnD8.s:104    .text.main:000001a0 .L0 
+     /tmp/cccQwnD8.s:15     .rodata.main.str1.4:00000028 .LC2
+     /tmp/cccQwnD8.s:105    .text.main:000001a8 .L0 
+     /tmp/cccQwnD8.s:84     .text.main:0000014c .L6
+     /tmp/cccQwnD8.s:94     .text.main:00000178 .L3
+     /tmp/cccQwnD8.s:101    .text.main:00000194 .L4
+     /tmp/cccQwnD8.s:75     .text.main:00000118 .L2
+     /tmp/cccQwnD8.s:43     .text.main:00000070 .L8
+     /tmp/cccQwnD8.s:62     .text.main:000000d4 .L9
+     /tmp/cccQwnD8.s:70     .text.main:00000100 .L5
+     /tmp/cccQwnD8.s:115    .text.TIMER_ElapsedCallback:00000000 .L0 
+     /tmp/cccQwnD8.s:121    .text.TIMER_ElapsedCallback:00000014 .L0 
+     /tmp/cccQwnD8.s:132    .text.TIMER_ElapsedCallback:00000044 .L0 
+     /tmp/cccQwnD8.s:133    .text.TIMER_ElapsedCallback:0000004c .L0 
+     /tmp/cccQwnD8.s:120    .text.TIMER_ElapsedCallback:00000014 .L16
+     /tmp/cccQwnD8.s:118    .text.TIMER_ElapsedCallback:00000010 .L13
+
+UNDEFINED SYMBOLS
+htimer0
+GPIO_Init
+TIMER_Init
+TIMER_Start_IT
+huart0
+UART_Init
+GPIO_SetPin
+GPIO_ResetPin
+sprintf
+UART_Transmit
+UART_Receive
+GAS LISTING /tmp/cccQwnD8.s 			page 6
+
+

@@ -1,0 +1,76 @@
+GAS LISTING /tmp/cckz1JlA.s 			page 1
+
+
+   1              		.file	"sysmem.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_zicsr2p0_zifencei2p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              		.section	.text._sbrk,"ax",@progbits
+   8              		.align	2
+   9              		.globl	_sbrk
+  11              	_sbrk:
+  12 0000 93070500 		mv	a5,a0
+  13 0004 17070000 		lla	a4,_estack
+  13      13070700 
+  14 000c 97060000 		lla	a3,_stack_size
+  14      93860600 
+  15 0014 3307D740 		sub	a4,a4,a3
+  16 0018 97060000 		lw	a3,__sbrk_heap_end
+  16      83A60600 
+  17 0020 63800602 		beq	a3,zero,.L9
+  18              	.L2:
+  19 0024 17050000 		lw	a0,__sbrk_heap_end
+  19      03250500 
+  20 002c B307F500 		add	a5,a0,a5
+  21 0030 6362F702 		bgtu	a5,a4,.L10
+  22 0034 17070000 		sw	a5,__sbrk_heap_end,a4
+  22      2320F700 
+  23 003c 67800000 		ret
+  24              	.L9:
+  25 0040 97060000 		lla	a3,_end
+  25      93860600 
+  26 0048 17060000 		sw	a3,__sbrk_heap_end,a2
+  26      2320D600 
+  27 0050 6FF05FFD 		j	.L2
+  28              	.L10:
+  29 0054 130101FF 		addi	sp,sp,-16
+  30 0058 23261100 		sw	ra,12(sp)
+  31 005c 97000000 		call	__errno
+  31      E7800000 
+  32 0064 9307C000 		li	a5,12
+  33 0068 2320F500 		sw	a5,0(a0)
+  34 006c 1305F0FF 		li	a0,-1
+  35 0070 8320C100 		lw	ra,12(sp)
+  36 0074 13010101 		addi	sp,sp,16
+  37 0078 67800000 		jr	ra
+  39              		.section	.sbss.__sbrk_heap_end,"aw",@nobits
+  40              		.align	2
+  43              	__sbrk_heap_end:
+  44 0000 00000000 		.zero	4
+  45              		.ident	"GCC: (xPack GNU RISC-V Embedded GCC x86_64) 13.2.0"
+GAS LISTING /tmp/cckz1JlA.s 			page 2
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 sysmem.c
+     /tmp/cckz1JlA.s:11     .text._sbrk:00000000 _sbrk
+     /tmp/cckz1JlA.s:12     .text._sbrk:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/cckz1JlA.s:43     .sbss.__sbrk_heap_end:00000000 __sbrk_heap_end
+     /tmp/cckz1JlA.s:13     .text._sbrk:00000004 .L0 
+     /tmp/cckz1JlA.s:14     .text._sbrk:0000000c .L0 
+     /tmp/cckz1JlA.s:16     .text._sbrk:00000018 .L0 
+     /tmp/cckz1JlA.s:19     .text._sbrk:00000024 .L0 
+     /tmp/cckz1JlA.s:22     .text._sbrk:00000034 .L0 
+     /tmp/cckz1JlA.s:25     .text._sbrk:00000040 .L0 
+     /tmp/cckz1JlA.s:26     .text._sbrk:00000048 .L0 
+     /tmp/cckz1JlA.s:24     .text._sbrk:00000040 .L9
+     /tmp/cckz1JlA.s:28     .text._sbrk:00000054 .L10
+     /tmp/cckz1JlA.s:18     .text._sbrk:00000024 .L2
+
+UNDEFINED SYMBOLS
+_estack
+_stack_size
+_end
+__errno

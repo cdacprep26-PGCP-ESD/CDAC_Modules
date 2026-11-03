@@ -1,0 +1,976 @@
+Archive member included to satisfy reference by file (symbol)
+
+/opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-atexit.o)
+                              build/startup_thejas32.o (atexit)
+/opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-snprintf.o)
+                              build/q4.o (snprintf)
+/opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-impure.o)
+                              /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-snprintf.o) (_impure_ptr)
+/opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-errno.o)
+                              build/hal_gpio.o (__errno)
+/opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-init.o)
+                              build/startup_thejas32.o (__libc_init_array)
+/opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-fini.o)
+                              build/startup_thejas32.o (__libc_fini_array)
+/opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__atexit.o)
+                              /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-atexit.o) (__register_exitproc)
+/opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__call_atexit.o)
+                              /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__atexit.o) (__call_exitprocs)
+/opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-svfprintf.o)
+                              /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-snprintf.o) (_svfprintf_r)
+/opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-vfprintf_i.o)
+                              /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-svfprintf.o) (_printf_i)
+/opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-memchr.o)
+                              /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-svfprintf.o) (memchr)
+/opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+                              /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__atexit.o) (__retarget_lock_acquire_recursive)
+/opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-memmove.o)
+                              /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-svfprintf.o) (memmove)
+/opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-memcpy-asm.o)
+                              /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-svfprintf.o) (memcpy)
+/opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-freer.o)
+                              /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-svfprintf.o) (_free_r)
+/opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-mallocr.o)
+                              /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-svfprintf.o) (_malloc_r)
+/opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-mlock.o)
+                              /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-freer.o) (__malloc_lock)
+/opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-reallocr.o)
+                              /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-svfprintf.o) (_realloc_r)
+/opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-sbrkr.o)
+                              /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-mallocr.o) (_sbrk_r)
+/opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-msizer.o)
+                              /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-reallocr.o) (_malloc_usable_size_r)
+/opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-reent.o)
+                              /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-sbrkr.o) (errno)
+
+Discarded input sections
+
+ .text          0x00000000        0x0 build/q4.o
+ .data          0x00000000        0x0 build/q4.o
+ .bss           0x00000000        0x0 build/q4.o
+ .text          0x00000000        0x0 build/hal_gpio.o
+ .data          0x00000000        0x0 build/hal_gpio.o
+ .bss           0x00000000        0x0 build/hal_gpio.o
+ .text.GPIO_Init
+                0x00000000      0x120 build/hal_gpio.o
+ .text.GPIO_SetPin
+                0x00000000       0x80 build/hal_gpio.o
+ .text.GPIO_ResetPin
+                0x00000000       0x7c build/hal_gpio.o
+ .text.GPIO_TogglePin
+                0x00000000       0x88 build/hal_gpio.o
+ .text.GPIO_ReadPin
+                0x00000000       0x90 build/hal_gpio.o
+ .text.GPIO_IT_Enable
+                0x00000000       0x54 build/hal_gpio.o
+ .text.GPIO_IT_Disable
+                0x00000000       0x58 build/hal_gpio.o
+ .text          0x00000000        0x0 build/hal_interrupt.o
+ .data          0x00000000        0x0 build/hal_interrupt.o
+ .bss           0x00000000        0x0 build/hal_interrupt.o
+ .text.__enable_irq
+                0x00000000       0x14 build/hal_interrupt.o
+ .text.__disable_irq
+                0x00000000       0x14 build/hal_interrupt.o
+ .text          0x00000000        0x0 build/hal_pwm.o
+ .data          0x00000000        0x0 build/hal_pwm.o
+ .bss           0x00000000        0x0 build/hal_pwm.o
+ .text.PWM_Init
+                0x00000000      0x148 build/hal_pwm.o
+ .text.PWM_Start
+                0x00000000       0x70 build/hal_pwm.o
+ .data.hpwm1    0x00000000       0x18 build/hal_pwm.o
+ .comment       0x00000000       0x34 build/hal_pwm.o
+ .riscv.attributes
+                0x00000000       0x3f build/hal_pwm.o
+ .text          0x00000000        0x0 build/hal_timer.o
+ .data          0x00000000        0x0 build/hal_timer.o
+ .bss           0x00000000        0x0 build/hal_timer.o
+ .text.TIMER_Start
+                0x00000000       0x94 build/hal_timer.o
+ .text.TIMER_Stop
+                0x00000000       0xdc build/hal_timer.o
+ .text.TIMER_GetCount
+                0x00000000       0x54 build/hal_timer.o
+ .text.TIMER_ElapsedCallback
+                0x00000000        0x4 build/hal_timer.o
+ .text          0x00000000        0x0 build/hal_uart.o
+ .data          0x00000000        0x0 build/hal_uart.o
+ .bss           0x00000000        0x0 build/hal_uart.o
+ .text.UART_Transmit_IT
+                0x00000000      0x114 build/hal_uart.o
+ .text.UART_Receive
+                0x00000000       0xc4 build/hal_uart.o
+ .text.UART_Receive_IT
+                0x00000000      0x114 build/hal_uart.o
+ .text          0x00000000        0x0 build/hal_delay.o
+ .data          0x00000000        0x0 build/hal_delay.o
+ .bss           0x00000000        0x0 build/hal_delay.o
+ .text.delayus  0x00000000       0x68 build/hal_delay.o
+ .text.delayms  0x00000000       0x6c build/hal_delay.o
+ .comment       0x00000000       0x34 build/hal_delay.o
+ .riscv.attributes
+                0x00000000       0x3f build/hal_delay.o
+ .text          0x00000000        0x0 build/syscalls.o
+ .data          0x00000000        0x0 build/syscalls.o
+ .bss           0x00000000        0x0 build/syscalls.o
+ .text._kill    0x00000000       0x28 build/syscalls.o
+ .text._exit    0x00000000       0x18 build/syscalls.o
+ .text._read    0x00000000       0x34 build/syscalls.o
+ .text._write   0x00000000       0x34 build/syscalls.o
+ .text._close   0x00000000        0x8 build/syscalls.o
+ .text._fstat   0x00000000       0x10 build/syscalls.o
+ .text._isatty  0x00000000        0x8 build/syscalls.o
+ .text._lseek   0x00000000        0x8 build/syscalls.o
+ .text._open    0x00000000       0x28 build/syscalls.o
+ .text._wait    0x00000000       0x28 build/syscalls.o
+ .text._unlink  0x00000000       0x28 build/syscalls.o
+ .text._times   0x00000000        0x8 build/syscalls.o
+ .text._stat    0x00000000       0x10 build/syscalls.o
+ .text._link    0x00000000       0x28 build/syscalls.o
+ .text._fork    0x00000000       0x28 build/syscalls.o
+ .text._execve  0x00000000       0x28 build/syscalls.o
+ .comment       0x00000000       0x34 build/syscalls.o
+ .riscv.attributes
+                0x00000000       0x3f build/syscalls.o
+ .text          0x00000000        0x0 build/sysmem.o
+ .data          0x00000000        0x0 build/sysmem.o
+ .bss           0x00000000        0x0 build/sysmem.o
+ .text          0x00000000        0x0 build/startup_thejas32.o
+ .data          0x00000000        0x0 build/startup_thejas32.o
+ .bss           0x00000000        0x0 build/startup_thejas32.o
+ .text          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-atexit.o)
+ .data          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-atexit.o)
+ .bss           0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-atexit.o)
+ .text          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-snprintf.o)
+ .data          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-snprintf.o)
+ .bss           0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-snprintf.o)
+ .text._snprintf_r
+                0x00000000       0xb8 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-snprintf.o)
+ .text          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-impure.o)
+ .data          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-impure.o)
+ .bss           0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-impure.o)
+ .text          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-errno.o)
+ .data          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-errno.o)
+ .bss           0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-errno.o)
+ .text          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-init.o)
+ .data          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-init.o)
+ .bss           0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-init.o)
+ .text          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-fini.o)
+ .data          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-fini.o)
+ .bss           0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-fini.o)
+ .text          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__atexit.o)
+ .data          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__atexit.o)
+ .bss           0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__atexit.o)
+ .sdata.__atexit_dummy
+                0x00000000        0x4 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__atexit.o)
+ .text          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__call_atexit.o)
+ .data          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__call_atexit.o)
+ .bss           0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__call_atexit.o)
+ .text.__call_exitprocs
+                0x00000000      0x158 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__call_atexit.o)
+ .text          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-svfprintf.o)
+ .data          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-svfprintf.o)
+ .bss           0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-svfprintf.o)
+ .text.__ssprint_r
+                0x00000000      0x1e0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-svfprintf.o)
+ .text          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-vfprintf_i.o)
+ .data          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-vfprintf_i.o)
+ .bss           0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-vfprintf_i.o)
+ .text          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-memchr.o)
+ .data          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-memchr.o)
+ .bss           0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-memchr.o)
+ .text          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+ .data          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+ .bss           0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+ .text.__retarget_lock_init
+                0x00000000        0x4 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+ .text.__retarget_lock_init_recursive
+                0x00000000        0x4 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+ .text.__retarget_lock_close
+                0x00000000        0x4 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+ .text.__retarget_lock_close_recursive
+                0x00000000        0x4 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+ .text.__retarget_lock_acquire
+                0x00000000        0x4 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+ .text.__retarget_lock_try_acquire
+                0x00000000        0x8 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+ .text.__retarget_lock_try_acquire_recursive
+                0x00000000        0x8 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+ .text.__retarget_lock_release
+                0x00000000        0x4 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+ .sbss.__lock___arc4random_mutex
+                0x00000000        0x1 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+ .sbss.__lock___dd_hash_mutex
+                0x00000000        0x1 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+ .sbss.__lock___tz_mutex
+                0x00000000        0x1 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+ .sbss.__lock___env_recursive_mutex
+                0x00000000        0x1 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+ .sbss.__lock___at_quick_exit_mutex
+                0x00000000        0x1 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+ .sbss.__lock___sfp_recursive_mutex
+                0x00000000        0x1 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+ .data          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-memmove.o)
+ .bss           0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-memmove.o)
+ .data          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-memcpy-asm.o)
+ .bss           0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-memcpy-asm.o)
+ .text          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-freer.o)
+ .data          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-freer.o)
+ .bss           0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-freer.o)
+ .text          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-mallocr.o)
+ .data          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-mallocr.o)
+ .bss           0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-mallocr.o)
+ .text          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-mlock.o)
+ .data          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-mlock.o)
+ .bss           0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-mlock.o)
+ .text          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-reallocr.o)
+ .data          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-reallocr.o)
+ .bss           0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-reallocr.o)
+ .text          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-sbrkr.o)
+ .data          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-sbrkr.o)
+ .bss           0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-sbrkr.o)
+ .text          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-msizer.o)
+ .data          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-msizer.o)
+ .bss           0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-msizer.o)
+ .text          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-reent.o)
+ .data          0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-reent.o)
+ .bss           0x00000000        0x0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-reent.o)
+ .text._reclaim_reent
+                0x00000000      0x188 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-reent.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ram              0x00202000         0x00040000         axw!rl
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD build/q4.o
+LOAD build/hal_gpio.o
+LOAD build/hal_interrupt.o
+LOAD build/hal_pwm.o
+LOAD build/hal_timer.o
+LOAD build/hal_uart.o
+LOAD build/hal_delay.o
+LOAD build/syscalls.o
+LOAD build/sysmem.o
+LOAD build/startup_thejas32.o
+LOAD /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a
+LOAD /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libm_nano.a
+LOAD /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libnosys.a
+LOAD /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/rv32im/ilp32/libgcc.a
+LOAD /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a
+LOAD /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/rv32im/ilp32/libgcc.a
+START GROUP
+LOAD /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/rv32im/ilp32/libgcc.a
+LOAD /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a
+LOAD /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libgloss_nano.a
+END GROUP
+                0x0023e7ff                        _estack = 0x23e7ff
+                0x00000400                        _stack_size = 0x400
+                0x00000200                        _heap_size = 0x200
+
+.init           0x00202000       0xa0
+ *(SORT_NONE(.init))
+ .init          0x00202000       0xa0 build/startup_thejas32.o
+                0x00202000                _start
+
+.text           0x002020a0     0x1d94
+ *(.text.unlikely .text.unlikely.*)
+ *(.text.startup .text.startup.*)
+ *(.text .text.*)
+ .text.main     0x002020a0       0xb4 build/q4.o
+                0x002020a0                main
+ .text.TIMER_ElapsedCallback
+                0x00202154       0x28 build/q4.o
+                0x00202154                TIMER_ElapsedCallback
+ .text.GPIO_EXTICallback
+                0x0020217c        0x4 build/hal_gpio.o
+                0x0020217c                GPIO_EXTICallback
+ .text.GPIO0_IRQHandler
+                0x00202180       0x1c build/hal_gpio.o
+                0x00202180                GPIO0_IRQHandler
+ .text.GPIO1_IRQHandler
+                0x0020219c       0x1c build/hal_gpio.o
+                0x0020219c                GPIO1_IRQHandler
+ .text.GPIO2_IRQHandler
+                0x002021b8       0x1c build/hal_gpio.o
+                0x002021b8                GPIO2_IRQHandler
+ .text.GPIO3_IRQHandler
+                0x002021d4       0x1c build/hal_gpio.o
+                0x002021d4                GPIO3_IRQHandler
+ .text.GPIO4_IRQHandler
+                0x002021f0       0x1c build/hal_gpio.o
+                0x002021f0                GPIO4_IRQHandler
+ .text.GPIO5_IRQHandler
+                0x0020220c       0x1c build/hal_gpio.o
+                0x0020220c                GPIO5_IRQHandler
+ .text.GPIO6_IRQHandler
+                0x00202228       0x1c build/hal_gpio.o
+                0x00202228                GPIO6_IRQHandler
+ .text.GPIO7_IRQHandler
+                0x00202244       0x1c build/hal_gpio.o
+                0x00202244                GPIO7_IRQHandler
+ .text.GPIO8_IRQHandler
+                0x00202260       0x1c build/hal_gpio.o
+                0x00202260                GPIO8_IRQHandler
+ .text.GPIO9_IRQHandler
+                0x0020227c       0x1c build/hal_gpio.o
+                0x0020227c                GPIO9_IRQHandler
+ .text.GPIO10_IRQHandler
+                0x00202298       0x1c build/hal_gpio.o
+                0x00202298                GPIO10_IRQHandler
+ .text.GPIO11_IRQHandler
+                0x002022b4       0x1c build/hal_gpio.o
+                0x002022b4                GPIO11_IRQHandler
+ .text.InfiniteLoop
+                0x002022d0        0x4 build/hal_interrupt.o
+                0x002022d0                I2C0_IRQHandler
+                0x002022d0                I2C1_IRQHandler
+                0x002022d0                InfiniteLoop
+                0x002022d0                PWMChannel7_IRQHandler
+                0x002022d0                GPIO12_IRQHandler
+                0x002022d0                PWMChannel1_IRQHandler
+                0x002022d0                SPI1_IRQHandler
+                0x002022d0                PWMChannel3_IRQHandler
+                0x002022d0                I2C2_IRQHandler
+                0x002022d0                PWMChannel5_IRQHandler
+                0x002022d0                PWMChannel2_IRQHandler
+                0x002022d0                PWMChannel6_IRQHandler
+                0x002022d0                SPI2_IRQHandler
+                0x002022d0                SPI0_IRQHandler
+                0x002022d0                PWMChannel4_IRQHandler
+                0x002022d0                PWMChannel8_IRQHandler
+ .text._exception_handler
+                0x002022d4        0x4 build/hal_interrupt.o
+                0x002022d4                _exception_handler
+ .text._interrupt_handler
+                0x002022d8       0x68 build/hal_interrupt.o
+                0x002022d8                _interrupt_handler
+ .text._trap_handler
+                0x00202340       0x28 build/hal_interrupt.o
+                0x00202340                _trap_handler
+ .text.TIMER_Init
+                0x00202368       0xc4 build/hal_timer.o
+                0x00202368                TIMER_Init
+ .text.TIMER_Start_IT
+                0x0020242c       0xf0 build/hal_timer.o
+                0x0020242c                TIMER_Start_IT
+ .text.__Timer_ISR
+                0x0020251c       0x5c build/hal_timer.o
+                0x0020251c                __Timer_ISR
+ .text.TIMER0_IRQHandler
+                0x00202578       0x20 build/hal_timer.o
+                0x00202578                TIMER0_IRQHandler
+ .text.TIMER1_IRQHandler
+                0x00202598       0x20 build/hal_timer.o
+                0x00202598                TIMER1_IRQHandler
+ .text.TIMER2_IRQHandler
+                0x002025b8       0x20 build/hal_timer.o
+                0x002025b8                TIMER2_IRQHandler
+ .text.UART_Init
+                0x002025d8      0x240 build/hal_uart.o
+                0x002025d8                UART_Init
+ .text.UART_Transmit
+                0x00202818       0xbc build/hal_uart.o
+                0x00202818                UART_Transmit
+ .text.UART_RxCpltCallback
+                0x002028d4        0x4 build/hal_uart.o
+                0x002028d4                UART_RxCpltCallback
+ .text.__UART_RxISR
+                0x002028d8       0x70 build/hal_uart.o
+                0x002028d8                __UART_RxISR
+ .text.UART_TxCpltCallback
+                0x00202948        0x4 build/hal_uart.o
+                0x00202948                UART_TxCpltCallback
+ .text.__UART_TxISR
+                0x0020294c       0x70 build/hal_uart.o
+                0x0020294c                __UART_TxISR
+ .text.__UART_ISR
+                0x002029bc       0x64 build/hal_uart.o
+                0x002029bc                __UART_ISR
+ .text.UART0_IRQHandler
+                0x00202a20       0x20 build/hal_uart.o
+                0x00202a20                UART0_IRQHandler
+ .text.UART1_IRQHandler
+                0x00202a40       0x20 build/hal_uart.o
+                0x00202a40                UART1_IRQHandler
+ .text.UART2_IRQHandler
+                0x00202a60       0x20 build/hal_uart.o
+                0x00202a60                UART2_IRQHandler
+ .text._sbrk    0x00202a80       0x74 build/sysmem.o
+                0x00202a80                _sbrk
+ .text._trap_entry
+                0x00202af4      0x108 build/startup_thejas32.o
+                0x00202af4                _trap_entry
+ .text.atexit   0x00202bfc       0x14 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-atexit.o)
+                0x00202bfc                atexit
+ .text.snprintf
+                0x00202c10       0xb8 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-snprintf.o)
+                0x00202c10                snprintf
+                0x00202c10                sniprintf
+ .text.__errno  0x00202cc8        0xc /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-errno.o)
+                0x00202cc8                __errno
+ .text.__libc_init_array
+                0x00202cd4       0x94 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-init.o)
+                0x00202cd4                __libc_init_array
+ .text.__libc_fini_array
+                0x00202d68       0x58 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-fini.o)
+                0x00202d68                __libc_fini_array
+ .text.__register_exitproc
+                0x00202dc0      0x10c /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__atexit.o)
+                0x00202dc0                __register_exitproc
+ .text.__ssputs_r
+                0x00202ecc      0x164 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-svfprintf.o)
+                0x00202ecc                __ssputs_r
+ .text._svfprintf_r
+                0x00203030      0x38c /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-svfprintf.o)
+                0x00203030                _svfprintf_r
+                0x00203030                _svfiprintf_r
+ .text._printf_common
+                0x002033bc      0x1b0 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-vfprintf_i.o)
+                0x002033bc                _printf_common
+ .text._printf_i
+                0x0020356c      0x394 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-vfprintf_i.o)
+                0x0020356c                _printf_i
+ .text.memchr   0x00203900       0x24 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-memchr.o)
+                0x00203900                memchr
+ .text.__retarget_lock_acquire_recursive
+                0x00203924        0x4 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+                0x00203924                __retarget_lock_acquire_recursive
+ .text.__retarget_lock_release_recursive
+                0x00203928        0x4 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+                0x00203928                __retarget_lock_release_recursive
+ .text          0x0020392c       0x3c /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-memmove.o)
+                0x0020392c                memmove
+ .text          0x00203968       0x24 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-memcpy-asm.o)
+                0x00203968                memcpy
+ .text._free_r  0x0020398c      0x100 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-freer.o)
+                0x0020398c                _free_r
+ .text.sbrk_aligned
+                0x00203a8c       0x8c /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-mallocr.o)
+ .text._malloc_r
+                0x00203b18      0x1c8 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-mallocr.o)
+                0x00203b18                _malloc_r
+ .text.__malloc_lock
+                0x00203ce0        0xc /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-mlock.o)
+                0x00203ce0                __malloc_lock
+ .text.__malloc_unlock
+                0x00203cec        0xc /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-mlock.o)
+                0x00203cec                __malloc_unlock
+ .text._realloc_r
+                0x00203cf8       0xd8 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-reallocr.o)
+                0x00203cf8                _realloc_r
+ .text._sbrk_r  0x00203dd0       0x48 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-sbrkr.o)
+                0x00203dd0                _sbrk_r
+ .text._malloc_usable_size_r
+                0x00203e18       0x1c /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-msizer.o)
+                0x00203e18                _malloc_usable_size_r
+ *(.gnu.linkonce.t.*)
+
+.fini
+ *(SORT_NONE(.fini))
+                [!provide]                        PROVIDE (__etext = .)
+                [!provide]                        PROVIDE (_etext = .)
+                [!provide]                        PROVIDE (etext = .)
+
+.rodata         0x00203e34      0x1d0
+ *(.rdata)
+ *(.rodata .rodata.*)
+ .rodata.main.str1.4
+                0x00203e34       0x49 build/q4.o
+                                  0xe (size before relaxing)
+ *fill*         0x00203e7d        0x3 
+ .rodata.plic_vtable
+                0x00203e80       0x80 build/hal_interrupt.o
+ .rodata.UART_Init
+                0x00203f00       0xac build/hal_uart.o
+ .rodata._svfprintf_r.str1.4
+                0x00203fac       0x13 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-svfprintf.o)
+ .rodata._printf_i.str1.4
+                0x00203fac       0x25 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-vfprintf_i.o)
+ .rodata._printf_i
+                0x00203fac       0x58 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-vfprintf_i.o)
+ *(.gnu.linkonce.r.*)
+
+.rela.dyn       0x00204004        0x0
+ .rela.rodata.plic_vtable
+                0x00204004        0x0 build/q4.o
+ .rela.text._sbrk
+                0x00204004        0x0 build/q4.o
+ .rela.init     0x00204004        0x0 build/q4.o
+ .rela.data._impure_data
+                0x00204004        0x0 build/q4.o
+ .rela.text.__libc_init_array
+                0x00204004        0x0 build/q4.o
+ .rela.text.__libc_fini_array
+                0x00204004        0x0 build/q4.o
+ .rela.text.__register_exitproc
+                0x00204004        0x0 build/q4.o
+ .rela.text._svfprintf_r
+                0x00204004        0x0 build/q4.o
+                0x00204004                        . = ALIGN (0x4)
+
+.preinit_array  0x00204004        0x0
+                0x00204004                        PROVIDE (__preinit_array_start = .)
+ *(.preinit_array)
+                0x00204004                        PROVIDE (__preinit_array_end = .)
+
+.init_array     0x00204004        0x0
+                0x00204004                        PROVIDE (__init_array_start = .)
+ *(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*))
+ *(.init_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
+                0x00204004                        PROVIDE (__init_array_end = .)
+
+.fini_array     0x00204004        0x0
+                0x00204004                        PROVIDE (__fini_array_start = .)
+ *(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*))
+ *(.fini_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
+                0x00204004                        PROVIDE (__fini_array_end = .)
+
+.ctors
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT_BY_NAME(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT_BY_NAME(.dtors.*))
+ *(.dtors)
+
+.lalign         0x00204004        0x0
+                0x00204004                        . = ALIGN (0x4)
+                0x00204004                        PROVIDE (_data_lma = .)
+
+.dalign         0x00204004        0x0
+                0x00204004                        . = ALIGN (0x4)
+                0x00204004                        PROVIDE (_data = .)
+
+.data           0x00204004      0x100
+ *(.data .data.*)
+ .data.htimer2  0x00204004       0x10 build/hal_timer.o
+                0x00204004                htimer2
+ .data.htimer1  0x00204014       0x10 build/hal_timer.o
+                0x00204014                htimer1
+ .data.htimer0  0x00204024       0x10 build/hal_timer.o
+                0x00204024                htimer0
+ .data.huart2   0x00204034       0x2c build/hal_uart.o
+                0x00204034                huart2
+ .data.huart1   0x00204060       0x2c build/hal_uart.o
+                0x00204060                huart1
+ .data.huart0   0x0020408c       0x2c build/hal_uart.o
+                0x0020408c                huart0
+ .data._impure_data
+                0x002040b8       0x4c /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-impure.o)
+                0x002040b8                _impure_data
+ *(.gnu.linkonce.d.*)
+
+.srodata        0x00204104        0x0
+                0x00204904                        PROVIDE (_gp = (. + 0x800))
+ *(.srodata.cst16)
+ *(.srodata.cst8)
+ *(.srodata.cst4)
+ *(.srodata.cst2)
+ *(.srodata .srodata.*)
+
+.sdata          0x00204104        0x8
+ *(.sdata .sdata.*)
+ .sdata._impure_ptr
+                0x00204104        0x4 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-impure.o)
+                0x00204104                _impure_ptr
+ .sdata.__atexit_recursive_mutex
+                0x00204108        0x4 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__call_atexit.o)
+                0x00204108                __atexit_recursive_mutex
+ *(.gnu.linkonce.s.*)
+                0x0020410c                        . = ALIGN (0x4)
+                0x0020410c                        PROVIDE (_edata = .)
+                [!provide]                        PROVIDE (edata = .)
+                [!provide]                        PROVIDE (_fbss = .)
+                0x0020410c                        PROVIDE (__bss_start = .)
+
+.bss            0x0020410c       0xbc
+ *(.sbss*)
+ .sbss.len      0x0020410c        0x1 build/q4.o
+                0x0020410c                len
+ .sbss.flag     0x0020410d        0x1 build/q4.o
+                0x0020410d                flag
+ .sbss.counter  0x0020410e        0x1 build/q4.o
+                0x0020410e                counter
+ *fill*         0x0020410f        0x1 
+ .sbss.__sbrk_heap_end
+                0x00204110        0x4 build/sysmem.o
+ .sbss.__atexit
+                0x00204114        0x4 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__call_atexit.o)
+                0x00204114                __atexit
+ .sbss.__lock___malloc_recursive_mutex
+                0x00204118        0x1 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+                0x00204118                __lock___malloc_recursive_mutex
+ *fill*         0x00204119        0x3 
+ .sbss.__lock___atexit_recursive_mutex
+                0x0020411c        0x1 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+                0x0020411c                __lock___atexit_recursive_mutex
+ *fill*         0x0020411d        0x3 
+ .sbss.__malloc_sbrk_start
+                0x00204120        0x4 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-mallocr.o)
+                0x00204120                __malloc_sbrk_start
+ .sbss.__malloc_free_list
+                0x00204124        0x4 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-mallocr.o)
+                0x00204124                __malloc_free_list
+ .sbss.errno    0x00204128        0x4 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-reent.o)
+                0x00204128                errno
+ *(.gnu.linkonce.sb.*)
+ *(.bss .bss.*)
+ .bss.out_buf   0x0020412c        0xe build/q4.o
+                0x0020412c                out_buf
+ *fill*         0x0020413a        0x2 
+ .bss.__atexit0
+                0x0020413c       0x8c /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__atexit.o)
+                0x0020413c                __atexit0
+ *(.gnu.linkonce.b.*)
+ *(COMMON)
+                0x002041c8                        . = ALIGN (0x4)
+                0x002041c8                        _ebss = .
+                0x002041c8                        __bss_end__ = _ebss
+
+.heap           0x002041c8      0x400
+                0x002041c8                        . = ALIGN (0x8)
+                0x002041c8                        PROVIDE (_end = .)
+                [!provide]                        PROVIDE (end = .)
+                [!provide]                        PROVIDE (_heap_end = (. + _heap_size))
+                0x002045c8                        . = (. + _stack_size)
+ *fill*         0x002041c8      0x400 
+OUTPUT(build/q4.elf elf32-littleriscv)
+
+.comment        0x00000000       0x33
+ .comment       0x00000000       0x33 build/q4.o
+                                 0x34 (size before relaxing)
+ .comment       0x00000033       0x34 build/hal_gpio.o
+ .comment       0x00000033       0x34 build/hal_interrupt.o
+ .comment       0x00000033       0x34 build/hal_timer.o
+ .comment       0x00000033       0x34 build/hal_uart.o
+ .comment       0x00000033       0x34 build/sysmem.o
+ .comment       0x00000033       0x34 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-atexit.o)
+ .comment       0x00000033       0x34 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-snprintf.o)
+ .comment       0x00000033       0x34 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-impure.o)
+ .comment       0x00000033       0x34 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-errno.o)
+ .comment       0x00000033       0x34 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-init.o)
+ .comment       0x00000033       0x34 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-fini.o)
+ .comment       0x00000033       0x34 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__atexit.o)
+ .comment       0x00000033       0x34 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__call_atexit.o)
+ .comment       0x00000033       0x34 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-svfprintf.o)
+ .comment       0x00000033       0x34 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-vfprintf_i.o)
+ .comment       0x00000033       0x34 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-memchr.o)
+ .comment       0x00000033       0x34 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+ .comment       0x00000033       0x34 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-freer.o)
+ .comment       0x00000033       0x34 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-mallocr.o)
+ .comment       0x00000033       0x34 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-mlock.o)
+ .comment       0x00000033       0x34 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-reallocr.o)
+ .comment       0x00000033       0x34 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-sbrkr.o)
+ .comment       0x00000033       0x34 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-msizer.o)
+ .comment       0x00000033       0x34 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-reent.o)
+
+.riscv.attributes
+                0x00000000       0x43
+ .riscv.attributes
+                0x00000000       0x3f build/q4.o
+ .riscv.attributes
+                0x0000003f       0x3f build/hal_gpio.o
+ .riscv.attributes
+                0x0000007e       0x43 build/hal_interrupt.o
+ .riscv.attributes
+                0x000000c1       0x3f build/hal_timer.o
+ .riscv.attributes
+                0x00000100       0x3f build/hal_uart.o
+ .riscv.attributes
+                0x0000013f       0x3f build/sysmem.o
+ .riscv.attributes
+                0x0000017e       0x41 build/startup_thejas32.o
+ .riscv.attributes
+                0x000001bf       0x2a /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-atexit.o)
+ .riscv.attributes
+                0x000001e9       0x2a /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-snprintf.o)
+ .riscv.attributes
+                0x00000213       0x2a /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-impure.o)
+ .riscv.attributes
+                0x0000023d       0x2a /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-errno.o)
+ .riscv.attributes
+                0x00000267       0x2a /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-init.o)
+ .riscv.attributes
+                0x00000291       0x2a /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-fini.o)
+ .riscv.attributes
+                0x000002bb       0x2a /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__atexit.o)
+ .riscv.attributes
+                0x000002e5       0x2a /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__call_atexit.o)
+ .riscv.attributes
+                0x0000030f       0x2a /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-svfprintf.o)
+ .riscv.attributes
+                0x00000339       0x2a /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-vfprintf_i.o)
+ .riscv.attributes
+                0x00000363       0x2a /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-memchr.o)
+ .riscv.attributes
+                0x0000038d       0x2a /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+ .riscv.attributes
+                0x000003b7       0x28 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-memmove.o)
+ .riscv.attributes
+                0x000003df       0x28 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-memcpy-asm.o)
+ .riscv.attributes
+                0x00000407       0x2a /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-freer.o)
+ .riscv.attributes
+                0x00000431       0x2a /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-mallocr.o)
+ .riscv.attributes
+                0x0000045b       0x2a /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-mlock.o)
+ .riscv.attributes
+                0x00000485       0x2a /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-reallocr.o)
+ .riscv.attributes
+                0x000004af       0x2a /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-sbrkr.o)
+ .riscv.attributes
+                0x000004d9       0x2a /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-msizer.o)
+ .riscv.attributes
+                0x00000503       0x2a /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-reent.o)
+
+Cross Reference Table
+
+Symbol                                            File
+GPIO0_IRQHandler                                  build/hal_gpio.o
+GPIO10_IRQHandler                                 build/hal_gpio.o
+GPIO11_IRQHandler                                 build/hal_gpio.o
+GPIO12_IRQHandler                                 build/hal_interrupt.o
+GPIO1_IRQHandler                                  build/hal_gpio.o
+GPIO2_IRQHandler                                  build/hal_gpio.o
+GPIO3_IRQHandler                                  build/hal_gpio.o
+GPIO4_IRQHandler                                  build/hal_gpio.o
+GPIO5_IRQHandler                                  build/hal_gpio.o
+GPIO6_IRQHandler                                  build/hal_gpio.o
+GPIO7_IRQHandler                                  build/hal_gpio.o
+GPIO8_IRQHandler                                  build/hal_gpio.o
+GPIO9_IRQHandler                                  build/hal_gpio.o
+GPIO_EXTICallback                                 build/hal_gpio.o
+GPIO_IT_Disable                                   build/hal_gpio.o
+GPIO_IT_Enable                                    build/hal_gpio.o
+GPIO_Init                                         build/hal_gpio.o
+GPIO_ReadPin                                      build/hal_gpio.o
+GPIO_ResetPin                                     build/hal_gpio.o
+GPIO_SetPin                                       build/hal_gpio.o
+GPIO_TogglePin                                    build/hal_gpio.o
+I2C0_IRQHandler                                   build/hal_interrupt.o
+I2C1_IRQHandler                                   build/hal_interrupt.o
+I2C2_IRQHandler                                   build/hal_interrupt.o
+InfiniteLoop                                      build/hal_interrupt.o
+PWMChannel1_IRQHandler                            build/hal_interrupt.o
+PWMChannel2_IRQHandler                            build/hal_interrupt.o
+PWMChannel3_IRQHandler                            build/hal_interrupt.o
+PWMChannel4_IRQHandler                            build/hal_interrupt.o
+PWMChannel5_IRQHandler                            build/hal_interrupt.o
+PWMChannel6_IRQHandler                            build/hal_interrupt.o
+PWMChannel7_IRQHandler                            build/hal_interrupt.o
+PWMChannel8_IRQHandler                            build/hal_interrupt.o
+PWM_Init                                          build/hal_pwm.o
+PWM_Start                                         build/hal_pwm.o
+SPI0_IRQHandler                                   build/hal_interrupt.o
+SPI1_IRQHandler                                   build/hal_interrupt.o
+SPI2_IRQHandler                                   build/hal_interrupt.o
+TIMER0_IRQHandler                                 build/hal_timer.o
+                                                  build/hal_interrupt.o
+TIMER1_IRQHandler                                 build/hal_timer.o
+                                                  build/hal_interrupt.o
+TIMER2_IRQHandler                                 build/hal_timer.o
+                                                  build/hal_interrupt.o
+TIMER_ElapsedCallback                             build/q4.o
+TIMER_GetCount                                    build/hal_timer.o
+TIMER_Init                                        build/hal_timer.o
+                                                  build/q4.o
+TIMER_Start                                       build/hal_timer.o
+TIMER_Start_IT                                    build/hal_timer.o
+                                                  build/q4.o
+TIMER_Stop                                        build/hal_timer.o
+UART0_IRQHandler                                  build/hal_uart.o
+                                                  build/hal_interrupt.o
+UART1_IRQHandler                                  build/hal_uart.o
+                                                  build/hal_interrupt.o
+UART2_IRQHandler                                  build/hal_uart.o
+                                                  build/hal_interrupt.o
+UART_Init                                         build/hal_uart.o
+                                                  build/q4.o
+UART_Receive                                      build/hal_uart.o
+                                                  build/syscalls.o
+UART_Receive_IT                                   build/hal_uart.o
+UART_RxCpltCallback                               build/hal_uart.o
+UART_Transmit                                     build/hal_uart.o
+                                                  build/syscalls.o
+                                                  build/q4.o
+UART_Transmit_IT                                  build/hal_uart.o
+UART_TxCpltCallback                               build/hal_uart.o
+__Timer_ISR                                       build/hal_timer.o
+__UART_ISR                                        build/hal_uart.o
+__UART_RxISR                                      build/hal_uart.o
+__UART_TxISR                                      build/hal_uart.o
+__atexit                                          /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__call_atexit.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__atexit.o)
+__atexit0                                         /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__atexit.o)
+__atexit_dummy                                    /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__atexit.o)
+__atexit_recursive_mutex                          /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__call_atexit.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__atexit.o)
+__bss_start                                       build/startup_thejas32.o
+__call_exitprocs                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__call_atexit.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__atexit.o)
+__disable_irq                                     build/hal_interrupt.o
+__enable_irq                                      build/hal_interrupt.o
+__errno                                           /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-errno.o)
+                                                  build/sysmem.o
+                                                  build/syscalls.o
+                                                  build/hal_uart.o
+                                                  build/hal_timer.o
+                                                  build/hal_pwm.o
+                                                  build/hal_gpio.o
+__fini_array_end                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-fini.o)
+__fini_array_start                                /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-fini.o)
+__init_array_end                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-init.o)
+__init_array_start                                /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-init.o)
+__libc_fini_array                                 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-fini.o)
+                                                  build/startup_thejas32.o
+__libc_init_array                                 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-init.o)
+                                                  build/startup_thejas32.o
+__lock___arc4random_mutex                         /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+__lock___at_quick_exit_mutex                      /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+__lock___atexit_recursive_mutex                   /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__call_atexit.o)
+__lock___dd_hash_mutex                            /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+__lock___env_recursive_mutex                      /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+__lock___malloc_recursive_mutex                   /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-mlock.o)
+__lock___sfp_recursive_mutex                      /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+__lock___tz_mutex                                 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+__malloc_free_list                                /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-mallocr.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-freer.o)
+__malloc_lock                                     /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-mlock.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-mallocr.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-freer.o)
+__malloc_sbrk_start                               /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-mallocr.o)
+__malloc_unlock                                   /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-mlock.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-mallocr.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-freer.o)
+__on_exit_args                                    /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__atexit.o)
+__preinit_array_end                               /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-init.o)
+__preinit_array_start                             /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-init.o)
+__register_exitproc                               /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__atexit.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-atexit.o)
+__retarget_lock_acquire                           /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+__retarget_lock_acquire_recursive                 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-mlock.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__call_atexit.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__atexit.o)
+__retarget_lock_close                             /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+__retarget_lock_close_recursive                   /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+__retarget_lock_init                              /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+__retarget_lock_init_recursive                    /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+__retarget_lock_release                           /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+__retarget_lock_release_recursive                 /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-mlock.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__call_atexit.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-__atexit.o)
+__retarget_lock_try_acquire                       /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+__retarget_lock_try_acquire_recursive             /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-lock.o)
+__sf                                              /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-impure.o)
+__ssprint_r                                       /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-svfprintf.o)
+__ssputs_r                                        /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-svfprintf.o)
+_close                                            build/syscalls.o
+_data                                             build/startup_thejas32.o
+_data_lma                                         build/startup_thejas32.o
+_edata                                            build/startup_thejas32.o
+_end                                              build/startup_thejas32.o
+                                                  build/sysmem.o
+_estack                                           build/startup_thejas32.o
+                                                  build/sysmem.o
+_exception_handler                                build/hal_interrupt.o
+_execve                                           build/syscalls.o
+_exit                                             build/syscalls.o
+_fork                                             build/syscalls.o
+_free_r                                           /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-freer.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-reent.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-reallocr.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-svfprintf.o)
+_fstat                                            build/syscalls.o
+_gp                                               build/startup_thejas32.o
+_impure_data                                      /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-impure.o)
+_impure_ptr                                       /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-impure.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-reent.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-errno.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-snprintf.o)
+_interrupt_handler                                build/hal_interrupt.o
+_isatty                                           build/syscalls.o
+_kill                                             build/syscalls.o
+_link                                             build/syscalls.o
+_lseek                                            build/syscalls.o
+_malloc_r                                         /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-mallocr.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-reallocr.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-svfprintf.o)
+_malloc_usable_size_r                             /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-msizer.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-reallocr.o)
+_open                                             build/syscalls.o
+_printf_common                                    /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-vfprintf_i.o)
+_printf_float                                     /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-svfprintf.o)
+_printf_i                                         /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-vfprintf_i.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-svfprintf.o)
+_read                                             build/syscalls.o
+_realloc_r                                        /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-reallocr.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-svfprintf.o)
+_reclaim_reent                                    /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-reent.o)
+_sbrk                                             build/sysmem.o
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-sbrkr.o)
+_sbrk_r                                           /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-sbrkr.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-mallocr.o)
+_sniprintf_r                                      /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-snprintf.o)
+_snprintf_r                                       /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-snprintf.o)
+_stack_size                                       build/sysmem.o
+_start                                            build/startup_thejas32.o
+_stat                                             build/syscalls.o
+_svfiprintf_r                                     /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-svfprintf.o)
+_svfprintf_r                                      /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-svfprintf.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-snprintf.o)
+_times                                            build/syscalls.o
+_trap_entry                                       build/startup_thejas32.o
+_trap_handler                                     build/hal_interrupt.o
+                                                  build/startup_thejas32.o
+_unlink                                           build/syscalls.o
+_wait                                             build/syscalls.o
+_write                                            build/syscalls.o
+atexit                                            /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-atexit.o)
+                                                  build/startup_thejas32.o
+counter                                           build/q4.o
+delayms                                           build/hal_delay.o
+delayus                                           build/hal_delay.o
+errno                                             /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-reent.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-sbrkr.o)
+flag                                              build/q4.o
+hpwm1                                             build/hal_pwm.o
+htimer0                                           build/hal_timer.o
+                                                  build/hal_delay.o
+                                                  build/q4.o
+htimer1                                           build/hal_timer.o
+htimer2                                           build/hal_timer.o
+huart0                                            build/hal_uart.o
+                                                  build/syscalls.o
+                                                  build/q4.o
+huart1                                            build/hal_uart.o
+huart2                                            build/hal_uart.o
+len                                               build/q4.o
+main                                              build/q4.o
+                                                  build/startup_thejas32.o
+memchr                                            /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-memchr.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-vfprintf_i.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-svfprintf.o)
+memcpy                                            /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-memcpy-asm.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-reallocr.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-svfprintf.o)
+memmove                                           /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-memmove.o)
+                                                  /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-nano-svfprintf.o)
+out_buf                                           build/q4.o
+sniprintf                                         /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-snprintf.o)
+snprintf                                          /opt/riscv-toolchain/xpack-riscv-none-elf-gcc-13.2.0-2/bin/../lib/gcc/riscv-none-elf/13.2.0/../../../../riscv-none-elf/lib/rv32im/ilp32/libc_nano.a(libc_a-snprintf.o)
+                                                  build/q4.o

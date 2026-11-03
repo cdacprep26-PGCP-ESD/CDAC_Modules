@@ -1,0 +1,207 @@
+GAS LISTING /tmp/cc7afS2E.s 			page 1
+
+
+   1              		.file	"q3.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_zicsr2p0_zifencei2p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              		.section	.rodata.main.str1.4,"aMS",@progbits,1
+   8              		.align	2
+   9              	.LC1:
+  10 0000 0D0A00   		.string	"\r\n"
+  11 0003 00       		.align	2
+  12              	.LC2:
+  13 0004 52657375 		.string	"Result: %d\r\n"
+  13      6C743A20 
+  13      25640D0A 
+  13      00
+  14 0011 000000   		.align	2
+  15              	.LC3:
+  16 0014 496E7661 		.string	"Invalid Expression\r\n"
+  16      6C696420 
+  16      45787072 
+  16      65737369 
+  16      6F6E0D0A 
+  17 0029 000000   		.align	2
+  18              	.LC0:
+  19 002c 456E7465 		.string	"Enter Expression in the form Op1 Op2 Operand\n"
+  19      72204578 
+  19      70726573 
+  19      73696F6E 
+  19      20696E20 
+  20              		.section	.text.main,"ax",@progbits
+  21              		.align	2
+  22              		.globl	main
+  24              	main:
+  25 0000 130101FA 		addi	sp,sp,-96
+  26 0004 232E1104 		sw	ra,92(sp)
+  27 0008 232C8104 		sw	s0,88(sp)
+  28 000c 17050000 		lla	a0,huart0
+  28      13050500 
+  29 0014 97000000 		call	UART_Init
+  29      E7800000 
+  30 001c 97070000 		lla	a5,.LC0
+  30      93870700 
+  31 0024 03AF0700 		lw	t5,0(a5)
+  32 0028 83AE4700 		lw	t4,4(a5)
+  33 002c 03AE8700 		lw	t3,8(a5)
+  34 0030 03A3C700 		lw	t1,12(a5)
+  35 0034 83A80701 		lw	a7,16(a5)
+  36 0038 03A84701 		lw	a6,20(a5)
+  37 003c 03A58701 		lw	a0,24(a5)
+  38 0040 83A5C701 		lw	a1,28(a5)
+  39 0044 03A60702 		lw	a2,32(a5)
+  40 0048 83A64702 		lw	a3,36(a5)
+  41 004c 03A78702 		lw	a4,40(a5)
+  42 0050 232EE101 		sw	t5,28(sp)
+  43 0054 2320D103 		sw	t4,32(sp)
+  44 0058 2322C103 		sw	t3,36(sp)
+GAS LISTING /tmp/cc7afS2E.s 			page 2
+
+
+  45 005c 23246102 		sw	t1,40(sp)
+  46 0060 23261103 		sw	a7,44(sp)
+  47 0064 23280103 		sw	a6,48(sp)
+  48 0068 232AA102 		sw	a0,52(sp)
+  49 006c 232CB102 		sw	a1,56(sp)
+  50 0070 232EC102 		sw	a2,60(sp)
+  51 0074 2320D104 		sw	a3,64(sp)
+  52 0078 2322E104 		sw	a4,68(sp)
+  53 007c 83D7C702 		lhu	a5,44(a5)
+  54 0080 2314F104 		sh	a5,72(sp)
+  55 0084 1306D002 		li	a2,45
+  56 0088 9305C101 		addi	a1,sp,28
+  57 008c 17050000 		lla	a0,huart0
+  57      13050500 
+  58 0094 97000000 		call	UART_Transmit
+  58      E7800000 
+  59 009c 13040000 		li	s0,0
+  60 00a0 6F00C002 		j	.L2
+  61              	.L11:
+  62 00a4 B306B500 		add	a3,a0,a1
+  63 00a8 6F00400C 		j	.L8
+  64              	.L5:
+  65 00ac 13064001 		li	a2,20
+  66 00b0 97050000 		lla	a1,.LC3
+  66      93850500 
+  67 00b8 17050000 		lla	a0,huart0
+  67      13050500 
+  68 00c0 97000000 		call	UART_Transmit
+  68      E7800000 
+  69 00c8 13040000 		li	s0,0
+  70              	.L2:
+  71 00cc 13061000 		li	a2,1
+  72 00d0 9305B104 		addi	a1,sp,75
+  73 00d4 17050000 		lla	a0,huart0
+  73      13050500 
+  74 00dc 97000000 		call	UART_Receive
+  74      E7800000 
+  75 00e4 8347B104 		lbu	a5,75(sp)
+  76 00e8 1307D000 		li	a4,13
+  77 00ec 6386E700 		beq	a5,a4,.L3
+  78 00f0 1307A000 		li	a4,10
+  79 00f4 6398E70A 		bne	a5,a4,.L4
+  80              	.L3:
+  81 00f8 13062000 		li	a2,2
+  82 00fc 97050000 		lla	a1,.LC1
+  82      93850500 
+  83 0104 17050000 		lla	a0,huart0
+  83      13050500 
+  84 010c 97000000 		call	UART_Transmit
+  84      E7800000 
+  85 0114 93073000 		li	a5,3
+  86 0118 E31AF4F8 		bne	s0,a5,.L5
+  87 011c 0347C104 		lbu	a4,76(sp)
+  88 0120 930707FD 		addi	a5,a4,-48
+  89 0124 93F7F70F 		andi	a5,a5,0xff
+  90 0128 93069000 		li	a3,9
+  91 012c E3E0F6F8 		bgtu	a5,a3,.L5
+GAS LISTING /tmp/cc7afS2E.s 			page 3
+
+
+  92 0130 8346D104 		lbu	a3,77(sp)
+  93 0134 938706FD 		addi	a5,a3,-48
+  94 0138 93F7F70F 		andi	a5,a5,0xff
+  95 013c 13069000 		li	a2,9
+  96 0140 E366F6F6 		bgtu	a5,a2,.L5
+  97 0144 8347E104 		lbu	a5,78(sp)
+  98 0148 1306B002 		li	a2,43
+  99 014c 6386C700 		beq	a5,a2,.L6
+ 100 0150 1306D002 		li	a2,45
+ 101 0154 E39CC7F4 		bne	a5,a2,.L5
+ 102              	.L6:
+ 103 0158 130507FD 		addi	a0,a4,-48
+ 104 015c 938506FD 		addi	a1,a3,-48
+ 105 0160 1306B002 		li	a2,43
+ 106 0164 E380C7F4 		beq	a5,a2,.L11
+ 107 0168 B306D740 		sub	a3,a4,a3
+ 108              	.L8:
+ 109 016c 17060000 		lla	a2,.LC2
+ 109      13060600 
+ 110 0174 93050001 		li	a1,16
+ 111 0178 1305C100 		addi	a0,sp,12
+ 112 017c 97000000 		call	snprintf
+ 112      E7800000 
+ 113 0184 13060500 		mv	a2,a0
+ 114 0188 9305C100 		addi	a1,sp,12
+ 115 018c 17050000 		lla	a0,huart0
+ 115      13050500 
+ 116 0194 97000000 		call	UART_Transmit
+ 116      E7800000 
+ 117 019c 13040000 		li	s0,0
+ 118 01a0 6FF0DFF2 		j	.L2
+ 119              	.L4:
+ 120 01a4 13061000 		li	a2,1
+ 121 01a8 9305B104 		addi	a1,sp,75
+ 122 01ac 17050000 		lla	a0,huart0
+ 122      13050500 
+ 123 01b4 97000000 		call	UART_Transmit
+ 123      E7800000 
+ 124 01bc 93072000 		li	a5,2
+ 125 01c0 E3E687F0 		bgtu	s0,a5,.L2
+ 126 01c4 93070405 		addi	a5,s0,80
+ 127 01c8 B3872700 		add	a5,a5,sp
+ 128 01cc 0347B104 		lbu	a4,75(sp)
+ 129 01d0 238EE7FE 		sb	a4,-4(a5)
+ 130 01d4 13041400 		addi	s0,s0,1
+ 131 01d8 1374F40F 		andi	s0,s0,0xff
+ 132 01dc 6FF01FEF 		j	.L2
+ 134              		.ident	"GCC: (xPack GNU RISC-V Embedded GCC x86_64) 13.2.0"
+GAS LISTING /tmp/cc7afS2E.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 q3.c
+     /tmp/cc7afS2E.s:24     .text.main:00000000 main
+     /tmp/cc7afS2E.s:25     .text.main:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/cc7afS2E.s:28     .text.main:0000000c .L0 
+     /tmp/cc7afS2E.s:18     .rodata.main.str1.4:0000002c .LC0
+     /tmp/cc7afS2E.s:30     .text.main:0000001c .L0 
+     /tmp/cc7afS2E.s:57     .text.main:0000008c .L0 
+     /tmp/cc7afS2E.s:15     .rodata.main.str1.4:00000014 .LC3
+     /tmp/cc7afS2E.s:66     .text.main:000000b0 .L0 
+     /tmp/cc7afS2E.s:67     .text.main:000000b8 .L0 
+     /tmp/cc7afS2E.s:73     .text.main:000000d4 .L0 
+     /tmp/cc7afS2E.s:9      .rodata.main.str1.4:00000000 .LC1
+     /tmp/cc7afS2E.s:82     .text.main:000000fc .L0 
+     /tmp/cc7afS2E.s:83     .text.main:00000104 .L0 
+     /tmp/cc7afS2E.s:12     .rodata.main.str1.4:00000004 .LC2
+     /tmp/cc7afS2E.s:109    .text.main:0000016c .L0 
+     /tmp/cc7afS2E.s:115    .text.main:0000018c .L0 
+     /tmp/cc7afS2E.s:122    .text.main:000001ac .L0 
+     /tmp/cc7afS2E.s:70     .text.main:000000cc .L2
+     /tmp/cc7afS2E.s:108    .text.main:0000016c .L8
+     /tmp/cc7afS2E.s:80     .text.main:000000f8 .L3
+     /tmp/cc7afS2E.s:119    .text.main:000001a4 .L4
+     /tmp/cc7afS2E.s:64     .text.main:000000ac .L5
+     /tmp/cc7afS2E.s:102    .text.main:00000158 .L6
+     /tmp/cc7afS2E.s:61     .text.main:000000a4 .L11
+
+UNDEFINED SYMBOLS
+huart0
+UART_Init
+UART_Transmit
+UART_Receive
+snprintf

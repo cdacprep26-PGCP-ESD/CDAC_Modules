@@ -1,0 +1,127 @@
+GAS LISTING /tmp/ccLbLFzz.s 			page 1
+
+
+   1              		.file	"Q5.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_zicsr2p0_zifencei2p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              		.section	.rodata.main.str1.4,"aMS",@progbits,1
+   8              		.align	2
+   9              	.LC0:
+  10 0000 566F7765 		.string	"Vowel Count : %d\r\n"
+  10      6C20436F 
+  10      756E7420 
+  10      3A202564 
+  10      0D0A00
+  11 0013 00       		.align	2
+  12              	.LC1:
+  13 0014 0D0A00   		.string	"\r\n"
+  14              		.section	.text.main,"ax",@progbits
+  15              		.align	2
+  16              		.globl	main
+  18              	main:
+  19 0000 130101FD 		addi	sp,sp,-48
+  20 0004 23261102 		sw	ra,44(sp)
+  21 0008 23248102 		sw	s0,40(sp)
+  22 000c 17050000 		lla	a0,huart0
+  22      13050500 
+  23 0014 97000000 		call	UART_Init
+  23      E7800000 
+  24 001c 13040000 		li	s0,0
+  25 0020 6F008006 		j	.L2
+  26              	.L3:
+  27 0024 13075007 		li	a4,117
+  28 0028 6364F702 		bgtu	a5,a4,.L5
+  29 002c 13071006 		li	a4,97
+  30 0030 63E0E702 		bltu	a5,a4,.L5
+  31 0034 9387F7F9 		addi	a5,a5,-97
+  32 0038 37471000 		li	a4,1064960
+  33 003c 13071711 		addi	a4,a4,273
+  34 0040 3357F700 		srl	a4,a4,a5
+  35 0044 13771700 		andi	a4,a4,1
+  36 0048 63040700 		beq	a4,zero,.L5
+  37              	.L6:
+  38 004c 13041400 		addi	s0,s0,1
+  39              	.L5:
+  40 0050 13061000 		li	a2,1
+  41 0054 9305F101 		addi	a1,sp,31
+  42 0058 17050000 		lla	a0,huart0
+  42      13050500 
+  43 0060 97000000 		call	UART_Transmit
+  43      E7800000 
+  44 0068 93060400 		mv	a3,s0
+  45 006c 17060000 		lla	a2,.LC0
+  45      13060600 
+  46 0074 93053001 		li	a1,19
+  47 0078 1305C100 		addi	a0,sp,12
+  48 007c 97000000 		call	snprintf
+  48      E7800000 
+GAS LISTING /tmp/ccLbLFzz.s 			page 2
+
+
+  49 0084 6346A004 		bgt	a0,zero,.L10
+  50              	.L2:
+  51 0088 13061000 		li	a2,1
+  52 008c 9305F101 		addi	a1,sp,31
+  53 0090 17050000 		lla	a0,huart0
+  53      13050500 
+  54 0098 97000000 		call	UART_Receive
+  54      E7800000 
+  55 00a0 8347F101 		lbu	a5,31(sp)
+  56 00a4 13075005 		li	a4,85
+  57 00a8 E36EF7F6 		bgtu	a5,a4,.L3
+  58 00ac 13071004 		li	a4,65
+  59 00b0 E3E0E7FA 		bltu	a5,a4,.L5
+  60 00b4 9387F7FB 		addi	a5,a5,-65
+  61 00b8 37471000 		li	a4,1064960
+  62 00bc 13071711 		addi	a4,a4,273
+  63 00c0 3357F700 		srl	a4,a4,a5
+  64 00c4 13771700 		andi	a4,a4,1
+  65 00c8 E31207F8 		bne	a4,zero,.L6
+  66 00cc 6FF05FF8 		j	.L5
+  67              	.L10:
+  68 00d0 13063000 		li	a2,3
+  69 00d4 97050000 		lla	a1,.LC1
+  69      93850500 
+  70 00dc 17050000 		lla	a0,huart0
+  70      13050500 
+  71 00e4 97000000 		call	UART_Transmit
+  71      E7800000 
+  72 00ec 13063001 		li	a2,19
+  73 00f0 9305C100 		addi	a1,sp,12
+  74 00f4 17050000 		lla	a0,huart0
+  74      13050500 
+  75 00fc 97000000 		call	UART_Transmit
+  75      E7800000 
+  76 0104 6FF05FF8 		j	.L2
+  78              		.ident	"GCC: (xPack GNU RISC-V Embedded GCC x86_64) 13.2.0"
+GAS LISTING /tmp/ccLbLFzz.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 Q5.c
+     /tmp/ccLbLFzz.s:18     .text.main:00000000 main
+     /tmp/ccLbLFzz.s:19     .text.main:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/ccLbLFzz.s:22     .text.main:0000000c .L0 
+     /tmp/ccLbLFzz.s:42     .text.main:00000058 .L0 
+     /tmp/ccLbLFzz.s:9      .rodata.main.str1.4:00000000 .LC0
+     /tmp/ccLbLFzz.s:45     .text.main:0000006c .L0 
+     /tmp/ccLbLFzz.s:53     .text.main:00000090 .L0 
+     /tmp/ccLbLFzz.s:12     .rodata.main.str1.4:00000014 .LC1
+     /tmp/ccLbLFzz.s:69     .text.main:000000d4 .L0 
+     /tmp/ccLbLFzz.s:70     .text.main:000000dc .L0 
+     /tmp/ccLbLFzz.s:74     .text.main:000000f4 .L0 
+     /tmp/ccLbLFzz.s:50     .text.main:00000088 .L2
+     /tmp/ccLbLFzz.s:39     .text.main:00000050 .L5
+     /tmp/ccLbLFzz.s:67     .text.main:000000d0 .L10
+     /tmp/ccLbLFzz.s:26     .text.main:00000024 .L3
+     /tmp/ccLbLFzz.s:37     .text.main:0000004c .L6
+
+UNDEFINED SYMBOLS
+huart0
+UART_Init
+UART_Transmit
+snprintf
+UART_Receive

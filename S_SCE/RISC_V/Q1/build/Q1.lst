@@ -1,0 +1,160 @@
+GAS LISTING /tmp/ccEtWXAC.s 			page 1
+
+
+   1              		.file	"Q1.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_zicsr2p0_zifencei2p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              		.section	.rodata.main.str1.4,"aMS",@progbits,1
+   8              		.align	2
+   9              	.LC1:
+  10 0000 50574D20 		.string	"PWM Duty : %d\r\n"
+  10      44757479 
+  10      203A2025 
+  10      640D0A00 
+  11              		.section	.text.main,"ax",@progbits
+  12              		.align	2
+  13              		.globl	main
+  15              	main:
+  16 0000 130101FA 		addi	sp,sp,-96
+  17 0004 232E1104 		sw	ra,92(sp)
+  18 0008 232C8104 		sw	s0,88(sp)
+  19 000c 13061000 		li	a2,1
+  20 0010 93058000 		li	a1,8
+  21 0014 13051000 		li	a0,1
+  22 0018 97000000 		call	GPIO_Init
+  22      E7800000 
+  23 0020 93058000 		li	a1,8
+  24 0024 13051000 		li	a0,1
+  25 0028 97000000 		call	GPIO_SetPin
+  25      E7800000 
+  26 0030 97070000 		lla	a5,.LANCHOR0
+  26      93870700 
+  27 0038 83AE0700 		lw	t4,0(a5)
+  28 003c 03AE4700 		lw	t3,4(a5)
+  29 0040 03A38700 		lw	t1,8(a5)
+  30 0044 83A8C700 		lw	a7,12(a5)
+  31 0048 03A80701 		lw	a6,16(a5)
+  32 004c 03A54701 		lw	a0,20(a5)
+  33 0050 83A58701 		lw	a1,24(a5)
+  34 0054 03A6C701 		lw	a2,28(a5)
+  35 0058 83A60702 		lw	a3,32(a5)
+  36 005c 03A74702 		lw	a4,36(a5)
+  37 0060 83A78702 		lw	a5,40(a5)
+  38 0064 2322D103 		sw	t4,36(sp)
+  39 0068 2324C103 		sw	t3,40(sp)
+  40 006c 23266102 		sw	t1,44(sp)
+  41 0070 23281103 		sw	a7,48(sp)
+  42 0074 232A0103 		sw	a6,52(sp)
+  43 0078 232CA102 		sw	a0,56(sp)
+  44 007c 232EB102 		sw	a1,60(sp)
+  45 0080 2320C104 		sw	a2,64(sp)
+  46 0084 2322D104 		sw	a3,68(sp)
+  47 0088 2324E104 		sw	a4,72(sp)
+  48 008c 2326F104 		sw	a5,76(sp)
+  49 0090 17050000 		lla	a0,hpwm1
+  49      13050500 
+  50 0098 97000000 		call	PWM_Init
+  50      E7800000 
+GAS LISTING /tmp/ccEtWXAC.s 			page 2
+
+
+  51 00a0 17050000 		lla	a0,huart0
+  51      13050500 
+  52 00a8 97000000 		call	UART_Init
+  52      E7800000 
+  53 00b0 17050000 		lla	a0,hpwm1
+  53      13050500 
+  54 00b8 97000000 		call	PWM_Start
+  54      E7800000 
+  55 00c0 13040000 		li	s0,0
+  56 00c4 6F00C004 		j	.L3
+  57              	.L5:
+  58 00c8 13054100 		addi	a0,sp,4
+  59 00cc 97000000 		call	strlen
+  59      E7800000 
+  60 00d4 13060500 		mv	a2,a0
+  61 00d8 93054100 		addi	a1,sp,4
+  62 00dc 17050000 		lla	a0,huart0
+  62      13050500 
+  63 00e4 97000000 		call	UART_Transmit
+  63      E7800000 
+  64 00ec 13054006 		li	a0,100
+  65 00f0 97000000 		call	delayms
+  65      E7800000 
+  66              	.L2:
+  67 00f8 13041400 		addi	s0,s0,1
+  68 00fc 9307B000 		li	a5,11
+  69 0100 3364F402 		rem	s0,s0,a5
+  70 0104 13054006 		li	a0,100
+  71 0108 97000000 		call	delayms
+  71      E7800000 
+  72              	.L3:
+  73 0110 93172400 		slli	a5,s0,2
+  74 0114 93870705 		addi	a5,a5,80
+  75 0118 B3872700 		add	a5,a5,sp
+  76 011c 83A647FD 		lw	a3,-44(a5)
+  77 0120 97070000 		lw	a5,hpwm1
+  77      83A70700 
+  78 0128 23A6D700 		sw	a3,12(a5)
+  79 012c 17060000 		lla	a2,.LC1
+  79      13060600 
+  80 0134 9305E001 		li	a1,30
+  81 0138 13054100 		addi	a0,sp,4
+  82 013c 97000000 		call	snprintf
+  82      E7800000 
+  83 0144 E342A0F8 		bgt	a0,zero,.L5
+  84 0148 6FF01FFB 		j	.L2
+  86              		.section	.rodata
+  87              		.align	2
+  88              		.set	.LANCHOR0,. + 0
+  89              	.LC0:
+  90 0000 00000000 		.word	0
+  91 0004 0A000000 		.word	10
+  92 0008 14000000 		.word	20
+  93 000c 1E000000 		.word	30
+  94 0010 28000000 		.word	40
+  95 0014 32000000 		.word	50
+  96 0018 3C000000 		.word	60
+GAS LISTING /tmp/ccEtWXAC.s 			page 3
+
+
+  97 001c 46000000 		.word	70
+  98 0020 50000000 		.word	80
+  99 0024 5A000000 		.word	90
+ 100 0028 64000000 		.word	100
+ 101              		.ident	"GCC: (xPack GNU RISC-V Embedded GCC x86_64) 13.2.0"
+GAS LISTING /tmp/ccEtWXAC.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 Q1.c
+     /tmp/ccEtWXAC.s:15     .text.main:00000000 main
+     /tmp/ccEtWXAC.s:16     .text.main:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/ccEtWXAC.s:88     .rodata:00000000 .LANCHOR0
+     /tmp/ccEtWXAC.s:26     .text.main:00000030 .L0 
+     /tmp/ccEtWXAC.s:49     .text.main:00000090 .L0 
+     /tmp/ccEtWXAC.s:51     .text.main:000000a0 .L0 
+     /tmp/ccEtWXAC.s:53     .text.main:000000b0 .L0 
+     /tmp/ccEtWXAC.s:62     .text.main:000000dc .L0 
+     /tmp/ccEtWXAC.s:77     .text.main:00000120 .L0 
+     /tmp/ccEtWXAC.s:9      .rodata.main.str1.4:00000000 .LC1
+     /tmp/ccEtWXAC.s:79     .text.main:0000012c .L0 
+     /tmp/ccEtWXAC.s:72     .text.main:00000110 .L3
+     /tmp/ccEtWXAC.s:57     .text.main:000000c8 .L5
+     /tmp/ccEtWXAC.s:66     .text.main:000000f8 .L2
+
+UNDEFINED SYMBOLS
+GPIO_Init
+GPIO_SetPin
+hpwm1
+PWM_Init
+huart0
+UART_Init
+PWM_Start
+strlen
+UART_Transmit
+delayms
+snprintf

@@ -1,0 +1,69 @@
+GAS LISTING /tmp/cczbQmGH.s 			page 1
+
+
+   1              		.file	"q2.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_zicsr2p0_zifencei2p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              		.section	.text.main,"ax",@progbits
+   8              		.align	2
+   9              		.globl	main
+  11              	main:
+  12 0000 130101FF 		addi	sp,sp,-16
+  13 0004 23261100 		sw	ra,12(sp)
+  14 0008 13061000 		li	a2,1
+  15 000c 93058000 		li	a1,8
+  16 0010 13051000 		li	a0,1
+  17 0014 97000000 		call	GPIO_Init
+  17      E7800000 
+  18 001c 13060000 		li	a2,0
+  19 0020 93053000 		li	a1,3
+  20 0024 13051000 		li	a0,1
+  21 0028 97000000 		call	GPIO_Init
+  21      E7800000 
+  22 0030 93058000 		li	a1,8
+  23 0034 13051000 		li	a0,1
+  24 0038 97000000 		call	GPIO_ResetPin
+  24      E7800000 
+  25 0040 6F000002 		j	.L2
+  26              	.L6:
+  27 0044 93058000 		li	a1,8
+  28 0048 13051000 		li	a0,1
+  29 004c 97000000 		call	GPIO_TogglePin
+  29      E7800000 
+  30 0054 1305A00F 		li	a0,250
+  31 0058 97000000 		call	delayms
+  31      E7800000 
+  32              	.L2:
+  33 0060 93053000 		li	a1,3
+  34 0064 13051000 		li	a0,1
+  35 0068 97000000 		call	GPIO_ReadPin
+  35      E7800000 
+  36 0070 E30A05FC 		beq	a0,zero,.L6
+  37 0074 93058000 		li	a1,8
+  38 0078 13051000 		li	a0,1
+  39 007c 97000000 		call	GPIO_TogglePin
+  39      E7800000 
+  40 0084 1305803E 		li	a0,1000
+  41 0088 97000000 		call	delayms
+  41      E7800000 
+  42 0090 6FF01FFD 		j	.L2
+  44              		.ident	"GCC: (xPack GNU RISC-V Embedded GCC x86_64) 13.2.0"
+GAS LISTING /tmp/cczbQmGH.s 			page 2
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 q2.c
+     /tmp/cczbQmGH.s:11     .text.main:00000000 main
+     /tmp/cczbQmGH.s:12     .text.main:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/cczbQmGH.s:32     .text.main:00000060 .L2
+     /tmp/cczbQmGH.s:26     .text.main:00000044 .L6
+
+UNDEFINED SYMBOLS
+GPIO_Init
+GPIO_ResetPin
+GPIO_TogglePin
+delayms
+GPIO_ReadPin

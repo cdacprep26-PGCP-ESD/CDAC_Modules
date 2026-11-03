@@ -1,0 +1,148 @@
+GAS LISTING /tmp/cchgxKcA.s 			page 1
+
+
+   1              		.file	"q4.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_zicsr2p0_zifencei2p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              		.section	.rodata.main.str1.4,"aMS",@progbits,1
+   8              		.align	2
+   9              	.LC0:
+  10 0000 436F756E 		.string	"Counter: %d\r\n"
+  10      7465723A 
+  10      2025640D 
+  10      0A00
+  11              		.section	.text.main,"ax",@progbits
+  12              		.align	2
+  13              		.globl	main
+  15              	main:
+  16 0000 130101FF 		addi	sp,sp,-16
+  17 0004 23261100 		sw	ra,12(sp)
+  18 0008 23248100 		sw	s0,8(sp)
+  19 000c 17040000 		lla	s0,htimer0
+  19      13040400 
+  20 0014 B7E7F505 		li	a5,99999744
+  21 0018 93870710 		addi	a5,a5,256
+  22 001c 2322F400 		sw	a5,4(s0)
+  23 0020 13050400 		mv	a0,s0
+  24 0024 97000000 		call	TIMER_Init
+  24      E7800000 
+  25 002c 13050400 		mv	a0,s0
+  26 0030 97000000 		call	TIMER_Start_IT
+  26      E7800000 
+  27 0038 17050000 		lla	a0,huart0
+  27      13050500 
+  28 0040 97000000 		call	UART_Init
+  28      E7800000 
+  29 0048 6F00C000 		j	.L2
+  30              	.L3:
+  31 004c 97070000 		sb	zero,flag,a5
+  31      23800700 
+  32              	.L2:
+  33 0054 97070000 		lbu	a5,flag
+  33      83C70700 
+  34 005c E38C07FE 		beq	a5,zero,.L2
+  35 0060 17040000 		lla	s0,counter
+  35      13040400 
+  36 0068 83460400 		lbu	a3,0(s0)
+  37 006c 17060000 		lla	a2,.LC0
+  37      13060600 
+  38 0074 9305E000 		li	a1,14
+  39 0078 17050000 		lla	a0,out_buf
+  39      13050500 
+  40 0080 97000000 		call	snprintf
+  40      E7800000 
+  41 0088 13060500 		mv	a2,a0
+  42 008c 97070000 		sb	a0,len,a5
+  42      2380A700 
+  43 0094 97050000 		lla	a1,out_buf
+GAS LISTING /tmp/cchgxKcA.s 			page 2
+
+
+  43      93850500 
+  44 009c 17050000 		lla	a0,huart0
+  44      13050500 
+  45 00a4 97000000 		call	UART_Transmit
+  45      E7800000 
+  46 00ac 83470400 		lbu	a5,0(s0)
+  47 00b0 93F7F70F 		andi	a5,a5,0xff
+  48 00b4 1307A000 		li	a4,10
+  49 00b8 E39AE7F8 		bne	a5,a4,.L3
+  50 00bc 97070000 		sb	zero,counter,a5
+  50      23800700 
+  51 00c4 6FF09FF8 		j	.L3
+  53              		.section	.text.TIMER_ElapsedCallback,"ax",@progbits
+  54              		.align	2
+  55              		.globl	TIMER_ElapsedCallback
+  57              	TIMER_ElapsedCallback:
+  58 0000 17070000 		lla	a4,counter
+  58      13070700 
+  59 0008 83470700 		lbu	a5,0(a4)
+  60 000c 93871700 		addi	a5,a5,1
+  61 0010 93F7F70F 		andi	a5,a5,0xff
+  62 0014 2300F700 		sb	a5,0(a4)
+  63 0018 93071000 		li	a5,1
+  64 001c 17070000 		sb	a5,flag,a4
+  64      2300F700 
+  65 0024 67800000 		ret
+  67              		.globl	out_buf
+  68              		.section	.bss.out_buf,"aw",@nobits
+  69              		.align	2
+  72              	out_buf:
+  73 0000 00000000 		.zero	14
+  73      00000000 
+  73      00000000 
+  73      0000
+  74              		.globl	len
+  75              		.section	.sbss.len,"aw",@nobits
+  78              	len:
+  79 0000 00       		.zero	1
+  80              		.globl	flag
+  81              		.section	.sbss.flag,"aw",@nobits
+  84              	flag:
+  85 0000 00       		.zero	1
+  86              		.globl	counter
+  87              		.section	.sbss.counter,"aw",@nobits
+  90              	counter:
+  91 0000 00       		.zero	1
+  92              		.ident	"GCC: (xPack GNU RISC-V Embedded GCC x86_64) 13.2.0"
+GAS LISTING /tmp/cchgxKcA.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 q4.c
+     /tmp/cchgxKcA.s:15     .text.main:00000000 main
+     /tmp/cchgxKcA.s:16     .text.main:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/cchgxKcA.s:84     .sbss.flag:00000000 flag
+     /tmp/cchgxKcA.s:90     .sbss.counter:00000000 counter
+     /tmp/cchgxKcA.s:72     .bss.out_buf:00000000 out_buf
+     /tmp/cchgxKcA.s:78     .sbss.len:00000000 len
+     /tmp/cchgxKcA.s:57     .text.TIMER_ElapsedCallback:00000000 TIMER_ElapsedCallback
+     /tmp/cchgxKcA.s:58     .text.TIMER_ElapsedCallback:00000000 $xrv32i2p1_m2p0_zicsr2p0_zifencei2p0_zmmul1p0
+     /tmp/cchgxKcA.s:19     .text.main:0000000c .L0 
+     /tmp/cchgxKcA.s:27     .text.main:00000038 .L0 
+     /tmp/cchgxKcA.s:31     .text.main:0000004c .L0 
+     /tmp/cchgxKcA.s:33     .text.main:00000054 .L0 
+     /tmp/cchgxKcA.s:35     .text.main:00000060 .L0 
+     /tmp/cchgxKcA.s:9      .rodata.main.str1.4:00000000 .LC0
+     /tmp/cchgxKcA.s:37     .text.main:0000006c .L0 
+     /tmp/cchgxKcA.s:39     .text.main:00000078 .L0 
+     /tmp/cchgxKcA.s:42     .text.main:0000008c .L0 
+     /tmp/cchgxKcA.s:43     .text.main:00000094 .L0 
+     /tmp/cchgxKcA.s:44     .text.main:0000009c .L0 
+     /tmp/cchgxKcA.s:50     .text.main:000000bc .L0 
+     /tmp/cchgxKcA.s:32     .text.main:00000054 .L2
+     /tmp/cchgxKcA.s:30     .text.main:0000004c .L3
+     /tmp/cchgxKcA.s:58     .text.TIMER_ElapsedCallback:00000000 .L0 
+     /tmp/cchgxKcA.s:64     .text.TIMER_ElapsedCallback:0000001c .L0 
+
+UNDEFINED SYMBOLS
+htimer0
+TIMER_Init
+TIMER_Start_IT
+huart0
+UART_Init
+snprintf
+UART_Transmit
