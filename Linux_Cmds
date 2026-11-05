@@ -20,3 +20,20 @@ sudo chrt -f/-r/-o PR <PID>
 
 
 ASLR : Address Space Layout Randomisation
+It has three values 0,1,2
+0: randomisation disabled
+1: partial enabled
+2: fully enabled
+
+//Shows ASLR Value
+cat /proc/sys/kernel/randomise_va_space
+
+
+//Changes ASLR Value 0,1,2
+sudo sysctl -w kernel.randomize_va_space=0
+
+
+//Address ranges assigned to different section of the memory
+cat /proc/<PID>/maps
+
+
