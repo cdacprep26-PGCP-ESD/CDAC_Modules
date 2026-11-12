@@ -1,0 +1,50 @@
+Parent Process Started
+Parent PID: 61898
+
+Child 1 created. PID = 61899, PPID = 61898
+Child 1: Launching PDF Viewer
+Child 2 created. PID = 61900, PPID = 61898
+Child 2: Launching KWrite
+Child 3 created. PID = 61901, PPID = 61898
+Child 3: Launching GCC compiler
+exec failed: No such file or directory
+
+Parent: All five children created.
+Child 4 created. PID = 61902, PPID = 61898
+Child 1 PID = 61899
+Child 4: Launching while1 applicationChild 2 PID = 61900
+
+Child 3 PID = 61901
+Child 4 PID = 61902
+Child 5 PID = 61903
+
+Parent is doing its own work...
+Child 5 created. PID = 61903, PPID = 61898
+Child 5: Launching false command
+
+Parent: Sending SIGKILL to Child 4...
+SIGKILL sent successfully to Child 4.
+
+Parent: Collecting child statuses...
+
+Collected Child PID: 61899
+Normal successful termination
+-----------------------------
+Collected Child PID: 61900
+Normal unsuccessful termination
+Exit status: 127
+-----------------------------
+Collected Child PID: 61901
+Normal successful termination
+-----------------------------
+Collected Child PID: 61902
+Abnormal termination
+Signal number: 9
+-----------------------------
+Collected Child PID: 61903
+Normal unsuccessful termination
+Exit status: 1
+-----------------------------
+
+Parent: All five children collected.
+Parent process exiting.

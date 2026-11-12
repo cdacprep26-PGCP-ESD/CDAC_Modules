@@ -1,0 +1,48 @@
+Parent Process Started
+Parent PID: 56584
+
+Child 1 created. PID = 56586, PPID = 56584
+Child 2 created. PID = 56587, PPID = 56584
+Child 3 created. PID = 56588, PPID = 56584
+
+Parent: All five children created.
+
+Child PIDs:
+Child 1 PID = 56586
+Child 2 PID = 56587
+Child 3 PID = 56588
+Child 4 PID = 56589
+Child 5 PID = 56590
+
+Parent is doing its own work...
+Child 4 created. PID = 56589, PPID = 56584
+Child 5 created. PID = 56590, PPID = 56584
+
+Parent: My work is completed.
+
+Parent: Sending SIGKILL to Child 3...
+Parent: SIGKILL sent successfully to Child 3.
+
+Parent: Collecting child termination statuses.
+
+Collected Child PID: 56586
+Status: Normal successful termination
+-----------------------------
+Collected Child PID: 56587
+Status: Normal unsuccessful termination
+Exit code: 5
+-----------------------------
+Collected Child PID: 56589
+Status: Normal successful termination
+-----------------------------
+Collected Child PID: 56590
+Status: Normal unsuccessful termination
+Exit code: 2
+-----------------------------
+Collected Child PID: 56588
+Status: Abnormal termination
+Terminating signal: 9
+-----------------------------
+
+Parent: All five children collected.
+Parent process exiting.

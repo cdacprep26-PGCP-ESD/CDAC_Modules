@@ -1,0 +1,10 @@
+Number 2 -> square = 4
+Number 4 -> square = 16
+Number 6 -> square = 36
+Number 8 -> square = 64
+Number 10 -> square = 100
+Number 12 -> square = 144
+Number 14 -> square = 196
+Number 16 -> square = 256
+Number 18 -> square = 324
+Number 20 -> square = 400

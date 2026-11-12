@@ -1,0 +1,51 @@
+Parent (pid 11877): message queue created, id 1
+Parent: created Child 1 (producer), pid 11879
+Child 1 (pid 11879) creating the producer thread
+Parent: created Child 2 (consumer), pid 11880
+Child 2 (pid 11880) creating the consumer and processing threads
+Producer: sent 2
+Consumer: received  2 from queue, placed in buffer
+Processor: took  2, square =   4, written to output.txt
+Producer: sent 4
+Consumer: received  4 from queue, placed in buffer
+Producer: sent 6
+Consumer: buffer full, waiting...
+Processor: took  4, square =  16, written to output.txt
+Consumer: received  6 from queue, placed in buffer
+Producer: sent 8
+Consumer: buffer full, waiting...
+Producer: sent 10
+Producer: sent 12
+Processor: took  6, square =  36, written to output.txt
+Consumer: received  8 from queue, placed in buffer
+Consumer: buffer full, waiting...
+Producer: sent 14
+Producer: sent 16
+Producer: sent 18
+Processor: took  8, square =  64, written to output.txt
+Consumer: received 10 from queue, placed in buffer
+Consumer: buffer full, waiting...
+Producer: sent 20
+Producer: sent END message
+Child 1 finished
+Parent: Child 1 (producer) terminated, exit status 0
+Processor: took 10, square = 100, written to output.txt
+Consumer: received 12 from queue, placed in buffer
+Consumer: buffer full, waiting...
+Processor: took 12, square = 144, written to output.txt
+Consumer: received 14 from queue, placed in buffer
+Consumer: buffer full, waiting...
+Processor: took 14, square = 196, written to output.txt
+Consumer: received 16 from queue, placed in buffer
+Consumer: buffer full, waiting...
+Processor: took 16, square = 256, written to output.txt
+Consumer: received 18 from queue, placed in buffer
+Consumer: buffer full, waiting...
+Processor: took 18, square = 324, written to output.txt
+Consumer: received 20 from queue, placed in buffer
+Consumer: finished
+Processor: took 20, square = 400, written to output.txt
+Processor: finished
+Child 2 finished: 10 numbers processed
+Parent: Child 2 (consumer) terminated, exit status 0
+Parent: message queue removed

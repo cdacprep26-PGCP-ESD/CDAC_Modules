@@ -1,0 +1,48 @@
+Q1. Write a user-space application that performs 
+the following tasks:
+1. Create three child processes from a common parent.
+2. From only one of the children, spawn two threads:
+3. Set up a named pipe (FIFO) in user-space for inter-process 
+communication between the parent and one child
+4. Use POSIX semaphores and mutexes for synchronization 
+between threads.
+5. Implement a producer-consumer scenario between the two threads.
+6. Ensure graceful termination of all processes and threads.
+
+Q2.Design and implement a user-space application in C that demonstrates inter-process communication (IPC) using System V shared memory and synchronization using POSIX semaphores and read-write locks.
+
+The application must satisfy the following requirements:
+
+1. Process creation: The parent process must create two child processes using "fork()". Each child process must create one worker thread using "pthread_create()".
+
+2. Shared memory: The two child processes must communicate through a shared memory region created using "shmget()" and attached using "shmat()". The shared memory must contain a buffer for transferring data and a shared status structure.
+
+3. Producer: The first child process must act as the producer. Its worker thread must generate integers from 1 to 10 and place them into the shared buffer.
+
+4. Consumer: The second child process must act as the consumer. Its worker thread must read the integers from the shared buffer, process them, and write the results to "output.txt".
+
+5. Semaphore synchronization: Use process-shared POSIX semaphores to coordinate the producer and consumer. The producer must wait when the buffer is full, and the consumer must wait when the buffer is empty.
+
+6. Read-write lock synchronization: Use a process-shared POSIX read-write lock to protect the shared status structure, which maintains information such as the number of items produced and consumed. Multiple readers may access the status simultaneously, but updates must be protected by a write lock.
+
+7. Completion and cleanup: Ensure that all 10 integers are consumed and processed before termination. The parent must wait for both child processes. Detach and remove the shared memory and destroy synchronization objects when they are no longer in use.
+
+Q3.Design and implement a user-space application in C that demonstrates inter-process communication using a System V message queue and thread synchronization using a POSIX mutex and condition variable.
+
+The application must satisfy the following requirements:
+
+1. Process creation: The parent process must create two child processes using "fork()".
+
+2. Producer: The first child process must create a producer thread using "pthread_create()". This thread must generate the first 10 even numbers, from 2 to 20, and send them to the second child process through a System V message queue using "msgsnd()".
+
+3. Consumer: The second child process must create a consumer thread and a processing thread. The consumer thread must receive messages using "msgrcv()" and place the received numbers into a single-slot buffer shared by the two threads.
+
+4. Processing thread: The processing thread must retrieve numbers from the single-slot buffer, calculate the square of each number, and write the number and its square to "output.txt".
+
+5. Mutex synchronization: Use a POSIX mutex to protect access to the shared buffer so that the consumer and processing threads do not access or modify it simultaneously in an unsafe manner.
+
+6. Condition variable synchronization: Use a POSIX condition variable with the mutex to coordinate the two threads. The consumer must wait while the buffer is full, and the processing thread must wait while the buffer is empty. After changing the buffer state, each thread must signal the other thread when appropriate.
+
+7. Completion and cleanup: Ensure that all 10 even numbers are processed before termination. Use a suitable termination mechanism so the consumer and processing threads can exit without waiting indefinitely. The parent must wait for both child processes and remove the message queue after it is no longer needed.
+
+

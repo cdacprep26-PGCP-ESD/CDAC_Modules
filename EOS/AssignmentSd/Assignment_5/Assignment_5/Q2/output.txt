@@ -1,0 +1,10 @@
+Item 1 -> square = 1
+Item 2 -> square = 4
+Item 3 -> square = 9
+Item 4 -> square = 16
+Item 5 -> square = 25
+Item 6 -> square = 36
+Item 7 -> square = 49
+Item 8 -> square = 64
+Item 9 -> square = 81
+Item 10 -> square = 100
