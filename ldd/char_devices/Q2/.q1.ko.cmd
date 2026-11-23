@@ -1,0 +1,1 @@
+savedcmd_/home/desd/ldd/char_devices/Q2/q1.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o /home/desd/ldd/char_devices/Q2/q1.ko /home/desd/ldd/char_devices/Q2/q1.o /home/desd/ldd/char_devices/Q2/q1.mod.o

@@ -1,0 +1,1 @@
+savedcmd_/home/desd/ldd/Q2/marks_analyzer.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o /home/desd/ldd/Q2/marks_analyzer.ko /home/desd/ldd/Q2/marks_analyzer.o /home/desd/ldd/Q2/marks_analyzer.mod.o

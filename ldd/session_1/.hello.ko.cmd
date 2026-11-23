@@ -1,0 +1,1 @@
+savedcmd_/home/desd/ldd/session_1/hello.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o /home/desd/ldd/session_1/hello.ko /home/desd/ldd/session_1/hello.o /home/desd/ldd/session_1/hello.mod.o
