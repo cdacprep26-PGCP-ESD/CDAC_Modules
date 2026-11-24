@@ -33,6 +33,47 @@ struct session
 	u8 data[CAPACITY];	//Binary byte. Not a NULL terminated string
 };
 
+static int my_open(struct inode *inode, struct file* file)
+{
+	struct session *s  //This will  point to open alloction
+	struct demo_device *dev;
+	
+	static const char inital[] = "Hello from kernel\n";
+	
+	dev = container_of(inode->i_cdev, struct demo_device, cdev);
+	
+	if(file->f_flags & (O_APPEND | O_TRUNC))
+	{
+		return -EINVAL;
+	}
+	
+	if(dev->fail_open)
+	{
+		return -ENOMEM;
+	}
+	
+	s = kzalloc(sizeof(*s), GFP_KERNEL); //allocate and zero
+	if(!s)
+	{
+		reteurn -ENOMEM;
+	}
+	
+	memcpy(s->data, initial, sizof(initial)-1);
+	s->length = sizof(initial) -1;
+	s->owner = dev;
+	file->private_data = s;
+	
+	return 0;
+}
+
+static int my_relase(struct inode* inode, struct file* file)
+{
+	kfree(file->private_data);
+	file->private_data = NULL;
+	return 0;
+}
+
+
 static const struct file_operations demo_operation = {
 	
 	.owner = THIS_MODULE,
@@ -122,7 +163,7 @@ module_exit(my_exit);
 
 MODULE_LICENSE("GPL");
 MODULE_DESCRIPTION("Manual cdev registration and file operation implementation");
-MODULE_AUTHOR("NEEL");
+MODULE_AUTHOR("Arati");
 
 
 
