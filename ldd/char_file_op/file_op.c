@@ -73,7 +73,58 @@ static int my_relase(struct inode* inode, struct file* file)
 	return 0;
 }
 
+static ssize_t my_read(struct file * file, char __user, *buf, size_t count, loff_t *ppos)
+{
+	struct session * s = file->private_data;
+	size_t pos, available, wanted, copied;
+	
+	if(!count)
+		retrun 0;
+	if(*ppos > s->length)
+		return 0;
+	if(*ppos < 0)
+		return -EINVAL;
+	
+	pos = (size_t)*ppos;
+	available = s->length - pos;
+	wanted = min(count, available);
+	copied = wanted - copy_to_user(buf, s->data+pos, wanted); // copy_to_user returns bytes not copied to the user space
+	
+	if(!copied)
+		retrun -EFAULT;
+	*ppos +=copied;
+	
+	return copied;	
+		
+}
+static ssize_t my_write(struct file *file, const char __user *buf, size__t count, loff_t *ppos)
+{
 
+	struct session *s = file->private_data;
+	u8 temporary{CAPACITY];
+	size_t pos, avalibale, wanted, copied;
+	
+	if(file->f_flags & O_APPEND)
+		return -EINVAL;
+	if(!count)
+		return 0;
+	if(*ppos >= CAPACITY)
+		retrun -ENSPC;
+	pos = (size_t)*ppos;
+	available = CAPACITY - pos;
+	wanted = min(count, available);
+	copied = wanted - copy_from_user(temporary, buf, wanted);
+	
+	if(!copied)
+		return -EFAULT;
+	memcpy(s->data+pos, temporary, copied);
+	*ppos += copied;
+	if((size_t)*ppos > s->length)
+		s->lenth = (size_t) *ppos;
+	
+	return copied;
+
+}
 static const struct file_operations demo_operation = {
 	
 	.owner = THIS_MODULE,
@@ -163,7 +214,7 @@ module_exit(my_exit);
 
 MODULE_LICENSE("GPL");
 MODULE_DESCRIPTION("Manual cdev registration and file operation implementation");
-MODULE_AUTHOR("Arati");
+MODULE_AUTHOR("SID");
 
 
 
