@@ -119,8 +119,6 @@ static ssize_t my_write(struct file *file, const char __user *buf, size__t count
 		return -EFAULT;
 	memcpy(s->data+pos, temporary, copied);
 	*ppos += copied;
-	if((size_t)*ppos > s->length)
-		s->lenth = (size_t) *ppos;
 	
 	return copied;
 
