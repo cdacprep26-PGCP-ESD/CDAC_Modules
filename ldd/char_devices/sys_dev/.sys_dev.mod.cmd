@@ -1,0 +1,1 @@
+savedcmd_/home/desd/ldd/char_devices/sys_dev/sys_dev.mod := printf '%s\n'   sys_dev.o | awk '!x[$$0]++ { print("/home/desd/ldd/char_devices/sys_dev/"$$0) }' > /home/desd/ldd/char_devices/sys_dev/sys_dev.mod

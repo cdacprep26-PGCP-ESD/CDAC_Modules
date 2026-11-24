@@ -28,7 +28,7 @@ static int __init my_init(void)
 }
 
 static void __exit my_exit(void)
-{
+{       
         unregister_chrdev_region(first_device, 4);
         pr_info("Character Device Released\n");
 }

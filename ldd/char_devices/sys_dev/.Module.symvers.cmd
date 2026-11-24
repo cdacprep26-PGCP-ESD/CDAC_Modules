@@ -1,0 +1,1 @@
+savedcmd_/home/desd/ldd/char_devices/sys_dev/Module.symvers :=  scripts/mod/modpost -M -m -a      -o /home/desd/ldd/char_devices/sys_dev/Module.symvers -T /home/desd/ldd/char_devices/sys_dev/modules.order -i Module.symvers -e 

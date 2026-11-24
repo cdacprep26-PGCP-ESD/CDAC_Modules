@@ -1,0 +1,1 @@
+savedcmd_/home/desd/ldd/char_devices/sys_dev/sys_dev.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o /home/desd/ldd/char_devices/sys_dev/sys_dev.ko /home/desd/ldd/char_devices/sys_dev/sys_dev.o /home/desd/ldd/char_devices/sys_dev/sys_dev.mod.o
