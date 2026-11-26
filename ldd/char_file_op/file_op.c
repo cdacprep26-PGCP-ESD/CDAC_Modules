@@ -3,15 +3,19 @@
 #include<linux/cdev.h>	//struct cdev, cdev_init(), cdev_add()
 #include<linux/device.h>	//class_create, device_create
 #include<linux/err.h>	//IS_ERR, PT_ERR
-#include<linux/container_of.h>	//Recover device object address
+#include<linux/kernel.h>
+//#include<linux/container_of.h>	//Recover device object address
 #include<linux/slab.h>	//Allocate free memory
 #include<linux/uaccess.h>	//copy across the userspace
+#include<linux/ioctl.h>
+#include<linux/types.h>
 
 
 #define DEVICE_NAME "beginner"
 #define CLASS_NAME "beginner_class"
+#define BEGINNER_GET_LENGTH _IOR('B',1,u32) 
 
-#define CAPACITY 64    //maximum bytes in one session
+#define CAPACITY 1024    //maximum bytes in one session
 
 static bool fail_open;	//Default value is false
 
@@ -35,10 +39,10 @@ struct session
 
 static int my_open(struct inode *inode, struct file* file)
 {
-	struct session *s  //This will  point to open alloction
+	struct session *s;  //This will  point to open alloction
 	struct demo_device *dev;
 	
-	static const char inital[] = "Hello from kernel\n";
+	static const char initial[] = "Hello from kernel\n";
 	
 	dev = container_of(inode->i_cdev, struct demo_device, cdev);
 	
@@ -55,32 +59,32 @@ static int my_open(struct inode *inode, struct file* file)
 	s = kzalloc(sizeof(*s), GFP_KERNEL); //allocate and zero
 	if(!s)
 	{
-		reteurn -ENOMEM;
+		return -ENOMEM;
 	}
 	
-	memcpy(s->data, initial, sizof(initial)-1);
-	s->length = sizof(initial) -1;
+	memcpy(s->data, initial, sizeof(initial)-1);
+	s->length = sizeof(initial) -1;
 	s->owner = dev;
 	file->private_data = s;
 	
 	return 0;
 }
 
-static int my_relase(struct inode* inode, struct file* file)
+static int my_release(struct inode* inode, struct file* file)
 {
 	kfree(file->private_data);
 	file->private_data = NULL;
 	return 0;
 }
 
-static ssize_t my_read(struct file * file, char __user, *buf, size_t count, loff_t *ppos)
+static ssize_t my_read(struct file * file, char __user *buf, size_t count, loff_t *ppos)
 {
 	struct session * s = file->private_data;
 	size_t pos, available, wanted, copied;
 	
 	if(!count)
-		retrun 0;
-	if(*ppos > s->length)
+		return 0;
+	if(*ppos >= s->length)
 		return 0;
 	if(*ppos < 0)
 		return -EINVAL;
@@ -91,25 +95,25 @@ static ssize_t my_read(struct file * file, char __user, *buf, size_t count, loff
 	copied = wanted - copy_to_user(buf, s->data+pos, wanted); // copy_to_user returns bytes not copied to the user space
 	
 	if(!copied)
-		retrun -EFAULT;
+		return -EFAULT;
 	*ppos +=copied;
 	
 	return copied;	
 		
 }
-static ssize_t my_write(struct file *file, const char __user *buf, size__t count, loff_t *ppos)
+static ssize_t my_write(struct file *file, const char __user *buf, size_t count, loff_t *ppos)
 {
 
 	struct session *s = file->private_data;
-	u8 temporary{CAPACITY];
-	size_t pos, avalibale, wanted, copied;
+	u8 temporary[CAPACITY];
+	size_t pos, available, wanted, copied;
 	
 	if(file->f_flags & O_APPEND)
 		return -EINVAL;
 	if(!count)
 		return 0;
 	if(*ppos >= CAPACITY)
-		retrun -ENSPC;
+		return -ENOSPC;
 	pos = (size_t)*ppos;
 	available = CAPACITY - pos;
 	wanted = min(count, available);
@@ -119,21 +123,82 @@ static ssize_t my_write(struct file *file, const char __user *buf, size__t count
 		return -EFAULT;
 	memcpy(s->data+pos, temporary, copied);
 	*ppos += copied;
+	if(*ppos > s->length)
+	{
+		s->length = *ppos;
+	}
 	
 	return copied;
-
+	
 }
+
+static loff_t my_seek(struct file *file, loff_t offset, int whence)
+{
+	struct session *s = file->private_data;
+	loff_t max_pos = CAPACITY-1;
+	loff_t base;
+	loff_t new_pos;
+	
+	switch(whence)
+	{
+		case SEEK_SET:
+			base = 0;
+			break;
+		case SEEK_CUR:
+			base = file->f_pos;
+			break;
+		case SEEK_END:
+			base = s->length;
+			break;
+		default:
+			return -EINVAL;
+	}
+	
+	if(offset < -base || offset >max_pos - base)
+		return -EINVAL;
+		
+	new_pos = base + offset;
+	file->f_pos = new_pos;
+	return new_pos;
+}
+
+static long my_ioctl(struct file *file,unsigned int cmd, unsigned long arg)
+{
+	struct session *s;
+	s = file->private_data;
+	
+	__u32 len;
+	
+	switch(cmd)
+	{
+		case BEGINNER_GET_LENGTH:
+				len = READ_ONCE(s->length);
+				
+				if(copy_to_user((u32 __user*)arg, &len, sizeof(len)))
+				{
+								return -EFAULT;
+				}
+								break;
+								
+		default:
+			return -EINVAL;
+	}
+		return 0;					
+}
+	
+		
 static const struct file_operations demo_operation = {
 	
 	.owner = THIS_MODULE,
 	.open = my_open,
 	.release = my_release,
+	.read = my_read,
 	.write = my_write,
 	.llseek = my_seek,
 	.unlocked_ioctl = my_ioctl
 };
 
-statict int __init my_init(void)
+static int __init my_init(void)
 {
 	int ret;
 	
@@ -150,21 +215,21 @@ statict int __init my_init(void)
 	
 	/*Initalize cdev structure and associate it with the drivers file operation structure. 
 	It does not register the character device only initiates it */
-	cdev_init(&demo.cdev, &demo_operations);
+	cdev_init(&demo.cdev, &demo_operation);
 	demo.cdev.owner = THIS_MODULE;
 	
 	/*Register the initialized character device with kernel's character device
 	 subsystem and associates it with a range of device number */
-	ret = cdev_add(&demo.cdev, demo,number, 1);	
+	ret = cdev_add(&demo.cdev, demo.number, 1);	
 	if(ret < 0)
 	{
 		goto err_numbers;
 	}
 	
-	demo.class = class_create(CLASS_NAME);
+	demo.class = class_create(THIS_MODULE, CLASS_NAME);
 	if(IS_ERR(demo.class))
 	{
-		ret = PTR_ERR(demoe.class);
+		ret = PTR_ERR(demo.class);
 		goto err_cdev;
 	}
 	
@@ -212,7 +277,7 @@ module_exit(my_exit);
 
 MODULE_LICENSE("GPL");
 MODULE_DESCRIPTION("Manual cdev registration and file operation implementation");
-MODULE_AUTHOR("SID");
+MODULE_AUTHOR("Arati");
 
 
 
