@@ -1,0 +1,1 @@
+savedcmd_/home/desd/CDAC_Modules/ldd/Timers/ltmr.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o /home/desd/CDAC_Modules/ldd/Timers/ltmr.ko /home/desd/CDAC_Modules/ldd/Timers/ltmr.o /home/desd/CDAC_Modules/ldd/Timers/ltmr.mod.o

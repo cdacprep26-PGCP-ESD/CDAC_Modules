@@ -1,0 +1,1 @@
+savedcmd_/home/desd/CDAC_Modules/ldd/workqueue/Module.symvers :=  scripts/mod/modpost -M -m -a      -o /home/desd/CDAC_Modules/ldd/workqueue/Module.symvers -T /home/desd/CDAC_Modules/ldd/workqueue/modules.order -i Module.symvers -e 
